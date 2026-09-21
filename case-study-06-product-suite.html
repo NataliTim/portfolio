@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@media (max-width:700px){.cs-split{grid-template-columns:minmax(0,1fr) !important}}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
+<a href="index.html#work" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">product suite</div>
+<h1 style="margin:0;max-width:20ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">One Language Across a Product Suite</h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">A dedicated initiative to bring 13 core products under a shared set of design rules, interaction patterns and delivery practices—so familiar workflows carry from one product to the next.</p>
+<p style="margin:0;font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Brand and design system · Workflow continuity · Accessibility and responsible AI · Guidance for teams and agents</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Consistency</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Cross-product</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">UX patterns</x-import>
+</div>
+<nav style="display:flex;flex-wrap:wrap;gap:var(--space-5);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase">
+<a href="#challenge">the challenge</a>
+<a href="#framework">the framework</a>
+<a href="#continuity">workflow continuity</a>
+<a href="#delivery">delivery</a>
+<a href="#ai">ai-assisted work</a>
+<a href="#evidence">evidence</a>
+</nav>
+
+<figure style="margin:var(--space-4) 0 0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div class="cs-split" style="position:relative;display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.5fr);gap:var(--space-5);align-items:center">
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">shared framework</span>
+<sc-for list="{{ frameworkChips }}" as="c" hint-placeholder-count="4">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ c }}</span>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:var(--space-3)">
+<sc-for list="{{ surfaces }}" as="s" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;gap:6px;padding:var(--space-3);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ s }}</span>
+<span style="height:8px;width:70%;background:color-mix(in srgb, var(--accent-green) 40%, transparent)"></span>
+<span style="height:8px;width:45%;background:color-mix(in srgb, var(--text-primary) 14%, transparent)"></span>
+<span style="height:8px;width:60%;background:color-mix(in srgb, var(--accent-cyan) 32%, transparent)"></span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Illustrative diagram. One framework feeding product surfaces: the same navigation, action and feedback patterns repeat across each. Not all 13 products are shown.</figcaption>
+</figure>
+</div>
+</header>
+
+<section id="challenge" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="01" kicker="the challenge" title="Consistency needs to reach beyond the interface" hint-size="100%,140px"></x-import>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">A shared visual style is only part of a coherent suite. Users also need familiar terminology, predictable actions and consistent feedback. Teams need a common way to make those decisions, with enough flexibility for each product's tasks and constraints.</p>
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<sc-for list="{{ problems }}" as="p" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ p.label }}</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">{{ p.text }}</p>
+</div>
+</sc-for>
+</div>
+<p style="margin:0;max-width:var(--measure-tight);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Stated as the initiative's motivations, not as findings from a completed audit.</p>
+</div>
+<figure style="margin:0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div class="cs-split" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-4)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);border:1px dashed var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">decided per product</span>
+<sc-for list="{{ divergent }}" as="d" hint-placeholder-count="4">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">{{ d }}</span>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">one shared pattern</span>
+<sc-for list="{{ shared }}" as="s" hint-placeholder-count="4">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ s }}</span>
+</sc-for>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Illustrative pattern. A single save-and-confirm task written two ways. Not a historical before-and-after.</figcaption>
+</figure>
+</div>
+</section>
+
+<section id="framework" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="the shared framework" title="Turn principles into rules teams can use" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The framework consolidates brand guidance, system components and UX best practices into a practical playbook: what to reuse, how it should behave, how to check it and when an exception is justified.</p>
+<div style="margin-top:var(--space-7);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden">
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,0.6fr) minmax(0,1.2fr) minmax(0,1fr);gap:var(--space-4);padding:var(--space-4) var(--space-5);background:var(--surface-inset);border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
+<span>layer</span><span>what it governs</span><span>evidence</span>
+</div>
+<sc-for list="{{ layers }}" as="l" hint-placeholder-count="7">
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,0.6fr) minmax(0,1.2fr) minmax(0,1fr);gap:var(--space-4);padding:var(--space-4) var(--space-5);border-bottom:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ l.layer }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ l.governs }}</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ l.evidence }}</span>
+</div>
+</sc-for>
+</div>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);margin-top:var(--space-7)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-cyan)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">Jakob's Law</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Users spend most of their time in other products, so conventions they already know carry weight beyond the suite. The rule is to respect established conventions where they serve the task—not to copy a competitor's interface.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-cyan)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">usability heuristics</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Heuristics appear as the reasoning behind specific decisions—why a destructive action is reversible, why system status is shown during a long save—rather than as a checklist appended to a review.</p>
+</div>
+</div>
+</section>
+
+<section id="continuity" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="workflow continuity" title="Familiar work should feel familiar everywhere" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Shared patterns preserve the parts of a task users already understand: how to find information, take action, confirm a change and recover from a problem. Product-specific details adapt around that common structure.</p>
+<figure style="margin:var(--space-7) 0 0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;gap:var(--space-5)">
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:stretch">
+<sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+<div style="flex:1;min-width:130px;display:flex;flex-direction:column;gap:6px;padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">step {{ st.n }}</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ st.name }}</span>
+</div>
+</sc-for>
+</div>
+<div class="cs-split" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-4)">
+<sc-for list="{{ contexts }}" as="ctx" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ ctx.name }}</span>
+<span style="font-size:var(--text-small);line-height:1.5;color:var(--text-secondary)">{{ ctx.same }}</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">varies: {{ ctx.varies }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Proposed illustration: find → open → edit → save → receive feedback, read across three product contexts. Shared patterns, not shared sessions or synchronised data.</figcaption>
+</figure>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:var(--space-7);margin-top:var(--space-8);align-items:start">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">what the pattern holds constant</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4)">
+<sc-for list="{{ annotations }}" as="a" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-3);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ a.label }}</span>
+<span style="font-size:var(--text-small);line-height:1.5;color:var(--text-secondary)">{{ a.text }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);border:1.5px solid var(--accent-cyan);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">justified exception</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">A product used on a shop floor replaces the standard save-on-submit with autosave and an explicit offline state. The terminology, action hierarchy and recovery path stay shared; the commit model changes because the working conditions do. The exception is recorded with its rationale, scope and owner.</p>
+</div>
+</div>
+</section>
+
+<section id="delivery" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="repeatable delivery processes" title="Make the guidance part of how products are created" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The playbook becomes useful when it enters everyday work: choosing an existing pattern, documenting a decision, reviewing accessibility and checking implementation against the same source.</p>
+<figure style="margin:var(--space-7) 0 0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:stretch">
+<sc-for list="{{ process }}" as="p" hint-placeholder-count="7">
+<div style="flex:1;min-width:145px;display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ p.step }}</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ p.who }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Proposed process. Improvements return to the playbook at the final step. Contributing functions are indicative; named ownership requires confirmation.</figcaption>
+</figure>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-7);margin-top:var(--space-8);align-items:start">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">illustrative rule record</span>
+<div style="border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden">
+<sc-for list="{{ ruleRecord }}" as="r" hint-placeholder-count="8">
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,0.7fr) minmax(0,1.6fr);gap:var(--space-4);padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ r.field }}</span>
+<span style="font-size:var(--text-small);line-height:1.5;color:var(--text-primary)">{{ r.value }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">maintenance</span>
+<sc-for list="{{ maintenance }}" as="m" hint-placeholder-count="5">
+<div style="display:flex;gap:var(--space-4);align-items:baseline;padding-top:var(--space-3);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">{{ m.n }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-secondary)">{{ m.text }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="ai" style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="ai-assisted design and development" title="Give AI assistants the same rules as the team" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The next layer makes the framework usable during AI-assisted work. Structured context explains the product and its constraints. Agent skills describe repeatable procedures. MCP connections make approved resources available, while validation checks whether the output follows the rules.</p>
+<figure style="margin:var(--space-7) 0 0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:stretch">
+<sc-for list="{{ aiChain }}" as="a" hint-placeholder-count="6">
+<div style="flex:1;min-width:160px;display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">{{ a.role }}</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ a.node }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Conceptual diagram, read left to right. MCP provides access to approved resources; it does not itself guarantee correctness or enforce the rules.</figcaption>
+</figure>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);margin-top:var(--space-8);align-items:start">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">illustrative walkthrough · edit form</span>
+<sc-for list="{{ walkthrough }}" as="w" hint-placeholder-count="5">
+<div style="display:flex;gap:var(--space-4);align-items:baseline;padding-top:var(--space-3);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">{{ w.n }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-secondary)">{{ w.text }}</span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-5);background:color-mix(in srgb, var(--accent-green) 8%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">guardrails</span>
+<sc-for list="{{ guardrails }}" as="g" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ g.label }}</span>
+<span style="font-size:var(--text-small);line-height:1.5;color:var(--text-secondary)">{{ g.text }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);margin-top:var(--space-8)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-cyan)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">AI features users experience</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">People should be able to tell when a system is assisting them, understand what it acted on, change or reject the result and recover the previous state. Transparency, control, privacy and recovery are written as interaction rules with an escalation path to a person.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-cyan)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">assistants used internally</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Internal assistance is governed by appropriate data access and accountable review: what an assistant may read, what it may produce, who signs off and what is recorded. Retrieved content never grants additional tool permissions.</p>
+</div>
+</div>
+<p style="margin:var(--space-7) 0 0;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">A more repeatable and verifiable approach to AI-assisted delivery.</p>
+<p style="margin:var(--space-3) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Deterministic checks can enforce explicit rules—approved components, required states, contrast, traceable sources. Generated output still requires evaluation, because the rules that matter most are the ones nobody has written down yet.</p>
+</div>
+</section>
+
+<section id="evidence" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="06" kicker="evidence and outcomes" title="What the framework is designed to improve" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">These are intended benefits with the evidence each one requires, not measured results. Numerical results are published only with their source, timeframe, sample and comparison basis.</p>
+<div style="margin-top:var(--space-7);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden">
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:var(--space-4);padding:var(--space-4) var(--space-5);background:var(--surface-inset);border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
+<span>intended benefit</span><span>evidence to collect</span>
+</div>
+<sc-for list="{{ benefits }}" as="b" hint-placeholder-count="5">
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:var(--space-4);padding:var(--space-4) var(--space-5);border-bottom:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ b.benefit }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ b.evidence }}</span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4);margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">status of the work</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-5)">
+<sc-for list="{{ status }}" as="s" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ s.label }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-secondary)">{{ s.text }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="reflection" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="07" kicker="reflection" title="A shared language needs shared ownership" hint-size="100%,140px"></x-import>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Consistency is easy to write down and hard to keep. A rule holds when the teams using it can see why it exists, adapt it where their task genuinely differs and record that decision where the next team will find it. The harder half of the work is not defining the language but keeping it current as products change.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">The same is true of the AI layer. Structured context and approved resources make assistance repeatable; they do not remove the need for someone to own the rule, review the result and update the source when the answer turns out to be wrong.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:flex-start">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="150px,52px">All work</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="resume.html" variant="secondary" size="lg" icon="arrow-up-right" hint-size="140px,52px">Resume</x-import>
+</div>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+    document.title = "One Language Across a Product Suite, Nataliia Tymofeieva";
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "beyond the work", href: "index.html#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      frameworkChips: ["brand and terminology", "components and states", "task patterns", "review criteria"],
+      surfaces: ["product surface", "product surface", "product surface", "product surface", "product surface", "product surface"],
+      problems: [
+        { label: "repeated decisions", text: "The same interaction question gets answered again in each product, with a different result each time." },
+        { label: "inconsistent task behaviour", text: "Comparable tasks use different labels, action order and confirmation behaviour." },
+        { label: "scattered guidance", text: "Brand, system and UX guidance live in separate places, so teams reconcile them by hand." },
+        { label: "ambiguous expectations", text: "What counts as a correct implementation is not stated in a form engineering can check against." },
+      ],
+      divergent: ["“Submit” · “Apply” · “Done”", "toast · inline banner · nothing", "dialog before leaving · silent discard", "error at top · error at field"],
+      shared: ["one primary action label", "one confirmation placement", "one unsaved-changes rule", "one error location"],
+      layers: [
+        { layer: "Brand", governs: "Voice, visual expression and terminology across the suite", evidence: "brand rule linked to a UI example" },
+        { layer: "Design system", governs: "Tokens, components, their states and the rules for using them", evidence: "component guidance with supported states" },
+        { layer: "UX patterns", governs: "Common tasks and what users expect them to do", evidence: "pattern specification" },
+        { layer: "Usability", governs: "Familiar conventions and heuristic review of decisions", evidence: "decision annotated with its rationale" },
+        { layer: "Accessibility", governs: "Requirements and how they are verified", evidence: "keyboard behaviour and review criteria" },
+        { layer: "Responsible AI", governs: "Transparency, control, privacy and recovery in AI-assisted features", evidence: "AI interaction rule and escalation path" },
+        { layer: "Delivery", governs: "Ownership, review, exceptions and maintenance", evidence: "workflow or decision record" },
+      ],
+      steps: [
+        { n: "01", name: "find" }, { n: "02", name: "open" }, { n: "03", name: "edit" },
+        { n: "04", name: "save" }, { n: "05", name: "feedback" },
+      ],
+      contexts: [
+        { name: "records product", same: "Same search placement, same filter behaviour, same primary action label, same save confirmation.", varies: "record fields and permissions" },
+        { name: "planning product", same: "Same step order and recovery path; editing happens in a side panel rather than a full page.", varies: "edit surface" },
+        { name: "field product", same: "Same terminology and feedback language, adapted to touch targets and intermittent connectivity.", varies: "input mode and commit timing" },
+      ],
+      annotations: [
+        { label: "terminology", text: "One name per concept and one primary action label per task." },
+        { label: "find and navigate", text: "Search, filters and navigation sit in the same place and behave the same way." },
+        { label: "forms and saving", text: "Validation timing, save behaviour and the unsaved-changes rule are shared." },
+        { label: "states", text: "Loading, empty, success and error states are specified, not left to each product." },
+        { label: "permissions", text: "Restricted actions are shown consistently, with a stated recovery path." },
+        { label: "moving between products", text: "Where products support it, context is retained. This is pattern continuity, not a shared session or synchronised data." },
+      ],
+      process: [
+        { step: "understand the task", who: "product · design" },
+        { step: "find an approved pattern", who: "design" },
+        { step: "adapt within constraints", who: "design · product" },
+        { step: "review design", who: "design · accessibility" },
+        { step: "implement", who: "engineering" },
+        { step: "validate", who: "engineering · design" },
+        { step: "feed back into playbook", who: "system owner" },
+      ],
+      ruleRecord: [
+        { field: "identifier", value: "PAT-FORM-014 · unsaved changes" },
+        { field: "rationale", value: "Users lose work when navigation discards edits silently; recognition over recall." },
+        { field: "scope", value: "Any form that commits on an explicit action, all products in the suite." },
+        { field: "required behaviour", value: "Warn before navigation, name what will be lost, offer save and discard." },
+        { field: "approved example", value: "Standard edit form with dialog on route change." },
+        { field: "anti-pattern", value: "Silent discard, or a warning that appears after the change is already lost." },
+        { field: "accessibility", value: "Dialog receives focus, Escape cancels, focus returns to the trigger." },
+        { field: "verification", value: "Keyboard walkthrough plus an automated check for the dialog on dirty state." },
+        { field: "owner · version", value: "System owner · v1.2" },
+        { field: "exception process", value: "Documented request, review, recorded decision with scope and expiry." },
+      ],
+      maintenance: [
+        { n: "01", text: "A team proposes a change with the problem it solves and the products affected." },
+        { n: "02", text: "The proposal is reviewed against the existing rule and any conflicting patterns." },
+        { n: "03", text: "The decision is approved, rejected or scoped as an exception." },
+        { n: "04", text: "The rule is versioned, and the previous version stays readable." },
+        { n: "05", text: "Affected teams are told what changed and by when it applies." },
+      ],
+      aiChain: [
+        { role: "source", node: "approved, versioned resources" },
+        { role: "access", node: "context retrieved through MCP" },
+        { role: "instruction", node: "task context and agent skills" },
+        { role: "output", node: "constrained design or code draft" },
+        { role: "check", node: "automated checks and human review" },
+        { role: "result", node: "accepted output or revision" },
+      ],
+      walkthrough: [
+        { n: "01", text: "An assistant receives a request to build an edit form for a record type." },
+        { n: "02", text: "It retrieves the approved form pattern and the component guidance for its fields and states." },
+        { n: "03", text: "It drafts the form using approved components and the suite's terminology." },
+        { n: "04", text: "It checks required states—loading, empty, success, error, unsaved changes—and keyboard and focus behaviour." },
+        { n: "05", text: "The draft goes to review with the sources and versions it used." },
+      ],
+      guardrails: [
+        { label: "approved components only", text: "Drafts are assembled from the system, not invented equivalents." },
+        { label: "terminology", text: "Labels come from the shared vocabulary for that concept." },
+        { label: "required states", text: "A pattern's mandatory states must be present before review." },
+        { label: "source and version", text: "Every retrieved rule is cited with the version it came from." },
+        { label: "permissions", text: "Retrieved content never grants an assistant additional tool permissions." },
+        { label: "stop and escalate", text: "When context is missing or contradictory, the assistant stops and asks rather than guessing." },
+      ],
+      benefits: [
+        { benefit: "more consistent workflows", evidence: "Comparable tasks reviewed against shared criteria" },
+        { benefit: "greater reuse", evidence: "Eligible implementations using approved patterns" },
+        { benefit: "easier transitions between products", evidence: "Observed task completion and errors across apps" },
+        { benefit: "better accessibility", evidence: "Manual and automated findings, with retest results" },
+        { benefit: "more reliable AI-assisted output", evidence: "Pass rate against explicit criteria and required revisions" },
+      ],
+      status: [
+        { label: "scope", text: "The initiative covers 13 core products. Scope is not the same as adoption: each product's use of each pattern is tracked separately." },
+        { label: "artefacts", text: "A consolidated rulebook, a workflow pattern, a review checklist and an exception record are the artefacts this page is built to show once cleared for publication." },
+        { label: "ai layer", text: "Described as proposed. Context, agent skills, MCP access and validation move to delivered framing only with supporting evidence." },
+      ],
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
+        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

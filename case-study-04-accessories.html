@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@media (max-width:700px){.cs-split{grid-template-columns:minmax(0,1fr) !important}}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
+<a href="index.html#work" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">accessories e-commerce</div>
+<h1 style="margin:0;max-width:22ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Rebuilding automotive accessories e-commerce</h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">I redesigned an automotive-accessories platform integrated with manufacturer and dealer websites, reworking search and the customer flow through testing with real users.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Omni-search, fewer steps, and important information brought into view.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">E-commerce</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Full redesign</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Integrations</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">User research</x-import>
+</div>
+<nav style="display:flex;flex-wrap:wrap;gap:var(--space-5);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase">
+<a href="#overview">overview</a>
+<a href="#decisions">decisions</a>
+<a href="#integration">integration</a>
+<a href="#outcomes">outcomes</a>
+</nav>
+
+<figure style="margin:var(--space-4) 0 0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;gap:var(--space-4)">
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-3);padding-bottom:var(--space-3);border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
+<span>host website shell</span>
+<span>account · cart</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">changed region: omni-search</span>
+<div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 8%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">search</span>
+<span style="flex:1;height:10px;background:color-mix(in srgb, var(--text-primary) 18%, transparent)"></span>
+</div>
+</div>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--space-5)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">results</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:var(--space-3)">
+<sc-for list="{{ heroCards }}" as="card" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-3);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="height:48px;background:color-mix(in srgb, var(--text-primary) 8%, transparent)"></span>
+<span style="height:8px;width:80%;background:color-mix(in srgb, var(--text-primary) 16%, transparent)"></span>
+<span style="height:8px;width:45%;background:color-mix(in srgb, var(--text-primary) 12%, transparent)"></span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">changed region: information in view</span>
+<div style="flex:1;display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 8%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<sc-for list="{{ heroInfoRows }}" as="row" hint-placeholder-count="4">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding-bottom:8px;border-bottom:1px solid color-mix(in srgb, var(--accent-green) 25%, transparent)">
+<span style="height:8px;width:40%;background:color-mix(in srgb, var(--text-primary) 20%, transparent)"></span>
+<span style="height:8px;width:25%;background:color-mix(in srgb, var(--accent-green) 60%, transparent)"></span>
+</div>
+</sc-for>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">generic information region</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Illustrative structure, not a production screenshot. Accent marks the changed regions.</figcaption>
+</figure>
+</div>
+</header>
+
+<section id="overview" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="01" kicker="the product and context" title="An accessories platform connected to dealer websites" hint-size="100%,140px"></x-import>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The platform brought automotive accessories into manufacturer and dealer website experiences. The work combined a full interface redesign with integration constraints. A related tire-sales workflow served both dealership staff and online customers.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Platform audiences and research participants are kept separate here: dealership staff and online customers are documented as audiences of the tire workflow, not as the participants of the redesign study.</p>
+</div>
+<figure style="margin:0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">experience context</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-3)">
+<div style="padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">manufacturer website</div>
+<div style="padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">dealer website</div>
+</div>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--text-muted);text-align:center">↓ user-facing relationship ↓</div>
+<div style="padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">accessories platform</div>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--text-muted);text-align:center">↓</div>
+<div style="padding:var(--space-4);border:1px dashed var(--accent-cyan);border-radius:var(--radius-sm);display:flex;flex-direction:column;gap:6px">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">third-party boundary</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">tire portal</span>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Experience context. Arrows describe user-facing relationships, not verified backend data flows.</figcaption>
+</figure>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="where it started" title="Search, extra steps, and information out of view" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The redesign focused on three connected problems: search, unnecessary steps, and information that was not visible when users needed it. I reworked the flow around omni-search, reduced the steps, and brought hidden information into the open, then tested the changes with real users.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-5);margin-top:var(--space-7)">
+<sc-for list="{{ pairs }}" as="pair" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase">
+<span style="padding:var(--space-3) var(--space-4);border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface-card);color:var(--text-muted)">{{ pair.before }}</span>
+<span style="color:var(--text-muted)">↓</span>
+<span style="padding:var(--space-3) var(--space-4);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm);background:color-mix(in srgb, var(--accent-green) 10%, transparent);color:var(--accent-green)">{{ pair.after }}</span>
+</div>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">{{ pair.text }}</p>
+</div>
+</sc-for>
+</div>
+<p style="margin:var(--space-6) 0 0;font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Editorial summaries of the redesign themes, not research quotes or reconstructed screens.</p>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="what I did" title="Redesign, integration design, and a reworked information architecture" hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5);margin-top:var(--space-6)">
+<sc-for list="{{ didItems }}" as="item" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ item.label }}</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">{{ item.text }}</p>
+</div>
+</sc-for>
+<sc-if value="{{ showHeuristic }}">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">heuristic evaluation</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Editable slot, add the audit scope, severity scale and findings when they are confirmed.</p>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section id="decisions" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="featured story" title="A clearer route through the buying flow" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">Business task: make the accessories journey easier to navigate within an integrated automotive platform.</p>
+
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-7);align-items:center;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">decision 01: omni-search</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One search region instead of scattered entry points</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">I introduced omni-search as part of the redesigned flow.</p>
+</div>
+<figure style="margin:0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;align-items:center;gap:var(--space-3);padding:var(--space-5);background:color-mix(in srgb, var(--accent-green) 8%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">omni-search</span>
+<span style="flex:1;height:12px;background:color-mix(in srgb, var(--text-primary) 18%, transparent)"></span>
+</div>
+<div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:var(--space-3)">
+<sc-for list="{{ searchBelow }}" as="b" hint-placeholder-count="4">
+<span style="height:44px;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)"></span>
+</sc-for>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Structural placement only. Searchable fields, categories and suggestion behaviour are not documented.</figcaption>
+</figure>
+</div>
+
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<figure style="margin:0;order:2">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-5)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">before: longer route</span>
+<div style="display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ beforeRoute }}" as="s" hint-placeholder-count="5">
+<span style="height:26px;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)"></span>
+</sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">after: shorter route</span>
+<div style="display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ afterRoute }}" as="s" hint-placeholder-count="3">
+<span style="height:26px;background:color-mix(in srgb, var(--accent-green) 12%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)"></span>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Conceptual comparison. Block counts are indicative, not a documented step reduction.</figcaption>
+</figure>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);order:1">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">decision 02: fewer steps</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">A shorter sequence, checked against real use</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">I reduced the steps in the flow and tested the reworked sequence with real users.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-muted)">Exact screens and step counts require the original flow documentation.</p>
+</div>
+</div>
+
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-7);align-items:center;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">decision 03: information in view</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Information moved from concealed to visible</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">I brought previously hidden information into the open.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-muted)">The diagram annotates position, not content. Which information became visible is still to be confirmed.</p>
+</div>
+<figure style="margin:0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-5)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">before: behind an interaction</span>
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="height:40px;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)"></span>
+<span style="padding:8px var(--space-3);border:1px dashed var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">information region: collapsed</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">after: in the page</span>
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="height:40px;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)"></span>
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-3);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">information region: visible</span>
+<span style="height:8px;width:70%;background:color-mix(in srgb, var(--text-primary) 20%, transparent)"></span>
+<span style="height:8px;width:50%;background:color-mix(in srgb, var(--text-primary) 16%, transparent)"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Conceptual comparison: a generic information region, placeholder content only.</figcaption>
+</figure>
+</div>
+
+<div style="margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:var(--space-4)">
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Tested with real users</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The reworked flow was tested with real users, covering omni-search, fewer steps, and information visibility.</p>
+<sc-if value="{{ showResearchDetail }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<sc-for list="{{ researchSlots }}" as="slot" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ slot }}</span>
+<span style="font-size:var(--text-small);line-height:1.5;color:var(--text-secondary)">To be supplied.</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section id="integration" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="integration and consistency" title="Adding tire selection within the existing experience" hint-size="100%,140px"></x-import>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">I created an interactive Figma prototype that introduced tires as a category within the existing platform. The design embedded a third-party tire portal, offered filtering, and brought selected tires back into the platform's quote flow. The challenge was to keep the experience consistent for dealership staff and online customers.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-muted)">The embedded portal was placed in an iframe. Authentication, data orchestration and shared cart behaviour are outside what the design documents.</p>
+</div>
+<figure style="margin:0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-4);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">host platform shell</span>
+<div style="display:flex;flex-wrap:wrap;align-items:stretch;gap:var(--space-3)">
+<div style="flex:1;min-width:130px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">tire category</div>
+<div style="display:flex;align-items:center;font-family:var(--font-mono);color:var(--text-muted)">→</div>
+<div style="flex:1;min-width:150px;padding:var(--space-4);border:1px dashed var(--accent-cyan);border-radius:var(--radius-sm);display:flex;flex-direction:column;gap:8px">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">third party · iframe</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">tire portal · filtering</span>
+</div>
+<div style="display:flex;align-items:center;font-family:var(--font-mono);color:var(--text-muted)">→</div>
+<div style="flex:1;min-width:150px;padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">selection returned to quote flow</div>
+</div>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">dashed outline marks the third-party boundary</span>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Proposed integration workflow from the design prototype. Documented stages, not measured interaction steps.</figcaption>
+</figure>
+</div>
+</section>
+
+<section id="outcomes" style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="06" kicker="outcomes" title="What changed" hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5);margin-top:var(--space-6)">
+<sc-for list="{{ outcomes }}" as="item" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ item.title }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ item.text }}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">These describe design work and owner-reported validation. Commercial impact is not measured here.</p>
+<sc-if value="{{ showOperationsNote }}">
+<div style="margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:var(--space-2);max-width:var(--measure-tight)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">earlier experience · separate from this platform</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Experience beyond the interface</h3>
+<p style="margin:0;font-size:var(--text-small);line-height:1.6;color:var(--text-secondary)">My earlier e-commerce work also included store operations: managing content, promotions, orders, suppliers and logistics.</p>
+</div>
+</sc-if>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4);margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">tools</span>
+<p style="margin:0;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Figma: interactive integration prototype.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The prototype was assembled from the platform's real components, linked to their implementations through Code Connect.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="150px,52px">All work</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="resume.html" variant="secondary" size="lg" icon="arrow-up-right" hint-size="140px,52px">Resume</x-import>
+</div>
+</div>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showResearchDetail&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Draft state&quot;},&quot;showHeuristic&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Draft state&quot;},&quot;showOperationsNote&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Draft state&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+    document.title = "Rebuilding automotive accessories e-commerce, Nataliia Tymofeieva";
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      showResearchDetail: this.props.showResearchDetail ?? false,
+      showHeuristic: this.props.showHeuristic ?? false,
+      showOperationsNote: this.props.showOperationsNote ?? true,
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "beyond the work", href: "index.html#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      heroCards: [1, 2, 3, 4, 5, 6],
+      heroInfoRows: [1, 2, 3, 4],
+      searchBelow: [1, 2, 3, 4],
+      beforeRoute: [1, 2, 3, 4, 5],
+      afterRoute: [1, 2, 3],
+      pairs: [
+        { before: "search", after: "omni-search", text: "Search became one region in the redesigned flow rather than several separate entry points." },
+        { before: "extra steps", after: "shorter flow", text: "The route through the flow was reworked to remove steps that were not needed." },
+        { before: "hidden information", after: "visible information", text: "Information users needed at a decision point was moved into view." },
+      ],
+      didItems: [
+        { label: "features", text: "Full platform redesign, plus supporting design for the tire integration." },
+        { label: "design system", text: "The tire workflow was designed to fit the existing platform language." },
+        { label: "information architecture", text: "Omni-search, a shorter flow, and important information brought into view." },
+      ],
+      researchSlots: ["task tested", "participant context", "observation", "resulting adjustment", "retest result"],
+      outcomes: [
+        { title: "search", text: "Omni-search became part of the redesigned flow." },
+        { title: "flow", text: "The rework reduced steps and exposed previously hidden information." },
+        { title: "validation", text: "The changes were tested with real users." },
+        { title: "integration", text: "An interactive prototype explored tire selection within the existing platform." },
+      ],
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
+        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

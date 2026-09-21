@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#resume" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:calc(var(--page-max) - var(--gutter) * 2);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--space-8);align-items:start">
+<div style="display:flex;flex-direction:column;gap:var(--space-5)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">resume · about me</div>
+<h1 style="margin:0;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Nataliia Tymofeieva</h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">Product design manager with extensive experience in UX/UI/AI, user-centered product design, web development, and leading AI process improvements and workflow optimization.</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-5);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);color:var(--text-secondary)">
+<a href="mailto:tymofeieva.n@gmail.com">tymofeieva.n@gmail.com</a>
+<span>437.987.8703</span>
+<a href="https://www.linkedin.com/in/tymofeieva-n">linkedin.com/in/tymofeieva-n</a>
+<span>Calgary, AB</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="assets/Nat-Tymofeieva-Product-Designer.pdf" variant="primary" icon="download" hint-size="auto,40px">download resume</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" variant="ghost" icon="arrow-right" hint-size="auto,40px">work streams</x-import>
+</div>
+</div>
+<div style="position:relative;aspect-ratio:1;border:1px solid var(--border);border-radius:999px;overflow:hidden;background:var(--surface-inset)">
+<img src="assets/nat-portrait.png" alt="Nataliia Tymofeieva" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:saturate(0.9)">
+</div>
+</div>
+</header>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="01" kicker="about me" title="Summary" hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Partners with executive leadership and cross-functional teams to align customer needs with business priorities, shape product strategy, and deliver complex enterprise experiences.</p>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Builds scalable design systems and uses AI-assisted discovery, research synthesis, prototyping, and workflow automation to accelerate design and validation.</p>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Combines technical fluency, entrepreneurial experience, and a collaborative approach to solve problems and drive results.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);align-content:start">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="15+" label="Years in design and web" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="?" label="To be replaced" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="?" label="To be replaced" tone="cyan" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="?" label="To be replaced" tone="cyan" hint-size="100%,90px"></x-import>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="core competencies" title="What I lead on." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6) var(--space-7);margin-top:var(--space-7)">
+<sc-for list="{{ competencies }}" as="c" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ c.title }}</div>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">{{ c.text }}</p>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="resume" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="professional experience" title="Experience" hint-size="100%,140px"></x-import>
+<div style="display:flex;flex-direction:column;gap:var(--space-7);margin-top:var(--space-7)">
+<sc-for list="{{ roles }}" as="role" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);gap:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-2)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ role.period }}</div>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);color:var(--text-muted)">{{ role.org }}</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<h3 style="margin:0;font-family:var(--font-display);font-size:var(--text-h3);font-weight:600;letter-spacing:-0.02em">{{ role.title }}</h3>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--space-3)">
+<sc-for list="{{ role.bullets }}" as="bullet" hint-placeholder-count="3">
+<li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:var(--space-3);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)"><span style="color:var(--text-muted)">—</span><span>{{ bullet }}</span></li>
+</sc-for>
+</ul>
+<sc-if value="{{ role.hasAchievements }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface-card)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">achievements</div>
+<sc-for list="{{ role.achievements }}" as="win" hint-placeholder-count="2">
+<div style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:var(--space-3);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)"><span style="color:var(--accent-cyan)">—</span><span>{{ win }}</span></div>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="skills" title="Design, tooling, code." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6) var(--space-7);margin-top:var(--space-7)">
+<sc-for list="{{ skillGroups }}" as="group" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ group.title }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ group.items }}" as="item" hint-placeholder-count="6">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">{{ item }}</x-import>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="additional information" title="Education and community." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:var(--space-7);margin-top:var(--space-7)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">2009</div>
+<h3 style="margin:0;font-family:var(--font-display);font-size:var(--text-h4);font-weight:600">Master's degree in Economics, with Honors</h3>
+<p style="margin:0;font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--text-muted)">Kharkiv University of Humanities "People's Ukrainian Academy" · Kharkiv, Ukraine</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-5)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">Volunteering &amp; contributions</div>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Share knowledge through conference presentations and participation in local design and product communities. Member and speaker, Calgary UX; member, Calgary Products.</p>
+</div>
+
+<sc-for list="{{ community }}" as="role" hint-placeholder-count="2">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-4);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase"><span style="color:var(--text-primary)">{{ role.title }}</span><span style="color:var(--text-muted)">{{ role.period }}</span></div>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">{{ role.text }}</p>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="tymofeieva.n@gmail.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    const roles = [
+      {
+        period: "Mar 2025 — Present", org: "Quorum Information Technologies Inc. · Calgary, AB", title: "Product Design Manager",
+        bullets: [
+          "Drive product design strategy aligned with business objectives while prioritizing exceptional user experiences, partnering with executive leadership to influence product vision, roadmap priorities, and the adoption of AI-augmented design practices across the product lifecycle.",
+          "Oversee the development and evolution of scalable design systems and processes that ensure consistency, efficiency, and product quality, leveraging AI-driven tools to accelerate prototyping, component reuse, and implementation readiness.",
+          "Lead advanced user research and discovery initiatives to inform strategic design decisions and validate solutions with measurable outcomes, using AI-supported analysis, insight synthesis, and experimentation workflows while facilitating cross-department collaboration and alignment throughout the ideation process.",
+          "Leverage AI-driven tools and methodologies to accelerate ideation, discovery, validation, data analysis, prototyping, and design system implementation across projects and teams.",
+        ],
+        achievements: ["Created a unified Design System by combining and consolidating styles from various products, establishing consistent design standards across the organization and significantly improving design efficiency and product cohesion."],
+      },
+      {
+        period: "Aug 2021 — Mar 2025", org: "Quorum Information Technologies Inc. · Calgary, AB", title: "Product Marketing Designer",
+        bullets: [
+          "Conduct in-depth user research, including user interviews and usability tests, to validate and refine the product roadmap with user-driven insights and metrics while supporting discovery activities through customer feedback analysis.",
+          "Develop wireframes, functional prototypes, and high-fidelity mockups to communicate design concepts effectively while maintaining and evolving design systems to ensure visual and functional consistency across products.",
+          "Collaborate cross-functionally with marketing, product, and development teams to align design with business objectives and deliver cohesive, on-brand experiences based on industry best practices and research.",
+          "Designed and maintained Quorum websites, landing pages, email campaigns, and social media content using HTML, CSS, and JavaScript to enhance engagement and conversions.",
+        ],
+        achievements: [
+          "Significantly improved the UX and UI of the company's products, including fourteen color themes for one of the company's products, resulting in increased sales, improved customer satisfaction, and higher retention.",
+          "Redesigned and built six company websites, resulting in a significant increase in organic search and brand awareness. These changes helped initiate the generation of online leads through web forms, consistently bringing in new leads.",
+          "Updated all of the company's document templates, making the work process easier and more efficient for each employee.",
+        ],
+      },
+      {
+        period: "Jul 2020 — Jul 2021", org: "ServiceTO Inc. · Toronto, ON", title: "Web and Graphic Designer",
+        bullets: [
+          "Created, supported and managed company websites and landing pages for various Google Ads and marketing campaigns, ensuring organization brand standards are met and maintained for all creative works.",
+          "Developed the overall layout and production design for print and digital collateral including ads, brochures, newsletters, email templates, and social media headers to grow brand presence across all digital channels.",
+          "Fulfilled creative briefs for marketing and communication campaigns, creating illustrated artwork and organizing the Communications and Marketing team's content library.",
+        ],
+        achievements: ["Created a unique structure for landing pages that allowed for efficient and rapid creation. This helped decrease Google Ads costs and bring leads to their desired information, resulting lead conversion increase of up to 40%."],
+      },
+      {
+        period: "Feb 2010 — May 2019", org: "Web Studio (Co-founder) · Kharkiv, Ukraine", title: "UX / UI Web Designer",
+        bullets: [
+          "Aligned business requirements with User-Centered Design (UCD) methodologies to create successful UI/UX designs, memorable visuals, UI elements, and corporate branding materials across various industries.",
+          "Created and maintained Yii2 and CMS websites (WordPress, Webasyst - Shop-Script) while developing web content and layouts using HTML, CSS (LESS, Bootstrap), JavaScript (jQuery, Vue.js), and PHP (Yii2).",
+          "Managed online store operations including content management, advertising, promotions, cost analysis, customer orders, supplier negotiations, and logistics coordination for 10,000+ products.",
+        ],
+        achievements: [
+          "Designed 30+ websites across various industries, including construction, education, music, and e-commerce.",
+          "Created 50+ print materials and 20+ corporate branding and advertising projects.",
+          "Uploaded and managed data for 10,000+ electronics and household products.",
+        ],
+      },
+    ];
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      roles: roles.map(r => ({ ...r, hasAchievements: r.achievements.length > 0 })),
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "beyond the work", href: "index.html#beyond" },
+        { label: "resume", href: "#resume" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      competencies: [
+        { title: "product design strategy", text: "UX vision, product discovery, roadmap influence, and alignment of customer needs with business priorities." },
+        { title: "design leadership & executive partnership", text: "Cross-functional leadership, executive stakeholder alignment, design advocacy, mentoring, and collaboration across product and engineering." },
+        { title: "design operations & systems", text: "Scalable design systems, cross-product consistency, design standards, process improvement, and implementation readiness." },
+        { title: "customer insights & validation", text: "User research, usability testing, research synthesis, data-informed decisions, experimentation workflows, and iterative design validation." },
+        { title: "product experience & delivery", text: "Complex enterprise workflows, information architecture, interaction design, accessible interfaces, prototyping, and collaboration through implementation." },
+        { title: "AI-enabled design & automation", text: "AI-assisted discovery and prototyping, workflow automation, MCP integrations, Agent Skills, and AI guardrails." },
+      ],
+      skillGroups: [
+        { title: "design", items: ["UX/UI", "Web Content Accessibility Guidelines (WCAG)", "Wireframes, prototypes, storyboards", "Responsive Web Design", "Graphic Design", "Layout Design/Development", "Printing Materials", "Logo Design", "Typography", "Email design and layout", "AI (Artificial Intelligence)"] },
+        { title: "design tools / programs", items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "Adobe After Effects", "Premiere Pro", "Inkscape", "Google Web Design", "Blender (3D modelling)"] },
+        { title: "programming / web", items: ["HTML", "CSS (SCSS, Less)", "SVG (SMIL)", "JavaScript (jQuery, Vue.js)", "PHP (Yii2)", "MySQL", "WordPress (WooCommerce)", "Webasyst - Shop-Script", "Salesforce", "Zoho"] },
+        { title: "product & project management", items: ["Jira", "Aha!", "Task tracking", "Product roadmaps", "Backlog prioritization", "Sprint planning", "Cross-functional coordination"] },
+        { title: "AI tools & integrations", items: ["Claude Design", "Claude Code", "MCP integrations", "Agent Skills", "AI agents", "Cursor", "GPT and OpenAI", "API integrations"] },
+        { title: "other programs", items: ["Microsoft Word", "Excel", "PowerPoint", "Power Builder"] },
+      ],
+      community: [
+        { title: "VP of Education, Toastmasters International · Calgary, AB", period: "2025—2026", text: "Coordinate educational programs, support members through Toastmasters Pathways, and celebrate their achievements." },
+        { title: "Board Member, DDRC (Developmental Disabilities Resource Centre) · Calgary, AB", period: "2026—Present", text: "Contribute to governance and strategic initiatives supporting people with developmental disabilities. Partner with board members and leadership to strengthen programs, expand community impact, and advance inclusive services." },
+        { title: "Figma plugin", period: "", text: "Designed a Figma plugin that generates table components with realistic data from CSV files, used by 1,000+ professionals." },
+        { title: "Book in progress", period: "Current", text: "Currently writing Design Systems for the AI Era, exploring how design systems can provide the context needed for reliable, deterministic AI-assisted work, with practical guidance on implementation and ongoing maintenance." },
+      ],
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "https://www.linkedin.com/in/tymofeieva-n" }, { label: "email", href: "mailto:tymofeieva.n@gmail.com" }] },
+        { title: "downloads", links: [{ label: "resume pdf", href: "assets/Nat-Tymofeieva-Product-Designer.pdf" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

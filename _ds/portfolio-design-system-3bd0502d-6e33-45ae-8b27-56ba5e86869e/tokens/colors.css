@@ -1,0 +1,97 @@
+:root {
+  /* --- base ramp (near-black greens, not neutral grey) --- */
+  --ink-1000: #050708;
+  --ink-900: #0a0d0e;
+  --ink-850: #0f1314;
+  --ink-800: #14191a;
+  --ink-700: #1c2223;
+  --ink-600: #262d2e;
+  --ink-500: #394243;
+  --ink-400: #5b6665;
+  --ink-300: #8b9695;
+  --ink-200: #b9c2c0;
+  --ink-100: #dde3e0;
+  --ink-050: #eef2ef;
+  --paper: #f2f3ee;
+
+  /* --- accents --- */
+  --acid-700: #4e6b00;
+  --acid-600: #8fc400;
+  --acid-500: #c8ff2e;
+  --acid-400: #d8ff70;
+  --acid-100: rgba(200, 255, 46, 0.14);
+  --cyan-700: #0a6b7a;
+  --cyan-600: #14b8cf;
+  --cyan-500: #4fe3ff;
+  --cyan-400: #8fefff;
+  --cyan-100: rgba(79, 227, 255, 0.14);
+
+  /* --- semantic: dark is the default theme --- */
+  --bg: var(--ink-900);
+  --bg-deep: var(--ink-1000);
+  --surface: var(--ink-850);
+  --surface-raised: var(--ink-800);
+  --surface-card: var(--ink-850);
+  --surface-inset: var(--ink-1000);
+
+  --text-primary: var(--ink-050);
+  --text-secondary: var(--ink-300);
+  --text-muted: var(--ink-400);
+  --text-inverse: var(--ink-1000);
+  --text-accent: var(--acid-500);
+  --text-link: var(--cyan-500);
+
+  --border: #232a2b;
+  --border-strong: var(--ink-500);
+  --border-subtle: rgba(238, 242, 239, 0.08);
+  --grid-line: rgba(238, 242, 239, 0.055);
+
+  --accent-green: var(--acid-500);
+  --accent-green-dim: var(--acid-600);
+  --accent-cyan: var(--cyan-500);
+  --accent-cyan-dim: var(--cyan-600);
+  --accent-wash-green: var(--acid-100);
+  --accent-wash-cyan: var(--cyan-100);
+
+  --state-hover: rgba(238, 242, 239, 0.06);
+  --state-press: rgba(238, 242, 239, 0.12);
+  --state-focus: var(--cyan-500);
+  --state-error: #ff5c4d;
+  --state-error-wash: rgba(255, 92, 77, 0.14);
+  --state-success: var(--acid-500);
+  --state-disabled-text: var(--ink-500);
+}
+
+/* --- light theme: same tokens, paper base. Apply with <html data-theme="light"> --- */
+[data-theme="light"] {
+  --bg: var(--paper);
+  --bg-deep: #e7e9e2;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-card: #ffffff;
+  --surface-inset: #e7e9e2;
+
+  --text-primary: var(--ink-1000);
+  --text-secondary: #4a5453;
+  --text-muted: var(--ink-400);
+  --text-inverse: var(--ink-050);
+  --text-accent: var(--acid-700);
+  --text-link: var(--cyan-700);
+
+  --border: #d2d6cd;
+  --border-strong: var(--ink-300);
+  --border-subtle: rgba(10, 13, 14, 0.1);
+  --grid-line: rgba(10, 13, 14, 0.06);
+
+  --accent-green: var(--acid-500);
+  --accent-green-dim: var(--acid-700);
+  --accent-cyan: var(--cyan-600);
+  --accent-cyan-dim: var(--cyan-700);
+
+  --state-hover: rgba(10, 13, 14, 0.05);
+  --state-press: rgba(10, 13, 14, 0.1);
+  --state-focus: var(--cyan-700);
+  --state-error: #c8322a;
+  --state-error-wash: rgba(200, 50, 42, 0.1);
+  --state-disabled-text: var(--ink-300);
+}

@@ -1,0 +1,23 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  text-wrap: pretty;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+a { color: var(--text-link); text-decoration: none; border-bottom: 1px solid color-mix(in oklab, currentColor 40%, transparent); transition: var(--transition-hover); }
+a:hover { color: var(--accent-green); border-bottom-color: var(--accent-green); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+::selection { background: var(--accent-green); color: var(--ink-1000); }

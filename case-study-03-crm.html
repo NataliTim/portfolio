@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@keyframes ds-pulse{0%,100%{opacity:.35}50%{opacity:1}}@media (prefers-reduced-motion:reduce){[style*="ds-pulse"]{animation:none !important}}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
+<a href="index.html#work" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">03 / sales &amp; service CRM · web</div>
+<h1 style="margin:0;max-width:20ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">One colour system, fourteen UI themes</h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">I modernized the visual foundation of a mature Sales &amp; Service CRM by first understanding how the product was built, then translating a new brand direction into a scalable system across fourteen supported UI themes.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" platform="web" hint-size="auto,22px">Web</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Foundation work</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">UI audit</x-import>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4);padding-top:var(--space-5);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="14 / 14" label="UI themes updated" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="2" label="Products on one shared foundation" tone="cyan" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="1" label="Set of semantic colour roles" hint-size="100%,90px"></x-import>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,220px));gap:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
+<div style="display:flex;flex-direction:column;gap:6px"><span>role</span><span style="color:var(--text-primary)">Manager of Product Design</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span>scope</span><span style="color:var(--text-primary)">Sales &amp; Service CRM</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span>focus</span><span style="color:var(--text-primary)">Visual foundation</span></div>
+</div>
+</div>
+</header>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="01" kicker="the product" title="Two products, one shared visual foundation." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Sales and Service operate inside one CRM ecosystem and rely on the same shared visual foundation: the same navigation, forms, grids, tables, dialogs and interactive states.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Customers use the product every working day and build strong familiarity with its patterns.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Fourteen supported UI themes sit on top of that one foundation, which means a local visual decision can surface across many interfaces and states at once.</p>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 10">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 560" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="0.1em">
+<text x="50" y="48" fill="var(--text-muted)" font-size="11">PRODUCT ARCHITECTURE</text>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 20%, transparent)" stroke-width="1">
+<rect x="50" y="76" width="380" height="64" rx="3"></rect>
+<rect x="470" y="76" width="380" height="64" rx="3"></rect>
+</g>
+<g fill="var(--text-primary)" font-size="14"><text x="70" y="114">SALES CRM</text><text x="490" y="114">SERVICE CRM</text></g>
+<g fill="none" stroke="color-mix(in srgb, var(--accent-green) 50%, transparent)" stroke-width="1.2">
+<path d="M240 140 V180 H660 V140"></path><path d="M450 180 V210"></path>
+<path d="M444 204 L450 212 L456 204"></path>
+</g>
+<rect x="50" y="220" width="800" height="70" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<text x="70" y="250" fill="var(--accent-green)" font-size="14">SHARED UI FOUNDATION</text>
+<text x="70" y="274" fill="var(--text-muted)" font-size="11">NAVIGATION · FORMS · GRIDS · TABLES · DIALOGS · STATES</text>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 20%, transparent)" stroke-width="1"><path d="M450 290 V320"></path><path d="M444 314 L450 322 L456 314"></path></g>
+<rect x="50" y="330" width="800" height="56" rx="3" fill="none" stroke="color-mix(in srgb, var(--text-primary) 20%, transparent)" stroke-width="1"></rect>
+<text x="70" y="364" fill="var(--text-secondary)" font-size="12">FRAMEWORKS · COMPONENT LIBRARIES · SHARED STYLES</text>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 20%, transparent)" stroke-width="1"><path d="M450 386 V416"></path><path d="M444 410 L450 418 L456 410"></path></g>
+<text x="50" y="446" fill="var(--text-muted)" font-size="11">14 UI THEMES</text>
+<g>
+<rect x="50" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 10%, transparent)"></rect><rect x="106" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 14%, transparent)"></rect><rect x="162" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 18%, transparent)"></rect><rect x="218" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 22%, transparent)"></rect><rect x="274" y="460" width="48" height="26" fill="color-mix(in srgb, var(--accent-cyan) 32%, transparent)"></rect><rect x="330" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 26%, transparent)"></rect><rect x="386" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 30%, transparent)"></rect><rect x="442" y="460" width="48" height="26" fill="color-mix(in srgb, var(--accent-green) 40%, transparent)"></rect><rect x="498" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 20%, transparent)"></rect><rect x="554" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><rect x="610" y="460" width="48" height="26" fill="color-mix(in srgb, var(--accent-cyan) 22%, transparent)"></rect><rect x="666" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 24%, transparent)"></rect><rect x="722" y="460" width="48" height="26" fill="color-mix(in srgb, var(--text-primary) 12%, transparent)"></rect><rect x="778" y="460" width="72" height="26" fill="color-mix(in srgb, var(--accent-green) 24%, transparent)"></rect>
+</g>
+<text x="50" y="524" fill="var(--text-muted)" font-size="11">ONE DECISION TRAVELS EVERYWHERE</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="business challenge" title="A new brand arrived before the foundation was ready for it." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The company introduced an updated brand direction while the CRM still relied on an older visual language. New initiatives were already forming, including an AI-assisted service experience and a new sales dashboard.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Before those experiences could be designed consistently, the existing product foundation needed to be updated.</p>
+<span style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">the foundation had to</span>
+<div style="display:grid;gap:var(--space-3)">
+<sc-for list="{{ needs }}" as="item" hint-placeholder-count="6">
+<span style="padding:var(--space-3) var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:var(--text-small);line-height:1.5;color:var(--text-primary)">{{ item }}</span>
+</sc-for>
+</div>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:4 / 5">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 700 880" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="0.1em">
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 20%, transparent)" stroke-width="1">
+<rect x="60" y="60" width="580" height="72" rx="3"></rect>
+<rect x="60" y="188" width="580" height="72" rx="3"></rect>
+<rect x="60" y="316" width="580" height="72" rx="3"></rect>
+<rect x="60" y="444" width="580" height="72" rx="3"></rect>
+</g>
+<g fill="var(--text-primary)" font-size="14">
+<text x="84" y="104">NEW BRAND</text>
+<text x="84" y="232">MATURE PRODUCT</text>
+<text x="84" y="360">14 UI THEMES</text>
+<text x="84" y="488">NEW FEATURES WAITING</text>
+</g>
+<g fill="var(--text-muted)" font-size="20"><text x="344" y="168">+</text><text x="344" y="296">+</text><text x="344" y="424">+</text></g>
+<g fill="none" stroke="var(--accent-green)" stroke-width="1.2"><path d="M350 516 V596"></path><path d="M342 588 L350 600 L358 588"></path></g>
+<rect x="60" y="616" width="580" height="104" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<text x="84" y="664" fill="var(--accent-green)" font-size="16">FOUNDATION NEEDED FIRST</text>
+<text x="84" y="694" fill="var(--text-muted)" font-size="11">BEFORE ANY NEW EXPERIENCE COULD BE DESIGNED</text>
+<path d="M60 776 H640" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<text x="60" y="812" fill="var(--text-muted)" font-size="11">WITHOUT UNNECESSARY DISRUPTION TO</text>
+<text x="60" y="834" fill="var(--text-muted)" font-size="11">ESTABLISHED CUSTOMER WORKFLOWS</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="design challenge" title="Changing the colour was the easy part. Understanding where it lived was harder." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The CRM had evolved over time and was supported by multiple technologies, shared components and deeply established customer behaviours. A visual change could reach navigation, forms, grids, tables, dialogs, interactive and selected states, warnings, primary actions, typography, icons and every reusable component.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-primary)">How do we modernize the visual foundation of a mature CRM while respecting its technical architecture and the familiarity existing customers depend on?</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Before making design decisions, I worked with developers to inventory how the product was actually built: language, framework and version, CSS approach, HTML structure, JavaScript and component libraries, icon libraries and the shared styling architecture.</p>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 11">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 620" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">
+<text x="50" y="44" fill="var(--text-muted)">AUDIT MATRIX · SURFACE × IMPLEMENTATION LAYER</text>
+<g fill="var(--text-muted)"><text x="360" y="92">LAYER A</text><text x="500" y="92">LAYER B</text><text x="640" y="92">LAYER C</text><text x="780" y="92">LAYER D</text></g>
+<g fill="var(--text-primary)" font-size="12">
+<text x="50" y="146">NAVIGATION</text><text x="50" y="216">TABLES</text><text x="50" y="286">FORMS</text><text x="50" y="356">DIALOGS</text><text x="50" y="426">STATES</text><text x="50" y="496">ACTIONS</text>
+</g>
+<g stroke="color-mix(in srgb, var(--text-primary) 12%, transparent)" stroke-width="1">
+<path d="M50 166 H860"></path><path d="M50 236 H860"></path><path d="M50 306 H860"></path><path d="M50 376 H860"></path><path d="M50 446 H860"></path><path d="M50 516 H860"></path>
+</g>
+<g fill="color-mix(in srgb, var(--text-primary) 22%, transparent)">
+<rect x="350" y="126" width="54" height="24"></rect><rect x="630" y="126" width="54" height="24"></rect>
+<rect x="490" y="196" width="54" height="24"></rect><rect x="770" y="196" width="54" height="24"></rect>
+<rect x="350" y="266" width="54" height="24"></rect><rect x="490" y="266" width="54" height="24"></rect>
+<rect x="630" y="336" width="54" height="24"></rect>
+<rect x="350" y="406" width="54" height="24"></rect><rect x="770" y="406" width="54" height="24"></rect>
+<rect x="490" y="476" width="54" height="24"></rect><rect x="630" y="476" width="54" height="24"></rect>
+</g>
+<g fill="color-mix(in srgb, var(--accent-green) 45%, transparent)">
+<rect x="490" y="126" width="54" height="24"></rect><rect x="350" y="196" width="54" height="24"></rect><rect x="630" y="196" width="54" height="24"></rect><rect x="770" y="266" width="54" height="24"></rect><rect x="350" y="336" width="54" height="24"></rect><rect x="630" y="406" width="54" height="24"></rect><rect x="350" y="476" width="54" height="24"></rect>
+</g>
+<path d="M50 556 H860" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<g fill="color-mix(in srgb, var(--accent-green) 45%, transparent)"><rect x="50" y="576" width="18" height="14"></rect></g>
+<text x="80" y="588" fill="var(--text-muted)">SHARED STYLE</text>
+<g fill="color-mix(in srgb, var(--text-primary) 22%, transparent)"><rect x="240" y="576" width="18" height="14"></rect></g>
+<text x="270" y="588" fill="var(--text-muted)">LOCAL OVERRIDE — DESIGN DECISIONS MAPPED TO IMPLEMENTATION</text>
+</svg>
+</div>
+</div>
+<p style="margin:var(--space-7) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Design decisions are only scalable when they understand the system that has to implement them.</p>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="design solution" title="Foundation before features." hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">The system had to become predictable before new experiences could be built on top of it. Seven steps, in the order they had to happen.</p>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-5);margin-top:var(--space-7)">
+<sc-for list="{{ sequence }}" as="step" hint-placeholder-count="7">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ step.n }} — {{ step.title }}</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">{{ step.text }}</p>
+</div>
+</sc-for>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">semantic roles first</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Define what a colour means before deciding what it is</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Roles were defined once — application background, surface, navigation, primary action, selection, hover, disabled, warning, error, information, borders and text hierarchy — then mapped consistently across all fourteen supported UI themes.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Typography, icons and reusable components followed the same logic, so one-off styling could be replaced progressively rather than all at once.</p>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 10">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 560" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">
+<text x="50" y="44" fill="var(--text-muted)">ROLE × THEME MATRIX · 14 ANONYMOUS UI THEMES</text>
+<g fill="var(--text-primary)" font-size="12">
+<text x="50" y="118">SURFACES</text><text x="50" y="176">ACTIONS</text><text x="50" y="234">SELECTION</text><text x="50" y="292">NAVIGATION</text><text x="50" y="350">BORDERS</text><text x="50" y="408">STATUS</text><text x="50" y="466">TYPOGRAPHY</text>
+</g>
+<g fill="color-mix(in srgb, var(--text-primary) 16%, transparent)">
+<rect x="250" y="100" width="40" height="22"></rect><rect x="296" y="100" width="40" height="22"></rect><rect x="342" y="100" width="40" height="22"></rect><rect x="388" y="100" width="40" height="22"></rect><rect x="434" y="100" width="40" height="22"></rect><rect x="480" y="100" width="40" height="22"></rect><rect x="526" y="100" width="40" height="22"></rect><rect x="572" y="100" width="40" height="22"></rect><rect x="618" y="100" width="40" height="22"></rect><rect x="664" y="100" width="40" height="22"></rect><rect x="710" y="100" width="40" height="22"></rect><rect x="756" y="100" width="40" height="22"></rect><rect x="802" y="100" width="40" height="22"></rect><rect x="848" y="100" width="12" height="22"></rect>
+<rect x="250" y="158" width="40" height="22"></rect><rect x="296" y="158" width="40" height="22"></rect><rect x="342" y="158" width="40" height="22"></rect><rect x="388" y="158" width="40" height="22"></rect><rect x="434" y="158" width="40" height="22"></rect><rect x="480" y="158" width="40" height="22"></rect><rect x="526" y="158" width="40" height="22"></rect><rect x="572" y="158" width="40" height="22"></rect><rect x="618" y="158" width="40" height="22"></rect><rect x="664" y="158" width="40" height="22"></rect><rect x="710" y="158" width="40" height="22"></rect><rect x="756" y="158" width="40" height="22"></rect><rect x="802" y="158" width="40" height="22"></rect><rect x="848" y="158" width="12" height="22"></rect>
+<rect x="250" y="216" width="40" height="22"></rect><rect x="296" y="216" width="40" height="22"></rect><rect x="342" y="216" width="40" height="22"></rect><rect x="388" y="216" width="40" height="22"></rect><rect x="434" y="216" width="40" height="22"></rect><rect x="480" y="216" width="40" height="22"></rect><rect x="526" y="216" width="40" height="22"></rect><rect x="572" y="216" width="40" height="22"></rect><rect x="618" y="216" width="40" height="22"></rect><rect x="664" y="216" width="40" height="22"></rect><rect x="710" y="216" width="40" height="22"></rect><rect x="756" y="216" width="40" height="22"></rect><rect x="802" y="216" width="40" height="22"></rect><rect x="848" y="216" width="12" height="22"></rect>
+<rect x="250" y="274" width="40" height="22"></rect><rect x="296" y="274" width="40" height="22"></rect><rect x="342" y="274" width="40" height="22"></rect><rect x="388" y="274" width="40" height="22"></rect><rect x="434" y="274" width="40" height="22"></rect><rect x="480" y="274" width="40" height="22"></rect><rect x="526" y="274" width="40" height="22"></rect><rect x="572" y="274" width="40" height="22"></rect><rect x="618" y="274" width="40" height="22"></rect><rect x="664" y="274" width="40" height="22"></rect><rect x="710" y="274" width="40" height="22"></rect><rect x="756" y="274" width="40" height="22"></rect><rect x="802" y="274" width="40" height="22"></rect><rect x="848" y="274" width="12" height="22"></rect>
+<rect x="250" y="332" width="40" height="22"></rect><rect x="296" y="332" width="40" height="22"></rect><rect x="342" y="332" width="40" height="22"></rect><rect x="388" y="332" width="40" height="22"></rect><rect x="434" y="332" width="40" height="22"></rect><rect x="480" y="332" width="40" height="22"></rect><rect x="526" y="332" width="40" height="22"></rect><rect x="572" y="332" width="40" height="22"></rect><rect x="618" y="332" width="40" height="22"></rect><rect x="664" y="332" width="40" height="22"></rect><rect x="710" y="332" width="40" height="22"></rect><rect x="756" y="332" width="40" height="22"></rect><rect x="802" y="332" width="40" height="22"></rect><rect x="848" y="332" width="12" height="22"></rect>
+<rect x="250" y="390" width="40" height="22"></rect><rect x="296" y="390" width="40" height="22"></rect><rect x="342" y="390" width="40" height="22"></rect><rect x="388" y="390" width="40" height="22"></rect><rect x="434" y="390" width="40" height="22"></rect><rect x="480" y="390" width="40" height="22"></rect><rect x="526" y="390" width="40" height="22"></rect><rect x="572" y="390" width="40" height="22"></rect><rect x="618" y="390" width="40" height="22"></rect><rect x="664" y="390" width="40" height="22"></rect><rect x="710" y="390" width="40" height="22"></rect><rect x="756" y="390" width="40" height="22"></rect><rect x="802" y="390" width="40" height="22"></rect><rect x="848" y="390" width="12" height="22"></rect>
+<rect x="250" y="448" width="40" height="22"></rect><rect x="296" y="448" width="40" height="22"></rect><rect x="342" y="448" width="40" height="22"></rect><rect x="388" y="448" width="40" height="22"></rect><rect x="434" y="448" width="40" height="22"></rect><rect x="480" y="448" width="40" height="22"></rect><rect x="526" y="448" width="40" height="22"></rect><rect x="572" y="448" width="40" height="22"></rect><rect x="618" y="448" width="40" height="22"></rect><rect x="664" y="448" width="40" height="22"></rect><rect x="710" y="448" width="40" height="22"></rect><rect x="756" y="448" width="40" height="22"></rect><rect x="802" y="448" width="40" height="22"></rect><rect x="848" y="448" width="12" height="22"></rect>
+</g>
+<g fill="color-mix(in srgb, var(--accent-green) 40%, transparent)">
+<rect x="342" y="158" width="40" height="22"></rect><rect x="572" y="158" width="40" height="22"></rect><rect x="756" y="158" width="40" height="22"></rect>
+<rect x="296" y="216" width="40" height="22"></rect><rect x="664" y="216" width="40" height="22"></rect>
+</g>
+<g fill="color-mix(in srgb, var(--accent-cyan) 35%, transparent)">
+<rect x="480" y="274" width="40" height="22"></rect><rect x="802" y="390" width="40" height="22"></rect>
+</g>
+<path d="M50 500 H860" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<text x="50" y="536" fill="var(--text-muted)">SAME ROLES EVERYWHERE · VALUES CHANGE PER THEME</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="preserve vs improve" title="Modernization does not mean changing everything." hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">Some patterns represented UX debt. Others represented customer familiarity. The work was to tell the two apart.</p>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-7);margin-top:var(--space-7)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--accent-cyan)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">preserve familiarity</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Patterns customers already understood.</p>
+<div style="display:grid;gap:var(--space-3)">
+<sc-for list="{{ preserve }}" as="item" hint-placeholder-count="6">
+<span style="padding:var(--space-3) var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:var(--text-small);line-height:1.5;color:var(--text-primary)">{{ item }}</span>
+</sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">improve inconsistency</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Areas creating unnecessary friction.</p>
+<div style="display:grid;gap:var(--space-3)">
+<sc-for list="{{ improve }}" as="item" hint-placeholder-count="7">
+<span style="padding:var(--space-3) var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:var(--text-small);line-height:1.5;color:var(--text-primary)">{{ item }}</span>
+</sc-for>
+</div>
+</div>
+</div>
+<p style="margin:var(--space-7) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.7;color:var(--text-primary)">The objective was not to make the CRM feel like a different product. It was to make the existing product clearer, more consistent and easier to evolve.</p>
+</section>
+
+<section style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="06" kicker="outcome and customer response" title="The visual result was cleaner. Customer reaction taught me something more important." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5) var(--space-6);margin-top:var(--space-6)">
+<sc-for list="{{ outcomes }}" as="item" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ item.n }} — {{ item.title }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ item.text }}</span>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The updated interface was visually calmer and more readable. Some long-time customers still reacted negatively to the change.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">They were not only reacting to aesthetics. They were reacting to changes in an environment they knew extremely well. A familiar enterprise interface becomes part of how people perform their jobs.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">The cost of change is not only implementation. It is relearning.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">what changed in my approach</span>
+<div style="display:grid;gap:var(--space-3)">
+<sc-for list="{{ lessons }}" as="item" hint-placeholder-count="5">
+<span style="padding:var(--space-3) var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:var(--text-small);line-height:1.5;color:var(--text-primary)">{{ item }}</span>
+</sc-for>
+</div>
+<p style="margin:var(--space-3) 0 0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Later modernization work became more incremental. Instead of treating legacy patterns as something to replace automatically, I became deliberate about separating patterns that create usability problems, patterns that simply look old, and patterns that carry valuable user familiarity.</p>
+</div>
+</div>
+<p style="margin:var(--space-8) 0 0;max-width:var(--measure);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-primary)">Modernizing enterprise software is not about making an old interface look new. It is about deciding what should change, what should remain familiar, and creating a system that can evolve without forcing customers to relearn their work.</p>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4);margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<p style="margin:0;flex:1;min-width:280px;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One foundation, fourteen UI themes, and a clearer way to modernize.</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="200px,52px">More work streams</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#contact" variant="secondary" size="lg" icon="mail" hint-size="150px,52px">Get in touch</x-import>
+</div>
+</div>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "beyond the work", href: "index.html#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      needs: [
+        "align the CRM with the updated brand",
+        "work across both Sales and Service",
+        "support all existing UI themes",
+        "be implementable in the technologies already in use",
+        "provide a stronger base for future product development",
+        "avoid unnecessary disruption to established workflows",
+      ],
+      sequence: [
+        { n: "01", title: "understand", text: "Inventory how the existing UI was actually implemented, with the developers who maintain it." },
+        { n: "02", title: "audit", text: "Identify every surface where the visual system appeared, from navigation to warning states." },
+        { n: "03", title: "define roles", text: "Decide what colours meant before deciding what values they would take." },
+        { n: "04", title: "map", text: "Translate those roles across all fourteen supported UI themes." },
+        { n: "05", title: "validate", text: "Review the themes inside the real product environment, not in isolation." },
+        { n: "06", title: "standardize", text: "Apply the same principles to typography, icons and reusable components." },
+        { n: "07", title: "build", text: "Design new features on an established system instead of a new independent direction." },
+      ],
+      preserve: [
+        "workflow sequence",
+        "familiar navigation",
+        "common task structure",
+        "frequently used actions",
+        "terminology users relied on",
+        "established product behaviour",
+      ],
+      improve: [
+        "visual noise",
+        "inconsistent hierarchy",
+        "unnecessary gradients",
+        "inconsistent component styles",
+        "unclear colour roles",
+        "inconsistent typography",
+        "accessibility problems",
+      ],
+      outcomes: [
+        { n: "01", title: "one foundation", text: "Sales and Service moved onto the same updated visual principles." },
+        { n: "02", title: "14 / 14 UI themes", text: "The full supported theme system was brought onto the new foundation." },
+        { n: "03", title: "future work unblocked", text: "New experiences could be designed on an established system rather than a new UI direction." },
+        { n: "04", title: "component base", text: "The work expanded beyond colour into typography, icons and reusable components." },
+        { n: "05", title: "less inconsistency", text: "The interface became calmer and more readable." },
+        { n: "06", title: "better strategy", text: "Customer reaction changed how later legacy modernization was approached." },
+      ],
+      lessons: [
+        "smaller increments",
+        "earlier validation",
+        "stronger preservation of established workflows",
+        "a clear line between usability debt and visual age",
+        "more customer involvement before changing familiar behaviour",
+      ],
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
+        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

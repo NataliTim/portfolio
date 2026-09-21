@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@keyframes ds-blink{0%,49%{opacity:1}50%,100%{opacity:0}}@keyframes ds-pulse{0%,100%{opacity:.35}50%{opacity:1}}@media (prefers-reduced-motion:reduce){[style*="ds-pulse"]{animation:none !important}}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
+<a href="index.html#work" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">02 / work stream</div>
+<h1 style="margin:0;max-width:24ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Dealer Management System Modernization</h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">Improving usability, consistency and maintainability while preserving the workflows customers already relied on.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" platform="saas" hint-size="auto,22px">SaaS · Cloud</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Legacy modernization</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">UX standards</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Interaction patterns</x-import>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4);padding-top:var(--space-5);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="1300+" label="Windows in scope" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="47K+" label="Labels analyzed and standardized" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="10×" label="Fewer popups and warning messages" tone="cyan" hint-size="100%,90px"></x-import>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,220px));gap:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
+<div style="display:flex;flex-direction:column;gap:6px"><span>role</span><span style="color:var(--text-primary)">Manager of Product Design</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span>scope</span><span style="color:var(--text-primary)">Dealer Management System</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span>focus</span><span style="color:var(--text-primary)">Incremental modernization</span></div>
+</div>
+</div>
+</header>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="01" kicker="business challenge" title="Decades of workflow, used every day." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The Dealer Management System had evolved over several decades and supported deeply established workflows used by experienced dealership teams every day.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The challenge was not simply to modernize the interface. Any significant change to familiar interaction patterns could slow users down, increase training needs, and create resistance.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">The business needed a way to improve usability, consistency, and maintainability while preserving the workflows customers already relied on.</p>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 10">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 560" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="0.1em">
+<text x="50" y="60" fill="var(--text-muted)">RISK BALANCE</text>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 18%, transparent)" stroke-width="1">
+<rect x="50" y="100" width="360" height="140" rx="3"></rect>
+<rect x="490" y="100" width="360" height="140" rx="3"></rect>
+<rect x="50" y="300" width="360" height="140" rx="3"></rect>
+</g>
+<rect x="490" y="300" width="360" height="140" rx="3" fill="color-mix(in srgb, var(--accent-green) 8%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<g fill="var(--text-primary)" font-size="14">
+<text x="70" y="140">SLOWER USERS</text>
+<text x="510" y="140">MORE TRAINING</text>
+<text x="70" y="340">RESISTANCE</text>
+</g>
+<text x="510" y="340" fill="var(--accent-green)" font-size="14">PRESERVED SPEED</text>
+<g fill="var(--text-muted)" font-size="11">
+<text x="70" y="170">CHANGED INTERACTION</text><text x="70" y="190">PATTERNS</text>
+<text x="510" y="170">RELEARNING WHAT</text><text x="510" y="190">ALREADY WORKED</text>
+<text x="70" y="370">CHANGE FOR ITS</text><text x="70" y="390">OWN SAKE</text>
+<text x="510" y="370">FAMILIAR WORKFLOW,</text><text x="510" y="390">CLEARER INTERFACE</text>
+</g>
+<path d="M50 490 H850" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<text x="50" y="524" fill="var(--text-muted)" font-size="11">MUSCLE MEMORY BUILT OVER YEARS IS PART OF THE PRODUCT</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="design challenge" title="Inconsistencies accumulated as screens evolved independently." hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">The product had accumulated inconsistencies over time as different screens and features evolved independently. The key design questions were:</p>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5) var(--space-7);margin-top:var(--space-6)">
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">01</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">How can we improve clarity without disrupting established user behavior?</span></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">02</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Which patterns should remain familiar, and which inconsistencies should be standardized?</span></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">03</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">How can we improve information hierarchy, labeling, navigation, and field placement across a large legacy application?</span></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">04</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">How can new AI-assisted design and development workflows make modernization of a large legacy product more scalable?</span></div>
+</div>
+<p style="margin:var(--space-7) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The goal was not to redesign everything from scratch, but to identify the highest-value improvements and introduce them systematically.</p>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="design solution" title="Five moves, in the order they had to happen." hint-size="100%,140px"></x-import>
+
+<div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">01</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Analyze the Existing Experience</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">I started by reviewing existing workflows and identifying recurring usability issues across representative screens.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Rather than treating each screen as an isolated design problem, I looked for systemic patterns that could become reusable product standards.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">the analysis focused on</span>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)">
+<sc-for list="{{ analysis }}" as="item" hint-placeholder-count="7">
+<span style="padding:var(--space-3) var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:var(--text-small);line-height:1.5;color:var(--text-primary)">{{ item }}</span>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-7);align-items:center;margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">02</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Data-Driven Labeling and Information Architecture</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Labels and field groupings were evaluated based on how users actually scan and complete the interface.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The goal was to reduce cognitive load while preserving terminology and concepts already familiar to experienced users.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Low-fidelity wireframes helped test alternative layouts and information hierarchies before introducing visual changes.</p>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 9">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 500" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.1em">
+<text x="40" y="50" fill="var(--text-muted)">UNGROUPED FIELDS</text>
+<text x="500" y="50" fill="var(--accent-green)">GROUPED BY TASK</text>
+<path d="M460 30 V470" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<g fill="color-mix(in srgb, var(--text-primary) 10%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 18%, transparent)" stroke-width="1">
+<rect x="40" y="80" width="170" height="26"></rect><rect x="230" y="80" width="170" height="26"></rect>
+<rect x="40" y="126" width="170" height="26"></rect><rect x="230" y="126" width="170" height="26"></rect>
+<rect x="40" y="172" width="170" height="26"></rect><rect x="230" y="172" width="170" height="26"></rect>
+<rect x="40" y="218" width="170" height="26"></rect><rect x="230" y="218" width="170" height="26"></rect>
+<rect x="40" y="264" width="170" height="26"></rect><rect x="230" y="264" width="170" height="26"></rect>
+<rect x="40" y="310" width="170" height="26"></rect><rect x="230" y="310" width="170" height="26"></rect>
+</g>
+<text x="40" y="378" fill="var(--text-muted)" font-size="11">NO HIERARCHY · LABELS INCONSISTENT</text>
+<g fill="none" stroke="color-mix(in srgb, var(--accent-green) 40%, transparent)" stroke-width="1">
+<rect x="500" y="70" width="360" height="120" rx="3"></rect>
+<rect x="500" y="210" width="360" height="94" rx="3"></rect>
+<rect x="500" y="324" width="360" height="94" rx="3"></rect>
+</g>
+<g fill="var(--accent-green)" font-size="11">
+<text x="516" y="92">VEHICLE</text><text x="516" y="232">CUSTOMER</text><text x="516" y="346">PRICING</text>
+</g>
+<g fill="color-mix(in srgb, var(--accent-green) 30%, transparent)">
+<rect x="516" y="104" width="160" height="22"></rect><rect x="690" y="104" width="154" height="22"></rect>
+<rect x="516" y="136" width="160" height="22"></rect><rect x="690" y="136" width="154" height="22"></rect>
+<rect x="516" y="244" width="160" height="22"></rect><rect x="690" y="244" width="154" height="22"></rect>
+<rect x="516" y="272" width="160" height="22"></rect>
+<rect x="516" y="358" width="160" height="22"></rect><rect x="690" y="358" width="154" height="22"></rect>
+<rect x="516" y="386" width="160" height="22"></rect>
+</g>
+<g fill="var(--accent-green)"><circle cx="686" cy="115" r="3"></circle><circle cx="686" cy="255" r="3"></circle><circle cx="686" cy="369" r="3"></circle></g>
+<text x="500" y="452" fill="var(--text-muted)" font-size="11">REQUIRED FIELDS VISIBLE · TAB ORDER FOLLOWS THE TASK</text>
+</svg>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">03</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Establish Consistent Interaction Patterns</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">I evaluated recurring patterns such as:</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Patterns were standardized where inconsistency created unnecessary friction, while intentionally preserving workflows that users already understood.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)">
+<sc-for list="{{ patterns }}" as="item" hint-placeholder-count="7">
+<span style="padding:var(--space-3) var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:var(--text-small);line-height:1.5;color:var(--text-primary)">{{ item }}</span>
+</sc-for>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">04</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Validate Without Disrupting Existing Workflows</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Because dealer users often build significant speed and muscle memory over years of using the system, even seemingly small interaction changes can have a large impact.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">This allowed us to distinguish between visual inconsistency and interaction patterns that were important to keep.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">prototypes were reviewed with users to understand</span>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4)">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-3);border-top:1px solid var(--accent-green)"><span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">whether changes improved clarity</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-3);border-top:1px solid var(--accent-green)"><span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">whether they affected workflow speed</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-3);border-top:1px solid var(--accent-green)"><span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">whether familiar patterns were preserved</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-3);border-top:1px solid var(--accent-green)"><span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">where modernization could be introduced safely</span></div>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-7);align-items:center;margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">05</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Use New Technology to Scale Modernization</h3>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Modern AI-assisted design and development tools made it possible to approach legacy-product modernization differently.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Design standards, layout rules, and reusable patterns could be translated into structured guidance and automation, reducing the amount of manual work required to modernize a large number of legacy screens.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Instead of redesigning hundreds of screens individually, the approach began shifting toward a scalable system for identifying, validating, and applying improvements.</p>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 9">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 500" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.1em">
+<text x="40" y="52" fill="var(--text-muted)">SCREEN BY SCREEN</text>
+<text x="500" y="52" fill="var(--accent-green)">STRUCTURED GUIDANCE</text>
+<path d="M460 30 V470" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<g fill="color-mix(in srgb, var(--text-primary) 8%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1">
+<rect x="40" y="78" width="74" height="52"></rect><rect x="124" y="78" width="74" height="52"></rect><rect x="208" y="78" width="74" height="52"></rect><rect x="292" y="78" width="74" height="52"></rect>
+<rect x="40" y="142" width="74" height="52"></rect><rect x="124" y="142" width="74" height="52"></rect><rect x="208" y="142" width="74" height="52"></rect><rect x="292" y="142" width="74" height="52"></rect>
+<rect x="40" y="206" width="74" height="52"></rect><rect x="124" y="206" width="74" height="52"></rect><rect x="208" y="206" width="74" height="52"></rect><rect x="292" y="206" width="74" height="52"></rect>
+<rect x="40" y="270" width="74" height="52"></rect><rect x="124" y="270" width="74" height="52"></rect><rect x="208" y="270" width="74" height="52"></rect><rect x="292" y="270" width="74" height="52"></rect>
+</g>
+<text x="40" y="366" fill="var(--text-muted)" font-size="11">HUNDREDS OF SCREENS, ONE AT A TIME</text>
+<rect x="500" y="78" width="360" height="72" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<text x="516" y="106" fill="var(--accent-green)">DESIGN STANDARDS · LAYOUT RULES</text>
+<text x="516" y="130" fill="var(--text-muted)" font-size="11">REUSABLE INTERACTION PATTERNS</text>
+<g fill="none" stroke="var(--accent-green)" stroke-width="1.2">
+<path d="M680 150 V186 M560 226 V186 H800 V226"></path>
+<path d="M554 220 L560 228 L566 220 M674 220 L680 228 L686 220 M794 220 L800 228 L806 220"></path>
+<path d="M680 186 V226"></path>
+</g>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 20%, transparent)" stroke-width="1">
+<rect x="500" y="236" width="120" height="66" rx="3"></rect><rect x="620" y="236" width="120" height="66" rx="3"></rect><rect x="740" y="236" width="120" height="66" rx="3"></rect>
+</g>
+<g fill="var(--text-muted)" font-size="11"><text x="514" y="274">IDENTIFY</text><text x="634" y="274">VALIDATE</text><text x="754" y="274">APPLY</text></g>
+<g fill="var(--accent-green)"><circle cx="560" cy="330" r="3" style="animation:ds-pulse 3.2s ease-in-out infinite"></circle><circle cx="680" cy="330" r="3" style="animation:ds-pulse 3.2s ease-in-out .8s infinite"></circle><circle cx="800" cy="330" r="3" style="animation:ds-pulse 3.2s ease-in-out 1.6s infinite"></circle></g>
+<text x="500" y="366" fill="var(--accent-green)" font-size="11">APPLIED ACROSS MANY SCREENS AT ONCE</text>
+<path d="M40 420 H860" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<text x="40" y="452" fill="var(--text-muted)" font-size="11">THE DESIGN SYSTEM STAYS THE SOURCE OF TRUTH · AI SPEEDS UP THE WORK, NOT THE DECISIONS</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="the rule we worked to" title="Change only where it is self-explanatory and necessary." hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">Customers have worked in this application for over a decade. Speed comes from muscle memory, so every proposed change had to earn its place: it had to make the product clearer, not just newer.</p>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6);margin-top:var(--space-7)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">standards</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">Heuristics, information architecture, accessibility</h3>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Screens were measured against usability heuristics, information-architecture principles and accessibility standards, and brought in line with the design system rather than restyled screen by screen.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">interviews</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">Essential changes only, confirmed by users</h3>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">User interviews were run throughout so that what shipped was essential. Where a change added value only on paper, the familiar pattern stayed — the existing day-to-day process was never disturbed for its own sake.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">onboarding</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">Clarity that shortens training</h3>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Consistent labeling, grouping and action placement make the product self-explanatory, so new staff are trained and onboarded on one set of patterns instead of a different convention per screen.</p>
+</div>
+</div>
+</section>
+
+<section style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="business outcome" title="A foundation for modernization without a disruptive redesign." hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">The work established a foundation for incremental modernization of a mature Dealer Management System without requiring a disruptive redesign. Key outcomes included:</p>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5) var(--space-6);margin-top:var(--space-6)">
+<sc-for list="{{ outcomes }}" as="item" hint-placeholder-count="7">
+<div style="display:flex;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">{{ item.n }}</span><span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ item.text }}</span></div>
+</sc-for>
+</div>
+<p style="margin:var(--space-7) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.7;color:var(--text-secondary)">Most importantly, the project demonstrated that legacy-product modernization does not require replacing familiar workflows. By combining user research, systematic UX analysis, design standards, and new technology, the product can evolve gradually while protecting the speed and familiarity experienced users depend on.</p>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4);margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<p style="margin:0;flex:1;min-width:280px;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Modernizing a product people already know how to use.</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="200px,52px">More work streams</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#contact" variant="secondary" size="lg" icon="mail" hint-size="150px,52px">Get in touch</x-import>
+</div>
+</div>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "beyond the work", href: "index.html#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      analysis: [
+        "information hierarchy",
+        "field grouping",
+        "labeling",
+        "required-field visibility",
+        "action placement",
+        "tabbing and navigation patterns",
+        "consistency between similar workflows",
+      ],
+      patterns: [
+        "placement of primary and secondary actions",
+        "Save, Update, Delete, Post, and Exit actions",
+        "required fields",
+        "lookup and list-of-value controls",
+        "dropdown behavior",
+        "navigation between fields",
+        "section organization",
+      ],
+      outcomes: [
+        { n: "01", text: "clearer cross-product UX standards" },
+        { n: "02", text: "improved consistency across common workflows" },
+        { n: "03", text: "identification and prioritization of UX debt" },
+        { n: "04", text: "reusable interaction and layout patterns" },
+        { n: "05", text: "reduced design and implementation effort for future improvements" },
+        { n: "06", text: "a framework for AI-assisted modernization of legacy interfaces" },
+        { n: "07", text: "stronger validation of design decisions through customer feedback" },
+      ],
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
+        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

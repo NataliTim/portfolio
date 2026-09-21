@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@keyframes ds-blink{0%,49%{opacity:1}50%,100%{opacity:0}}@keyframes hero-flow{to{stroke-dashoffset:-1200}}@keyframes hero-msg{0%{opacity:0;transform:translateY(10px)}8%{opacity:1;transform:none}25%{opacity:1;transform:none}33%{opacity:0;transform:translateY(-8px)}100%{opacity:0;transform:translateY(-8px)}}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<section style="position:relative;overflow:hidden;padding:var(--space-10) var(--gutter) var(--space-9);border-bottom:var(--border-width) solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="{{ gridSize }}" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--space-8);align-items:center">
+<div style="display:flex;flex-direction:column;gap:var(--space-6)">
+<div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">
+<span style="width:7px;height:7px;border-radius:var(--radius-pill);background:var(--accent-green);animation:ds-blink 1.6s steps(1, end) infinite"></span>
+Product Design Manager
+</div>
+<h1 style="font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display);max-width:18ch">I design systems, <span style="color:var(--accent-green)">not screens.</span></h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);color:var(--text-secondary)">UX/UI/AI evangelist, 15+ years in<br>setting the direction for how products evolve into one consistent system.</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#contact" icon="send" size="lg" hint-size="160px,52px">Connect</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#work" icon="arrow-down" variant="secondary" size="lg" hint-size="180px,52px">Case studies</x-import>
+</div>
+</div>
+<div style="position:relative;aspect-ratio:4/5;border:var(--border-width) solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--bg-deep)">
+<svg viewBox="0 0 400 500" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+<g fill="none" stroke="var(--accent-green)" stroke-linecap="round" stroke-dasharray="220 900" style="animation:hero-flow 14s linear infinite">
+<path d="M-20 430 C 140 430, 150 300, 250 300 S 340 190, 420 190" stroke-width="2.5" opacity=".95"></path>
+<path d="M-20 452 C 150 452, 160 322, 258 322 S 348 212, 420 212" stroke-width="1.5" opacity=".6"></path>
+<path d="M-20 474 C 160 474, 170 344, 266 344 S 356 234, 420 234" stroke-width="1" opacity=".38"></path>
+<path d="M-20 408 C 130 408, 140 278, 242 278 S 332 168, 420 168" stroke-width="1" opacity=".3"></path>
+</g>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 10%, transparent)" stroke-width="1">
+<path d="M-20 360 H 200"></path>
+<path d="M-20 386 H 150"></path>
+<path d="M300 470 H 420"></path>
+<rect x="34" y="70" width="120" height="86" rx="4"></rect>
+<rect x="230" y="120" width="130" height="70" rx="4"></rect>
+</g>
+</svg>
+<div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:var(--space-5)">
+<div style="position:relative;min-height:104px">
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">Consistency</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">One language, every product</span>
+</div>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) 4s infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">System</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Component libraries that scale</span>
+</div>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) 8s infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">Strategy</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">How the product evolves</span>
+</div>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) 12s infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">Bridge</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Closing the gap with AI</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="connect" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2)">
+<sc-for list="{{ flow }}" as="node" hint-placeholder-count="4">
+<div style="min-width:0;display:flex;align-items:stretch;gap:var(--space-2)">
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background:var(--surface-card);border:1px solid {{ node.border }};border-radius:var(--radius-md)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ node.tone }}">{{ node.label }}</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">{{ node.title }}</span>
+</div>
+<span style="display:flex;align-items:center;color:var(--text-muted);font-family:var(--font-mono);font-size:14px">{{ node.arrow }}</span>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="work" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="work streams" title="The work, the leadership behind it, and the decisions that moved the needle on quality of experience." hint-size="100%,160px"></x-import>
+<div style="display:flex;flex-direction:column;margin-top:var(--space-6)">
+
+<article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
+<div style="position:relative;overflow:hidden;aspect-ratio:4 / 3;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 480 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.1em">
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1">
+<path d="M240 168 L100 96 M240 168 L380 96 M240 168 L100 250 M240 168 L380 250"></path>
+<rect x="30" y="66" width="140" height="52" rx="3"></rect>
+<rect x="310" y="66" width="140" height="52" rx="3"></rect>
+<rect x="30" y="222" width="140" height="52" rx="3"></rect>
+<rect x="310" y="222" width="140" height="52" rx="3"></rect>
+</g>
+<rect x="168" y="142" width="144" height="54" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<g fill="var(--text-muted)">
+<text x="46" y="96">TOKENS AS CODE</text>
+<text x="326" y="96">COMPONENT REPO</text>
+<text x="46" y="252">AI-ASSISTED BUILD</text>
+<text x="326" y="252">GENERATED DOCS</text>
+</g>
+<text x="196" y="174" fill="var(--accent-green)">DESIGN SYSTEM</text>
+<text x="199" y="188" fill="var(--text-muted)" font-size="9">SOURCE OF TRUTH</text>
+</svg>
+<span style="position:absolute;left:var(--space-4);bottom:var(--space-4);font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">source-of-truth diagram</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">01</div>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Process Transformation for the AI Era</h3>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Rebuilt the entire design process so that the design system is the source of truth — the foundation that turns AI-assisted design into a deterministic approach rather than a generated guess.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">AI</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Process</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design–development bridge</x-import>
+</div>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">The shift in what counts as the source of truth, and the pipeline that makes it work.</p>
+<div style="margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-01-process.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
+</div>
+</div>
+</article>
+
+<article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">02 · Dealer management system</div>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Modernizing a Dealer Management System Customers Have Used for Over a Decade</h3>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Directed the modernization of a large dealer management system: consistency, standardization, and consistent application of the design system, with every change validated through UX analysis and user interviews.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" platform="saas" hint-size="auto,22px">SaaS · Cloud</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Modernization</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">New features</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Technology migration</x-import>
+</div>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">Standards, heuristics and accessibility applied across a legacy product — changing only what is self-explanatory and necessary, so muscle memory built over a decade stays intact.</p>
+<div style="margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-02-dms.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
+</div>
+</div>
+<div style="position:relative;overflow:hidden;aspect-ratio:4 / 3;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 480 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.1em">
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1">
+<rect x="22" y="52" width="170" height="66" rx="3"></rect><path d="M22 72 H192"></path>
+<rect x="22" y="136" width="170" height="66" rx="3"></rect><path d="M22 156 H192"></path>
+<rect x="22" y="220" width="170" height="66" rx="3"></rect><path d="M22 240 H192"></path>
+<rect x="288" y="52" width="170" height="66" rx="3"></rect><path d="M288 72 H458"></path>
+<rect x="288" y="220" width="170" height="66" rx="3"></rect><path d="M288 240 H458"></path>
+<path d="M204 85 H274 M204 253 H274"></path>
+</g>
+<rect x="288" y="136" width="170" height="66" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<path d="M288 156 H458" stroke="var(--accent-green)" stroke-width="1"></path>
+<path d="M204 169 H274" stroke="var(--accent-green)" stroke-width="1.5"></path>
+<path d="M268 164 L276 169 L268 174" fill="none" stroke="var(--accent-green)" stroke-width="1.5"></path>
+<g fill="color-mix(in srgb, var(--text-primary) 12%, transparent)">
+<rect x="34" y="84" width="90" height="7"></rect><rect x="34" y="97" width="60" height="7"></rect>
+<rect x="34" y="168" width="90" height="7"></rect><rect x="34" y="181" width="60" height="7"></rect>
+<rect x="34" y="252" width="90" height="7"></rect><rect x="34" y="265" width="60" height="7"></rect>
+<rect x="300" y="84" width="120" height="7"></rect><rect x="300" y="97" width="80" height="7"></rect>
+<rect x="300" y="252" width="120" height="7"></rect><rect x="300" y="265" width="80" height="7"></rect>
+</g>
+<g fill="color-mix(in srgb, var(--accent-green) 55%, transparent)"><rect x="300" y="168" width="120" height="7"></rect><rect x="300" y="181" width="80" height="7"></rect></g>
+<text x="22" y="38" fill="var(--text-muted)">LEGACY</text>
+<text x="288" y="38" fill="var(--text-muted)">MODERN</text>
+</svg>
+<span style="position:absolute;left:var(--space-4);bottom:var(--space-4);font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">legacy screen vs standardized layout</span>
+</div>
+</article>
+
+<article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
+<div style="position:relative;overflow:hidden;aspect-ratio:4 / 3;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 480 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.1em">
+<g fill="color-mix(in srgb, var(--text-primary) 6%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1">
+<rect x="22" y="56" width="56" height="56"></rect><rect x="88" y="56" width="56" height="56"></rect><rect x="154" y="56" width="56" height="56"></rect><rect x="220" y="56" width="56" height="56"></rect><rect x="286" y="56" width="56" height="56"></rect><rect x="352" y="56" width="56" height="56"></rect><rect x="418" y="56" width="40" height="56"></rect>
+<rect x="22" y="122" width="56" height="56"></rect><rect x="88" y="122" width="56" height="56"></rect><rect x="220" y="122" width="56" height="56"></rect><rect x="286" y="122" width="56" height="56"></rect><rect x="352" y="122" width="56" height="56"></rect><rect x="418" y="122" width="40" height="56"></rect>
+</g>
+<rect x="154" y="122" width="56" height="56" fill="color-mix(in srgb, var(--accent-green) 12%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<g fill="color-mix(in srgb, var(--text-primary) 14%, transparent)">
+<rect x="22" y="236" width="42" height="18"></rect><rect x="70" y="236" width="42" height="18" fill="color-mix(in srgb, var(--text-primary) 20%, transparent)"></rect><rect x="118" y="236" width="42" height="18" fill="color-mix(in srgb, var(--text-primary) 28%, transparent)"></rect><rect x="166" y="236" width="42" height="18" fill="color-mix(in srgb, var(--text-primary) 36%, transparent)"></rect><rect x="214" y="236" width="42" height="18" fill="color-mix(in srgb, var(--accent-cyan) 35%, transparent)"></rect><rect x="262" y="236" width="42" height="18" fill="color-mix(in srgb, var(--accent-green) 45%, transparent)"></rect><rect x="310" y="236" width="42" height="18" fill="color-mix(in srgb, var(--text-primary) 22%, transparent)"></rect><rect x="358" y="236" width="42" height="18" fill="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><rect x="406" y="236" width="52" height="18" fill="color-mix(in srgb, var(--text-primary) 10%, transparent)"></rect>
+</g>
+<text x="22" y="42" fill="var(--text-muted)">14 UI THEMES</text>
+<text x="22" y="224" fill="var(--text-muted)">ONE TOKEN RAMP</text>
+</svg>
+<span style="position:absolute;left:var(--space-4);bottom:var(--space-4);font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">theme matrix</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">03 · Sales and service CRM</div>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One Colour System, Fourteen UI Themes</h3>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Led a global update of all fourteen UI themes across a sales and service CRM, grounded in a full analysis of the existing interface and every technology in use across the product.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" platform="web" hint-size="auto,22px">Web</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Foundation work</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">UI audit</x-import>
+</div>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">The analysis-first method — auditing every surface and every technology in use de-risked a change that touched the whole product.</p>
+<div style="margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-03-crm.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
+</div>
+</div>
+</article>
+
+<article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">04 · Accessories e-commerce</div>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Rebuilding Automotive Accessories E-commerce</h3>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">A full redesign of an automotive-accessories platform deeply integrated with OEM and dealer websites — plus running design and operations for an online store of more than a thousand products.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">E-commerce</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Full redesign</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Integrations</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">User research</x-import>
+</div>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">The validated flow rework — omni-search, fewer steps, and hidden information brought into the open, all tested against real users.</p>
+<div style="margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-04-accessories.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
+</div>
+</div>
+<div style="position:relative;overflow:hidden;aspect-ratio:4 / 3;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 480 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.1em">
+<rect x="22" y="30" width="436" height="30" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<text x="34" y="49" fill="var(--accent-green)">OMNI-SEARCH</text>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1">
+<rect x="22" y="76" width="96" height="210" rx="3"></rect>
+<rect x="134" y="76" width="150" height="100" rx="3"></rect>
+<rect x="300" y="76" width="158" height="100" rx="3"></rect>
+<rect x="134" y="186" width="150" height="100" rx="3"></rect>
+</g>
+<g fill="color-mix(in srgb, var(--text-primary) 12%, transparent)">
+<rect x="34" y="90" width="60" height="7"></rect><rect x="34" y="106" width="72" height="7"></rect><rect x="34" y="122" width="48" height="7"></rect><rect x="34" y="138" width="66" height="7"></rect><rect x="34" y="154" width="54" height="7"></rect><rect x="34" y="170" width="70" height="7"></rect><rect x="34" y="186" width="44" height="7"></rect>
+<rect x="146" y="88" width="80" height="46"></rect><rect x="146" y="144" width="100" height="7"></rect><rect x="146" y="157" width="60" height="7"></rect>
+<rect x="146" y="198" width="80" height="46"></rect><rect x="146" y="254" width="100" height="7"></rect><rect x="146" y="267" width="60" height="7"></rect>
+</g>
+<rect x="300" y="186" width="158" height="100" rx="3" fill="color-mix(in srgb, var(--accent-cyan) 8%, transparent)" stroke="var(--accent-cyan)" stroke-width="1.5"></rect>
+<g fill="color-mix(in srgb, var(--accent-cyan) 50%, transparent)"><rect x="312" y="216" width="118" height="7"></rect><rect x="312" y="230" width="90" height="7"></rect><rect x="312" y="244" width="104" height="7"></rect></g>
+<text x="312" y="206" fill="var(--accent-cyan)" font-size="9">FITMENT · SURFACED</text>
+<g fill="color-mix(in srgb, var(--text-primary) 12%, transparent)"><rect x="312" y="92" width="120" height="7"></rect><rect x="312" y="106" width="90" height="7"></rect><rect x="312" y="120" width="110" height="7"></rect><rect x="312" y="134" width="70" height="7"></rect></g>
+</svg>
+<span style="position:absolute;left:var(--space-4);bottom:var(--space-4);font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">layout skeleton</span>
+</div>
+</article>
+
+<article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
+<div style="position:relative;overflow:hidden;aspect-ratio:4 / 3;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 480 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.1em">
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1">
+<rect x="22" y="52" width="120" height="46" rx="3"></rect>
+<rect x="22" y="124" width="120" height="46" rx="3"></rect>
+<rect x="22" y="196" width="120" height="46" rx="3"></rect>
+<rect x="22" y="268" width="120" height="46" rx="3"></rect>
+<path d="M148 75 C 190 75, 190 183, 218 183 M148 147 C 190 147, 190 183, 218 183 M148 219 C 190 219, 190 183, 218 183 M148 291 C 190 291, 190 183, 218 183"></path>
+</g>
+<rect x="222" y="158" width="104" height="50" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<text x="234" y="180" fill="var(--accent-green)" font-size="9">ANALYTICS</text>
+<text x="234" y="196" fill="var(--text-muted)" font-size="9">GA · GTM</text>
+<path d="M332 183 H400" stroke="var(--accent-green)" stroke-width="1.5"></path>
+<path d="M394 178 L402 183 L394 188" fill="none" stroke="var(--accent-green)" stroke-width="1.5"></path>
+<rect x="406" y="146" width="52" height="74" rx="3" fill="color-mix(in srgb, var(--accent-cyan) 8%, transparent)" stroke="var(--accent-cyan)" stroke-width="1.5"></rect>
+<text x="414" y="188" fill="var(--accent-cyan)" font-size="9">CRM</text>
+<g fill="var(--text-muted)">
+<text x="34" y="80">WEBSITES</text>
+<text x="34" y="152">LANDING PAGES</text>
+<text x="34" y="224">VIDEO</text>
+<text x="34" y="296">PRESENTATIONS</text>
+</g>
+</svg>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">05 · Marketing and web</div>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Supporting the Business Beyond the Product</h3>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Delivered the surrounding layer the business needed to promote and sell its products — company websites, landing pages, video and presentations — instrumented with Google Analytics and Tag Manager and integrated with the sales CRM.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Marketing</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Landing pages</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Analytics</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">CRM integration</x-import>
+</div>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">One reusable landing-page structure behind many campaigns, and a lead pipeline that lands in one place.</p>
+<div style="margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-05-marketing.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
+</div>
+</div>
+</article>
+
+<article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">06 · Product suite</div>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One Language Across a Product Suite</h3>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">A dedicated initiative to optimize a single design language across every product in the suite, and to make workflows carry from one product to the next — best practices consolidated into shared patterns rather than re-solved product by product.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Consistency</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Cross-product</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">UX patterns</x-import>
+</div>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">Workflow continuity across products — the shared patterns that let a user move between apps without relearning.</p>
+<div style="margin-top:var(--space-2)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-06-product-suite.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
+</div>
+</div>
+<div style="position:relative;overflow:hidden;aspect-ratio:4 / 3;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 480 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.1em">
+<g fill="var(--text-muted)" font-size="9">
+<text x="46" y="46">01</text><text x="116" y="46">02</text><text x="186" y="46">03</text><text x="256" y="46">04</text><text x="326" y="46">05</text><text x="396" y="46">06</text>
+</g>
+<g fill="color-mix(in srgb, var(--text-primary) 7%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1">
+<rect x="36" y="60" width="58" height="42"></rect><rect x="106" y="60" width="58" height="42"></rect><rect x="176" y="60" width="58" height="42"></rect><rect x="246" y="60" width="58" height="42"></rect><rect x="316" y="60" width="58" height="42"></rect><rect x="386" y="60" width="58" height="42"></rect>
+<rect x="36" y="112" width="58" height="42"></rect><rect x="106" y="112" width="58" height="42"></rect><rect x="176" y="112" width="58" height="42"></rect><rect x="246" y="112" width="58" height="42"></rect><rect x="316" y="112" width="58" height="42"></rect><rect x="386" y="112" width="58" height="42"></rect>
+<rect x="36" y="164" width="58" height="42"></rect><rect x="106" y="164" width="58" height="42"></rect><rect x="176" y="164" width="58" height="42"></rect><rect x="246" y="164" width="58" height="42"></rect><rect x="316" y="164" width="58" height="42"></rect><rect x="386" y="164" width="58" height="42"></rect>
+<rect x="36" y="216" width="58" height="42"></rect><rect x="106" y="216" width="58" height="42"></rect><rect x="176" y="216" width="58" height="42"></rect><rect x="246" y="216" width="58" height="42"></rect><rect x="316" y="216" width="58" height="42"></rect><rect x="386" y="216" width="58" height="42"></rect>
+</g>
+<g fill="color-mix(in srgb, var(--accent-green) 16%, transparent)" stroke="var(--accent-green)" stroke-width="1">
+<rect x="36" y="60" width="58" height="42"></rect><rect x="176" y="60" width="58" height="42"></rect><rect x="316" y="60" width="58" height="42"></rect><rect x="386" y="60" width="58" height="42"></rect>
+<rect x="106" y="112" width="58" height="42"></rect><rect x="246" y="112" width="58" height="42"></rect><rect x="316" y="112" width="58" height="42"></rect>
+<rect x="36" y="164" width="58" height="42"></rect><rect x="106" y="164" width="58" height="42"></rect><rect x="246" y="164" width="58" height="42"></rect><rect x="386" y="164" width="58" height="42"></rect>
+<rect x="176" y="216" width="58" height="42"></rect><rect x="316" y="216" width="58" height="42"></rect>
+</g>
+<path d="M36 280 H444" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1"></path>
+<text x="36" y="302" fill="var(--text-muted)">SHARED PATTERNS ACROSS SIX PRODUCTS</text>
+</svg>
+</div>
+</article>
+
+</div>
+</section>
+
+<section id="more" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="beyond the work" title="Everything that isn't a product, in one place." hint-size="100%,120px"></x-import>
+<div style="display:grid;grid-template-columns:{{ moreCols }};gap:var(--grid-gap);margin-top:var(--space-7)">
+<sc-for list="{{ more }}" as="card" hint-placeholder-count="7">
+<article style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);background:var(--surface-card);border:1px solid {{ card.border }};border-radius:var(--radius-md)">
+<div style="position:relative;overflow:hidden;height:120px;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="32" hint-size="100%,100%"></x-import>
+<span style="position:relative;font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">IMAGE</span>
+</div>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ card.kind }}</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">{{ card.title }}</h3>
+<p style="margin:0;color:var(--text-secondary);font-size:var(--text-small);line-height:1.6">{{ card.text }}</p>
+<span style="margin-top:auto;padding-top:var(--space-3);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ card.noteTone }}">{{ card.note }}</span>
+</article>
+</sc-for>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPersonalNote&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;How it connects&quot;},&quot;beyondColumns&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:4,&quot;min&quot;:2,&quot;max&quot;:4,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Beyond the work&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    const perRow = this.props.beyondColumns ?? 4;
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      gridSize: 80,
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "#connect" },
+        { label: "work streams", href: "#work" },
+        { label: "beyond the work", href: "#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      showPersonal: this.props.showPersonalNote ?? true,
+      moreCols: "repeat(" + perRow + ",minmax(0,1fr))",
+      flow: [
+        { label: "design system", title: "Tokens, components, patterns", arrow: "→", tone: "var(--accent-green)", border: "var(--border)" },
+        { label: "figma / github", title: "Source of truth, versioned", arrow: "→", tone: "var(--accent-green)", border: "var(--border)" },
+        { label: "ai", title: "Agents build and validate on-system", arrow: "→", tone: "var(--accent-green)", border: "var(--accent-green)" },
+        { label: "products", title: "Generated, consistant, determenistic", arrow: "", tone: "var(--accent-green)", border: "var(--border)" },
+      ],
+      more: [
+        { kind: "Book", title: "Design Systems for the AI Era", text: "How systems teams stay the source of truth when generation is cheap and consistency isn't.", note: "Read more →", border: "var(--border)", noteTone: "var(--accent-green)" },
+        { kind: "Tooling", title: "Figma plugin", text: "Generates table components from CSV data.", note: "1,000+ users", border: "var(--border)", noteTone: "var(--accent-cyan)" },
+        { kind: "Speaking", title: "Conference talks", text: "Design systems and AI-augmented workflows.", note: "Occasional", border: "var(--border)", noteTone: "var(--text-muted)" },
+        { kind: "Board", title: "DDRC", text: "Board Member.", note: "2026 — present", border: "var(--border)", noteTone: "var(--text-muted)" },
+        { kind: "Leadership", title: "Toastmasters International", text: "VP of Education.", note: "2025 — present", border: "var(--border)", noteTone: "var(--text-muted)" },
+        { kind: "My path", title: "15 years, four eras", text: "Web Studio → ServiceTO → Quorum. Its own page now, not a homepage section.", note: "Read the story →", border: "var(--accent-green)", noteTone: "var(--accent-green)" },
+        { kind: "Resume", title: "Want the short version?", text: "One PDF — roles, dates, skills.", note: "Download resume →", href: "resume.html", border: "var(--border)", noteTone: "var(--accent-green)" },
+      ],
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
+        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

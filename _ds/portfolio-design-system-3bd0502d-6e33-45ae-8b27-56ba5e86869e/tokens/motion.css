@@ -1,0 +1,33 @@
+:root {
+  --duration-instant: 90ms; /* @kind other */
+  --duration-fast: 160ms; /* @kind other */
+  --duration-base: 240ms; /* @kind other */
+  --duration-slow: 420ms; /* @kind other */
+  --duration-reveal: 700ms; /* @kind other */
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-in: cubic-bezier(0.5, 0, 0.75, 0); /* @kind other */
+  --ease-mono: steps(12, end); /* @kind other */ /* typewriter / counter tick */
+
+  --transition-hover: color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    opacity var(--duration-fast) var(--ease-standard);
+  --transition-transform: transform var(--duration-base) var(--ease-out);
+
+  --reveal-distance: 24px;
+  --reveal-stagger: 70ms; /* @kind other */
+}
+
+@keyframes ds-reveal {
+  from { opacity: 0; transform: translateY(var(--reveal-distance)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes ds-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-reveal: 1ms; /* @kind other */ --reveal-distance: 0px; }
+}

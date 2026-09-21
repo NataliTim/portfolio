@@ -1,0 +1,32 @@
+:root {
+  /* 8px base unit; 4px is the only half-step */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 160px;
+  --space-12: 224px;
+
+  /* rhythm */
+  --section-gap: var(--space-10);
+  --section-gap-tight: var(--space-9);
+  --block-gap: var(--space-6);
+  --stack-gap: var(--space-4);
+
+  /* layout */
+  --page-max: 1440px;
+  --measure: 68ch;
+  --measure-tight: 52ch;
+  --gutter: var(--space-6);
+  --gutter-wide: var(--space-8);
+  --grid-columns: 12; /* @kind other */
+  --grid-gap: var(--space-5);
+  --nav-height: 64px;
+}

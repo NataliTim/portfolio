@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@media (max-width:700px){.cs-split{grid-template-columns:minmax(0,1fr) !important}}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
+<a href="index.html#work" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">05 · marketing and web</div>
+<h1 style="margin:0;max-width:22ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Supporting the Business Beyond the Product</h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">Delivered the surrounding layer the business needed to promote and sell its products — company websites, landing pages, video and presentations — instrumented with Google Analytics and Tag Manager and integrated with the sales CRM.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Marketing</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Landing pages</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Analytics</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">CRM integration</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Templates</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Rebranding</x-import>
+</div>
+<nav style="display:flex;flex-wrap:wrap;gap:var(--space-5);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase">
+<a href="#overview">overview</a>
+<a href="#websites">websites</a>
+<a href="#templates">templates</a>
+<a href="#pipeline">measurement and leads</a>
+<a href="#outcomes">outcomes</a>
+</nav>
+
+<figure style="margin:var(--space-4) 0 0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div class="cs-split" style="position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,0.9fr) minmax(0,0.9fr);gap:var(--space-5);align-items:center">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">surfaces delivered</span>
+<sc-for list="{{ surfaces }}" as="s" hint-placeholder-count="6">
+<div style="padding:var(--space-3) var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ s }}</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">analytics</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Google Analytics · Tag Manager</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4);border:1.5px solid var(--accent-cyan);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">sales CRM</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">one lead destination</span>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</header>
+
+<section id="overview" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="01" kicker="the work and context" title="The layer around the product" hint-size="100%,140px"></x-import>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The product was only part of what the business needed to sell. Alongside it sat the material buyers actually met first: the company websites, the campaign landing pages, the video, and the presentations used in sales conversations. That material was delivered as one stream of work rather than a set of one-off requests.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Because the same stream also owned intake, measurement and the CRM handoff, a request could be raised, produced, published, tracked and followed up without changing hands.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-5)">
+<sc-for list="{{ deliverables }}" as="d" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ d.label }}</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">{{ d.text }}</p>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="websites" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="websites" title="Six company websites rebuilt, and made to bring in leads" hint-size="100%,140px"></x-import>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:var(--space-7);align-items:center;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">After the rebranding, worked out with the marketing team and external consultants, the company's websites were rebuilt to the new brand guidelines and brought them up to date. Each one carried the same landing-page structure underneath, so a new campaign meant new copy and assets rather than a new page design, and the same form and tracking sat in the same place every time.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">The rebuild turned the websites into a lead source: enquiries started arriving through them and landing in the sales CRM.</p>
+</div>
+<figure style="margin:0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;gap:var(--space-4)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">shared structure</span>
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 8%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<sc-for list="{{ blocks }}" as="b" hint-placeholder-count="5">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding:8px var(--space-3);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ b.name }}</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ b.slot }}</span>
+</div>
+</sc-for>
+</div>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--text-muted);text-align:center">↓ reused across sites and campaigns ↓</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:var(--space-3)">
+<sc-for list="{{ sites }}" as="c" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:6px;padding:var(--space-3);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ c }}</span>
+<span style="height:8px;width:80%;background:color-mix(in srgb, var(--text-primary) 16%, transparent)"></span>
+<span style="height:8px;width:55%;background:color-mix(in srgb, var(--text-primary) 12%, transparent)"></span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Structural diagram. Section order is indicative, not a documented template spec.</figcaption>
+</figure>
+</div>
+</section>
+
+<section id="templates" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="templates, standards and shared libraries" title="Templates one click away, not one archive search away" hint-size="100%,140px"></x-import>
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:var(--space-7);align-items:center;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Finding the current version of a document used to mean digging through the company archives, and the file that turned up was often out of date. The document templates were produced and placed where the work happens: Word, PowerPoint and Excel, available in one click.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Alongside them, the wider material was standardised to the new brand after the rebranding: marketing collaterals, social media templates, emails and landing pages, plus email signatures, business cards and many more. The approved assets sat in shared libraries, so everyone drew from the same source.</p>
+</div>
+<figure style="margin:0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;gap:var(--space-4)">
+<div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-5);align-items:center">
+<div style="display:flex;flex-direction:column;gap:6px;padding:var(--space-4);border:1px dashed var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">before</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">search the archives · unclear version</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">after</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">new from template · one click</span>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:var(--space-3)">
+<sc-for list="{{ appTemplates }}" as="a" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ a.app }}</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ a.kind }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Access model, not a screenshot of the template gallery.</figcaption>
+</figure>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4);margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">standardised to the new brand</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ standardised }}" as="s" hint-placeholder-count="8">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">{{ s }}</x-import>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="pipeline" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="measurement and leads" title="Instrumented on publish, and landing in one place" hint-size="100%,140px"></x-import>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Every surface shipped with Google Analytics and Tag Manager already attached, and every form fed the sales CRM. Marketing could see what a campaign did, and sales received the lead in the system they already worked in.</p>
+<figure style="margin:var(--space-7) 0 0">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<div style="position:relative;display:flex;flex-wrap:wrap;align-items:stretch;gap:var(--space-3)">
+<div style="flex:1;min-width:150px;display:flex;flex-direction:column;gap:6px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">website or campaign page</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">shared structure</span>
+</div>
+<div style="display:flex;align-items:center;font-family:var(--font-mono);color:var(--text-muted)">→</div>
+<div style="flex:1;min-width:150px;display:flex;flex-direction:column;gap:6px;padding:var(--space-4);background:color-mix(in srgb, var(--accent-green) 10%, transparent);border:1.5px solid var(--accent-green);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">tag manager</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">events · conversions</span>
+</div>
+<div style="display:flex;align-items:center;font-family:var(--font-mono);color:var(--text-muted)">→</div>
+<div style="flex:1;min-width:150px;display:flex;flex-direction:column;gap:6px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">google analytics</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">campaign reporting</span>
+</div>
+<div style="display:flex;align-items:center;font-family:var(--font-mono);color:var(--text-muted)">→</div>
+<div style="flex:1;min-width:150px;display:flex;flex-direction:column;gap:6px;padding:var(--space-4);border:1.5px solid var(--accent-cyan);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">sales CRM</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">lead record</span>
+</div>
+</div>
+</div>
+<figcaption style="margin-top:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Documented stages. Field mapping, deduplication and attribution rules are not documented here.</figcaption>
+</figure>
+<sc-if value="{{ showTrackingPlan }}">
+<div style="margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:var(--space-4)">
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Tracking plan</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-4)">
+<sc-for list="{{ trackingSlots }}" as="slot" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">{{ slot }}</span>
+<span style="font-size:var(--text-small);line-height:1.5;color:var(--text-secondary)">To be supplied.</span>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</section>
+
+<section id="outcomes" style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="outcomes" title="What changed" hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5);margin-top:var(--space-6)">
+<sc-for list="{{ outcomes }}" as="item" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ item.title }}</span>
+<span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ item.text }}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">These describe the work delivered and how it was set up. Campaign performance figures are not published here.</p>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4);margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:var(--space-3)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">tools</span>
+<p style="margin:0;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Adobe Creative Suite and WP Engine for the making, Google Analytics and Tag Manager for the measuring, the sales CRM for the follow-up, and the Microsoft Office stack already in place. Held together by shared styles, hand-written code, UX and UI heuristics, and accessibility standards.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="150px,52px">All work</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="resume.html" variant="secondary" size="lg" icon="arrow-up-right" hint-size="140px,52px">Resume</x-import>
+</div>
+</div>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTrackingPlan&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Draft state&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+    document.title = "Supporting the business beyond the product, Nataliia Tymofeieva";
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      showTrackingPlan: this.props.showTrackingPlan ?? false,
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "beyond the work", href: "index.html#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      surfaces: ["company websites", "landing pages", "video", "presentations", "collaterals and templates", "social media"],
+      deliverables: [
+        { label: "company websites", text: "Six company websites rebuilt, the public face of the business kept current alongside the product." },
+        { label: "landing pages", text: "Campaign pages built on one shared structure rather than one design each." },
+        { label: "internal requests", text: "One request form replaced scattered email, chat and verbal briefs, built on tools the company already had and needing no additional licences or subscriptions." },
+        { label: "templates and standards", text: "Document, collateral and social templates standardised to the new brand and made easy to reach." },
+        { label: "analytics", text: "One consolidated flow from page to Tag Manager to Analytics to the sales CRM." },
+        { label: "rebranding", text: "A rebranding across the umbrella of brands, and every collateral that followed from it." },
+        { label: "customer-facing materials", text: "Social media language, email templates, and all customer-facing product material including video and brochures." },
+      ],
+      blocks: [
+        { name: "hero and offer", slot: "copy slot" },
+        { name: "proof", slot: "asset slot" },
+        { name: "detail", slot: "copy slot" },
+        { name: "lead form", slot: "fixed · tracked" },
+        { name: "footer", slot: "fixed" },
+      ],
+      sites: ["site 01", "site 02", "site 03", "site 04", "site 05", "site 06"],
+      appTemplates: [
+        { app: "MS Word", kind: "documents" },
+        { app: "PowerPoint", kind: "presentations" },
+        { app: "Excel", kind: "spreadsheets" },
+      ],
+      standardised: ["Marketing collaterals", "Social media templates", "Emails", "Landing pages", "Email signatures", "Business cards", "Document templates", "Presentation templates", "Shared libraries"],
+      trackingSlots: ["event", "trigger", "destination", "owner"],
+      outcomes: [
+        { title: "websites as a lead source", text: "Six rebuilt websites started bringing in leads rather than only presenting the company." },
+        { title: "clear internal intake", text: "Teams raised complete requests through one form, with no additional licences or subscriptions." },
+        { title: "templates in one click", text: "Word, PowerPoint and Excel templates were available from the apps instead of the archives." },
+        { title: "one brand across surfaces", text: "Collaterals, social templates, emails, landing pages, signatures and business cards followed the new brand." },
+        { title: "instrumented by default", text: "Google Analytics and Tag Manager shipped with the surfaces, and leads landed in the sales CRM." },
+      ],
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
+        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

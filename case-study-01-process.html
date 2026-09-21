@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@keyframes ds-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes ds-drift-a{0%{transform:translate(0,0)}50%{transform:translate(14px,-18px)}100%{transform:translate(0,0)}}
+@keyframes ds-drift-b{0%{transform:translate(0,0)}50%{transform:translate(-16px,12px)}100%{transform:translate(0,0)}}
+@keyframes ds-drift-c{0%{transform:translate(0,0)}50%{transform:translate(10px,16px)}100%{transform:translate(0,0)}}
+@keyframes ds-pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){[style*="ds-drift"],[style*="ds-pulse"]{animation:none !important}}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
+<a href="index.html" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">01 / work stream</div>
+<h1 style="margin:0;max-width:24ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Process Transformation for the AI Era</h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">The design system is the source of truth — the foundation that turns AI-assisted design into a deterministic approach.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">AI</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Process</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design–development bridge</x-import>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,220px));gap:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
+<div style="display:flex;flex-direction:column;gap:6px"><span>role</span><span style="color:var(--text-primary)">Manager of Product Design</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span>scope</span><span style="color:var(--text-primary)">Design process, whole suite</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span>timeframe</span><span style="color:var(--text-primary)">2025 — present</span></div>
+</div>
+</div>
+</header>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="01" kicker="the shift" title="What counts as the source of truth." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:var(--space-7);align-items:center;margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The component library and design language come first, and every new surface is composed outward from them. That is the approach we have always aimed for — the system leads the work instead of trailing behind it and drifting.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">It is now the most critical part of the process. AI works from that foundation, and that is what makes the output deterministic instead of plausible.</p>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 9">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">
+<text x="40" y="42" fill="var(--text-muted)">BEFORE</text>
+<text x="500" y="42" fill="var(--accent-green)">AFTER</text>
+<path d="M450 30 V310" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 18%, transparent)" stroke-width="1">
+<rect x="40" y="66" width="80" height="58" rx="3"></rect><rect x="130" y="66" width="80" height="58" rx="3"></rect><rect x="220" y="66" width="80" height="58" rx="3"></rect><rect x="310" y="66" width="80" height="58" rx="3"></rect>
+<path d="M215 136 V186"></path><path d="M209 180 L215 188 L221 180"></path>
+<rect x="130" y="196" width="170" height="60" rx="3" stroke-dasharray="4 4"></rect>
+</g>
+<text x="46" y="100" fill="var(--text-muted)" font-size="9">SCREENS</text>
+<text x="142" y="232" fill="var(--text-muted)" font-size="9">SYSTEM, ABSTRACTED LATE</text>
+<rect x="590" y="66" width="170" height="60" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<text x="602" y="94" fill="var(--accent-green)" font-size="9">DESIGN SYSTEM</text>
+<text x="602" y="110" fill="var(--text-muted)" font-size="9">TOKENS · COMPONENTS</text>
+<g fill="none" stroke="var(--accent-green)" stroke-width="1.2">
+<path d="M675 136 V166 M540 196 V166 H810 V196"></path>
+<path d="M534 190 L540 198 L546 190 M669 190 L675 198 L681 190 M804 190 L810 198 L816 190"></path>
+<path d="M675 166 V196"></path>
+</g>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 18%, transparent)" stroke-width="1">
+<rect x="500" y="206" width="80" height="58" rx="3"></rect><rect x="635" y="206" width="80" height="58" rx="3"></rect><rect x="770" y="206" width="80" height="58" rx="3"></rect>
+</g>
+<g fill="var(--text-muted)" font-size="9"><text x="508" y="240">SCREENS</text><text x="643" y="240">CODE</text><text x="778" y="240">DOCS</text></g>
+</svg>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="why ai is built on the system" title="From guesswork to a predictable outcome." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--space-7);align-items:center;margin-top:var(--space-6)">
+<div style="position:relative;overflow:hidden;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:16 / 9">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="40" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 900 340" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">
+<text x="40" y="44" fill="var(--text-muted)">WITHOUT THE SYSTEM</text>
+<text x="500" y="44" fill="var(--accent-green)">ON THE SYSTEM</text>
+<path d="M460 30 V310" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<circle cx="60" cy="120" r="4" fill="var(--text-muted)"></circle>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 22%, transparent)" stroke-width="1.2">
+<path d="M60 120 C 150 60, 240 190, 330 96"></path>
+<path d="M60 120 C 150 170, 250 90, 360 200"></path>
+<path d="M60 120 C 140 210, 230 250, 340 256"></path>
+<path d="M60 120 C 160 40, 280 150, 300 40"></path>
+</g>
+<g fill="color-mix(in srgb, var(--text-primary) 22%, transparent)">
+<circle cx="330" cy="96" r="3"></circle><circle cx="360" cy="200" r="3"></circle><circle cx="340" cy="256" r="3"></circle><circle cx="300" cy="40" r="3"></circle>
+</g>
+<text x="40" y="296" fill="var(--text-muted)" font-size="9">SAME PROMPT, DIFFERENT ANSWER EVERY TIME</text>
+<circle cx="500" cy="170" r="4" fill="var(--accent-green)"></circle>
+<rect x="560" y="76" width="150" height="188" rx="3" fill="color-mix(in srgb, var(--accent-green) 6%, transparent)" stroke="color-mix(in srgb, var(--accent-green) 40%, transparent)" stroke-width="1"></rect>
+<text x="572" y="98" fill="var(--accent-green)" font-size="9">SYSTEM CONSTRAINT</text>
+<g fill="none" stroke="var(--accent-green)" stroke-width="1.4">
+<path d="M500 170 H860"></path>
+<path d="M854 164 L862 170 L854 176"></path>
+</g>
+<g stroke="color-mix(in srgb, var(--accent-green) 28%, transparent)" stroke-width="1" fill="none">
+<path d="M500 170 C 620 150, 740 162, 860 170"></path>
+<path d="M500 170 C 620 190, 740 178, 860 170"></path>
+</g>
+<circle cx="860" cy="170" r="7" fill="color-mix(in srgb, var(--accent-green) 18%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></circle>
+<text x="500" y="296" fill="var(--accent-green)" font-size="9">ONE PREDICTABLE, ON-SYSTEM OUTCOME</text>
+</svg>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">A design system is already proven correct. Its components are built, reviewed, accessible and in production — every decision inside it has been made once and validated.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">That is why AI has to be built on it. Given a screenshot or a description, an assistant produces a plausible guess that changes every run. Given the tokens, the component repository and the documented patterns, it composes from what is already proven — the same input reaches the same on-system result.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">It is the only route from guesswork to a deterministic, predictable outcome.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-7)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="34%" label="Accelerating task completion rate" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="38%" label="Boosting design team efficiency" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="14%" label="Accelerating cross-department productivity" tone="cyan" hint-size="100%,90px"></x-import>
+</div>
+<p style="margin:var(--space-4) 0 0;font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">measured against design system guidelines and standards with styles and patterns</p>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="the foundation" title="Years of Figma library work is what there was to build from." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">A real component library and design language with documented intent, not a sticker sheet. Without it there is nothing for AI to build from — the system is the precondition, not the output.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Git now carries as much of that foundation as Figma does. We started with Code Connect, moved to MCP, and in some cases work directly against the Git repositories — so the reusable UI components and the design system are read from where they actually live.</p>
+</div>
+<div style="position:relative;overflow:hidden;grid-column:1 / -1;order:3;margin-top:var(--space-6);background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:1200 / 300">
+
+<svg viewBox="0 0 1200 300" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.1em">
+<g stroke="color-mix(in srgb, var(--text-primary) 10%, transparent)" stroke-width="1" fill="none">
+<path d="M600 150 L180 78 M600 150 L340 210 M600 150 L250 138 M600 150 L470 66 M600 150 L520 236 M600 150 L740 72 M600 150 L880 200 M600 150 L1000 96 M600 150 L1080 216 M600 150 L830 128 M600 150 L390 96 M600 150 L960 240"></path>
+</g>
+<g style="animation:ds-drift-a 17s ease-in-out infinite">
+<rect x="120" y="62" width="120" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="132" y="79" fill="var(--text-muted)">BUTTON</text>
+<rect x="700" y="56" width="110" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="712" y="73" fill="var(--text-muted)">TABLE</text>
+<rect x="1020" y="200" width="130" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="1032" y="217" fill="var(--text-muted)">TOOLTIP</text>
+</g>
+<g style="animation:ds-drift-b 23s ease-in-out infinite">
+<rect x="290" y="196" width="120" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="302" y="213" fill="var(--text-muted)">MODAL</text>
+<rect x="940" y="82" width="140" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="952" y="99" fill="var(--text-muted)">DATA GRID</text>
+<rect x="460" y="52" width="120" height="26" rx="2" fill="color-mix(in srgb, var(--accent-cyan) 8%, transparent)" stroke="color-mix(in srgb, var(--accent-cyan) 45%, transparent)"></rect><text x="472" y="69" fill="var(--accent-cyan)">TOKENS</text>
+</g>
+<g style="animation:ds-drift-c 29s ease-in-out infinite">
+<rect x="190" y="124" width="130" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="202" y="141" fill="var(--text-muted)">FORM FIELD</text>
+<rect x="820" y="186" width="130" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="832" y="203" fill="var(--text-muted)">NAVIGATION</text>
+<rect x="770" y="114" width="120" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="782" y="131" fill="var(--text-muted)">CHART</text>
+<rect x="330" y="82" width="120" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="342" y="99" fill="var(--text-muted)">CARD</text>
+<rect x="890" y="226" width="130" height="26" rx="2" fill="color-mix(in srgb, var(--text-primary) 5%, transparent)" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)"></rect><text x="902" y="243" fill="var(--text-muted)">FILTERS</text>
+</g>
+<rect x="520" y="128" width="160" height="44" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<text x="534" y="147" fill="var(--accent-green)">SHARED LIBRARIES</text>
+<text x="534" y="163" fill="var(--text-muted)" font-size="9">FIGMA · GIT</text>
+<g fill="var(--accent-green)">
+<circle cx="600" cy="112" r="2.5" style="animation:ds-pulse 3.2s ease-in-out infinite"></circle>
+<circle cx="600" cy="188" r="2.5" style="animation:ds-pulse 3.2s ease-in-out .8s infinite"></circle>
+<circle cx="504" cy="150" r="2.5" style="animation:ds-pulse 3.2s ease-in-out 1.6s infinite"></circle>
+<circle cx="696" cy="150" r="2.5" style="animation:ds-pulse 3.2s ease-in-out 2.4s infinite"></circle>
+</g>
+</svg>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);order:2">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="369" label="Components" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="246" label="Styles" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="221" label="Variables" hint-size="100%,90px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="6" label="Shared libraries" tone="cyan" hint-size="100%,90px"></x-import>
+</div>
+</div>
+</section>
+
+<section style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border);background:var(--surface-raised, transparent)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="the pipeline" title="Design library to generated docs, with the system in the middle of every step." hint-size="100%,140px"></x-import>
+<div style="position:relative;overflow:hidden;margin-top:var(--space-6);background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:1200 / 380">
+<svg viewBox="0 0 1200 380" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.1em">
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 18%, transparent)" stroke-width="1">
+<rect x="30" y="70" width="155" height="110" rx="3"></rect>
+<rect x="230" y="70" width="155" height="110" rx="3"></rect>
+<rect x="430" y="70" width="155" height="110" rx="3"></rect>
+<rect x="830" y="70" width="155" height="110" rx="3"></rect>
+<rect x="1030" y="70" width="155" height="110" rx="3"></rect>
+</g>
+<rect x="630" y="70" width="155" height="110" rx="3" fill="color-mix(in srgb, var(--accent-green) 10%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 35%, transparent)" stroke-width="1.2">
+<path d="M190 125 H222 M390 125 H422 M590 125 H622 M790 125 H822 M990 125 H1022"></path>
+<path d="M216 119 L224 125 L216 131 M416 119 L424 125 L416 131 M816 119 L824 125 L816 131 M1016 119 L1024 125 L1016 131"></path>
+</g>
+<path d="M616 119 L624 125 L616 131" fill="none" stroke="var(--accent-green)" stroke-width="1.4"></path>
+<path d="M786 119 L794 125 L786 131" fill="none" stroke="var(--accent-green)" stroke-width="1.4"></path>
+<g fill="var(--text-primary)">
+<text x="44" y="106">FIGMA LIBRARY</text>
+<text x="244" y="106">TOKENS AS CODE</text>
+<text x="444" y="106">GITHUB REPO</text>
+<text x="844" y="106">CLAUDE CODE</text>
+<text x="1044" y="106">STORYBOOK</text>
+</g>
+<text x="644" y="106" fill="var(--accent-green)">MCP</text>
+<g fill="var(--text-muted)" font-size="10">
+<text x="44" y="132">COMPONENTS,</text><text x="44" y="148">PATTERNS, INTENT</text>
+<text x="244" y="132">COLOUR, TYPE,</text><text x="244" y="148">SPACING, EXPORTED</text>
+<text x="444" y="132">THE COMPONENTS THAT</text><text x="444" y="148">ACTUALLY EXIST</text>
+<text x="644" y="132">CONTEXT LAYER —</text><text x="644" y="148">SYSTEM, REPO, DOCS</text>
+<text x="844" y="132">BUILDS FROM REAL</text><text x="844" y="148">COMPONENTS</text>
+<text x="1044" y="132">GENERATED DOCS</text><text x="1044" y="148">AND PLAYGROUND</text>
+</g>
+<path d="M1107 190 V250 H107 V190" fill="none" stroke="var(--accent-cyan)" stroke-width="1.2" stroke-dasharray="5 5"></path>
+<path d="M101 198 L107 188 L113 198" fill="none" stroke="var(--accent-cyan)" stroke-width="1.2"></path>
+<text x="480" y="242" fill="var(--accent-cyan)" font-size="10">FEEDBACK: WHAT SHIPPED RETURNS TO THE LIBRARY</text>
+<path d="M30 300 H1185" stroke="color-mix(in srgb, var(--text-primary) 14%, transparent)" stroke-width="1"></path>
+<text x="30" y="330" fill="var(--text-muted)" font-size="10">FIGMA MCP FEEDS LOW-FIDELITY PROTOTYPES AND WORKFLOWS BACK INTO THE SAME PIPELINE · AS OF EARLY 2026</text>
+</svg>
+</div>
+<p style="margin:var(--space-5) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">MCP is the piece that changes the outcome. Given a screenshot, an assistant guesses. Given the token file, the component repo and the documented patterns, it composes from what already exists — on-system, reusable, buildable.</p>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="how the rollout went" title="One capability at a time, each assessed before it joined the pipeline." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-md)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">stage 01</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Foundation</span>
+<span style="font-size:var(--text-small);line-height:1.6;color:var(--text-secondary)">The Figma library made machine-readable: tokens named, intent documented, coverage audited.</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-md)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">stage 02</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">System in git</span>
+<span style="font-size:var(--text-small);line-height:1.6;color:var(--text-secondary)">Tokens exported as code and the system moved into a GitHub repository — the bridge design and development share.</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-md)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">stage 03</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Context layer</span>
+<span style="font-size:var(--text-small);line-height:1.6;color:var(--text-secondary)">MCP connected the CLI and Claude Code to the real system; Figma MCP added fast low-fidelity prototyping.</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background:var(--surface-card);border:1px solid var(--accent-green);border-radius:var(--radius-md)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">stage 04</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Skills and guardrails</span>
+<span style="font-size:var(--text-small);line-height:1.6;color:var(--text-secondary)">Agent skills and guardrails written on top of the system, so assistants extend it inside its own rules.</span>
+</div>
+</div>
+<p style="margin:var(--space-5) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Not a big-bang rollout. Every time a new capability appeared it was evaluated and slotted in as it matured, which kept the system stable while the process around it changed.</p>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="06" kicker="from hand work to system-built" title="Three stages, one direction of travel." hint-size="100%,140px"></x-import>
+<div style="position:relative;overflow:hidden;margin-top:var(--space-6);background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-md);aspect-ratio:1200 / 300">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="60" hint-size="100%,100%"></x-import>
+<svg viewBox="0 0 1200 300" style="position:absolute;inset:0;width:100%;height:100%" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.1em">
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 18%, transparent)" stroke-width="1">
+<rect x="40" y="60" width="330" height="180" rx="3"></rect>
+<rect x="420" y="60" width="330" height="180" rx="3"></rect>
+</g>
+<rect x="800" y="60" width="360" height="180" rx="3" fill="color-mix(in srgb, var(--accent-green) 8%, transparent)" stroke="var(--accent-green)" stroke-width="1.5"></rect>
+<g fill="var(--text-primary)">
+<text x="60" y="96">MANUAL DESIGN</text>
+<text x="440" y="96">AI-ASSISTED DESIGN</text>
+</g>
+<text x="820" y="96" fill="var(--accent-green)">SYSTEM-BUILT OUTPUT</text>
+<g fill="var(--text-muted)" font-size="10">
+<text x="60" y="122">SCREENS DRAWN ONE BY ONE</text>
+<text x="440" y="122">SYSTEM-CONSTRAINED DRAFTS,</text><text x="440" y="138">HUMAN JUDGMENT ON EVERY CALL</text>
+<text x="820" y="122">ASSISTANTS EXTEND THE SYSTEM ITSELF;</text><text x="820" y="138">HANDOFF IS PRODUCTION HTML</text>
+</g>
+<g fill="color-mix(in srgb, var(--text-primary) 12%, transparent)">
+<rect x="60" y="170" width="60" height="50"></rect><rect x="130" y="170" width="60" height="50"></rect>
+<rect x="440" y="170" width="60" height="50"></rect><rect x="510" y="170" width="60" height="50"></rect><rect x="580" y="170" width="60" height="50"></rect><rect x="650" y="170" width="60" height="50"></rect>
+</g>
+<g fill="color-mix(in srgb, var(--accent-green) 35%, transparent)">
+<rect x="820" y="170" width="45" height="50"></rect><rect x="875" y="170" width="45" height="50"></rect><rect x="930" y="170" width="45" height="50"></rect><rect x="985" y="170" width="45" height="50"></rect><rect x="1040" y="170" width="45" height="50"></rect><rect x="1095" y="170" width="45" height="50"></rect>
+</g>
+<g fill="none" stroke="color-mix(in srgb, var(--text-primary) 35%, transparent)" stroke-width="1.2"><path d="M378 150 H412 M758 150 H792"></path><path d="M406 144 L414 150 L406 156 M786 144 L794 150 L786 156"></path></g>
+</svg>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="07" kicker="outcomes" title="What the process produces now." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6);margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Decisions land faster</span>
+<span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Options are produced inside the system's constraints, so review is about the decision rather than the drawing.</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Handoff is ready-to-use HTML</span>
+<span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Production-grade markup built from real components, not pictures of screens engineering has to rebuild.</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Consistency holds under load</span>
+<span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Many tracks move at once without the system drifting, because every track composes from the same source.</span>
+</div>
+</div>
+</section>
+
+<section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="08" kicker="principles" title="Six rules the process runs on." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6) var(--space-7);margin-top:var(--space-6)">
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">01</span><div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">The system is the foundation.</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Output quality is set by constraint quality; a mature design system is machine-readable constraint.</span></div></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">02</span><div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Prototype in real components, not pictures of them.</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">A prototype from the live library is a proposal engineering can accept.</span></div></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">03</span><div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">One source of truth, many generated surfaces.</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Figma, Storybook, docs and code are one thing projected, not four maintained in parallel.</span></div></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">04</span><div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Automate the upkeep, never the judgment.</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Variants, documentation, boilerplate and first drafts are assisted. What matters and what to build next is not.</span></div></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">05</span><div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Relearning is the real cost.</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Teams don't fail to adopt new ways of working because they're hard; they fail because nobody budgeted for the discomfort.</span></div></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">06</span><div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">Measure the loop, not the tool.</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">What matters is how long an idea takes to become something real and consistent, and whether it stayed consistent after shipping.</span></div></div>
+</div>
+<p style="margin:var(--space-7) 0 0;max-width:var(--measure-tight);font-size:var(--text-small);line-height:1.7;color:var(--text-muted)">Changing how you work is harder than learning a new tool. I've been doing it for fifteen years — the tools kept changing, the discipline of looking for the better way didn't.</p>
+</section>
+
+<section style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="09" kicker="for teams who want this" title="What it takes, honestly." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-6);margin-top:var(--space-6)">
+<div style="display:flex;flex-direction:column;gap:var(--space-3)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">can we do this?</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Only with a real design system in place — tokens, components, documented patterns, a live repo. The system is the precondition, not the output.</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">what does it take?</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The pipeline pieces — tokens as code, a repo, a context layer, assisted build — and a relearning budget for the team.</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">how do we know it works?</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Measure the loop: time from idea to consistent, buildable output, and whether it stayed consistent after shipping. Not adoption stats.</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-3)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">where do we start?</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">With the system audit — is it machine-readable, is it in a repo, is intent documented. Then one capability at a time.</span></div>
+</div>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="60" hint-size="100%,100%"></x-import><div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4);margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<p style="margin:0;flex:1;min-width:280px;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">This is what the book is about.</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#more" size="lg" icon="arrow-right" hint-size="200px,52px">Design Systems for the AI Era</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#contact" variant="secondary" size="lg" icon="mail" hint-size="150px,52px">Get in touch</x-import>
+</div>
+</div>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const t = localStorage.getItem("pf-theme") || "dark";
+    this.applyTheme(t);
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  renderVals() {
+    return {
+      toggleTheme: () => this.toggleTheme(),
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "beyond the work", href: "index.html#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      footerColumns: [
+        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
+        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

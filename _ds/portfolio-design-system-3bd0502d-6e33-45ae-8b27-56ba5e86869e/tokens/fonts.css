@@ -1,0 +1,10 @@
+/* Webfonts are loaded from the Google Fonts CDN — no binaries were supplied with the brief.
+   Archivo = display/headlines (tight grotesque). Public Sans = body. JetBrains Mono = labels, meta, chips.
+   If licensed self-hosted files exist, drop them in assets/fonts/ and replace this import with @font-face rules. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Public+Sans:ital,wght@0,300..700;1,300..600&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
