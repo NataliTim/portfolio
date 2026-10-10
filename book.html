@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AI x DS = NRR — Book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}[data-noscrollbar]::-webkit-scrollbar{display:none}</style></helmet>
+<div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="book" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+
+<header data-screen-label="01 Hero" style="position:relative;overflow:hidden;padding:var(--space-10) var(--gutter);border-bottom:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:var(--space-6);min-width:0">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:0.3em;text-transform:uppercase;color:var(--text-secondary)">Nataliia Tymofeieva</span>
+<h1 style="margin:0;font-family:var(--font-display);font-size:clamp(48px,8.5vw,128px);font-weight:700;line-height:0.92;letter-spacing:-0.045em">Consistency<br><span style="color:var(--accent-green)">Compounds</span></h1>
+<div style="display:flex;flex-direction:column;gap:var(--space-2)">
+<span style="font-family:var(--font-display);font-size:clamp(28px,3.4vw,48px);font-weight:700;letter-spacing:-0.03em;line-height:1">AI × DS = <span style="color:var(--accent-green)">GM</span></span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Artificial Intelligence × Design Systems = Gross Margin</span>
+</div>
+<p style="margin:0;max-width:34ch;font-size:var(--text-body-lg);font-weight:300;line-height:1.5;color:var(--text-secondary);text-wrap:pretty">How AI-powered design systems turn consistency into measurable business growth.</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#get" size="lg" icon="arrow-down" hint-size="220px,52px">Join the waitlist</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#business" variant="secondary" size="lg" icon="arrow-down" hint-size="220px,52px">Explore the framework</x-import>
+</div>
+</div>
+<img src="assets/book-cover-v2.png" alt="Consistency Compounds book cover" style="display:block;flex:0 1 420px;width:100%;max-width:420px;min-width:0;height:auto">
+</div>
+</header>
+
+
+<section id="business" data-screen-label="02 Business case" style="border-top:1px solid var(--border)">
+<div style="max-width:var(--page-max);margin:0 auto;padding:var(--space-10) var(--gutter);display:flex;flex-direction:column;gap:var(--space-8)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4)">
+<h2 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h1);letter-spacing:-0.035em;line-height:1.05">AI provides acceleration.<br><span style="color:var(--accent-green)">Design systems provide direction.</span></h2>
+<p style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.02em;line-height:1.2;color:var(--text-secondary)">Together they create product leverage.</p>
+<p style="margin:0;font-size:var(--text-body-lg);font-weight:300;line-height:1.55;color:var(--text-secondary);text-wrap:pretty">Design systems are often treated as design tools. Their real value is broader: they create reusable product infrastructure that can improve the quality of experience, increase revenue potential, reduce cost, and accelerate delivery.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:var(--space-6)">
+<sc-for list="{{ outcomePairs }}" as="pair" hint-placeholder-count="2">
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6)">
+<sc-for list="{{ pair }}" as="o" hint-placeholder-count="2">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-display);font-weight:700;font-size:var(--text-h2);letter-spacing:-0.03em;line-height:1">{{ o.word }} <span style="color:{{ o.tone }}">{{ o.arrow }}</span></span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-primary)">{{ o.label }}</span>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary);text-wrap:pretty">{{ o.text }}</p>
+</div>
+</sc-for>
+</div>
+</sc-for>
+</div>
+<p style="margin:0;padding-top:var(--space-5);border-top:1px solid var(--border);font-size:var(--text-body-lg);font-weight:300;line-height:1.55;color:var(--text-secondary);text-wrap:pretty">Compounding Growth is the cumulative economic effect of increasing revenue, reducing cost, and accelerating delivery through a consistent product system.</p>
+</div>
+</section>
+
+<section data-screen-label="03 Consistency compounds" style="border-top:1px solid var(--border)">
+<div style="max-width:var(--page-max);margin:0 auto;padding:var(--space-10) var(--gutter);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:var(--space-8);align-items:start">
+<div style="display:flex;flex-direction:column;gap:var(--space-5)">
+<h2 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h2);letter-spacing:-0.03em;line-height:1.15">Revenue compounds.<br>Savings compound.<br><span style="color:var(--accent-green)">Speed compounds.</span></h2>
+<p style="margin:0;max-width:34ch;font-size:var(--text-body-lg);font-weight:300;line-height:1.55;color:var(--text-secondary);text-wrap:pretty">Every reusable decision creates value beyond the task where it was first made.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-6)">
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ reuse }}" as="r" hint-placeholder-count="4"><p style="margin:0;padding:var(--space-3) 0;border-top:1px solid var(--border);font-size:var(--text-body);line-height:1.55;color:var(--text-secondary)">{{ r }}</p></sc-for>
+</div>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary);text-wrap:pretty">Over time, organizations stop solving the same problems repeatedly and start building on previous solutions.</p>
+</div>
+<div style="grid-column:1/-1;display:flex;flex-direction:column;gap:var(--space-4);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">The book connects</span>
+<div data-noscrollbar="" style="display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none">
+<sc-for list="{{ connects }}" as="c" hint-placeholder-count="6"><span style="padding:var(--space-1) var(--space-5);border-left:1px solid var(--border);font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;line-height:1.2;white-space:nowrap;color:{{ c.tone }}">{{ c.name }}</span></sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="04 AI x DS" style="border-top:1px solid var(--border)">
+<div style="max-width:var(--page-max);margin:0 auto;padding:var(--space-10) var(--gutter);display:flex;flex-direction:column;gap:var(--space-8)">
+<div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:760px">
+<h2 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h1);letter-spacing:-0.035em;line-height:1.05;text-wrap:balance">AI accelerates. Design systems direct.</h2>
+<p style="margin:0;font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary);text-wrap:pretty">AI alone increases speed. Speed without structure can also increase inconsistency.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:var(--space-7)">
+<div style="display:flex;flex-direction:column">
+<span style="padding-bottom:var(--space-4);font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">AI without a system</span>
+<sc-for list="{{ without }}" as="w" hint-placeholder-count="4"><span style="padding:var(--space-3) 0;border-top:1px solid var(--border);font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);color:var(--text-muted)">{{ w }}</span></sc-for>
+</div>
+<div style="display:flex;flex-direction:column">
+<span style="padding-bottom:var(--space-4);font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">AI × Design System</span>
+<sc-for list="{{ withDs }}" as="w" hint-placeholder-count="4"><span style="padding:var(--space-3) 0;border-top:1px solid var(--accent-green);font-family:var(--font-display);font-weight:600;font-size:var(--text-h4)">{{ w }}</span></sc-for>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="framework" data-screen-label="05 Compounding loop" style="border-top:1px solid var(--border)">
+<div style="max-width:var(--page-max);margin:0 auto;padding:var(--space-10) var(--gutter);display:flex;flex-direction:column;gap:var(--space-7)">
+<h2 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h1);letter-spacing:-0.035em;line-height:1.05">The compounding loop.</h2>
+<div style="width:100%;max-width:880px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,auto);gap:var(--space-3)">
+<sc-for list="{{ loop }}" as="l" hint-placeholder-count="8">
+<div style="grid-area:{{ l.area }};display:flex;flex-direction:column;gap:6px;padding:var(--space-4);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-md)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);color:var(--accent-green)">{{ l.n }} {{ l.dir }}</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;line-height:1.2">{{ l.name }}</span>
+</div>
+</sc-for>
+<div style="grid-area:2 / 2 / 3 / 3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-2);padding:var(--space-4);border:1px solid var(--accent-green);border-radius:var(--radius-md);text-align:center">
+<span style="font-family:var(--font-display);font-weight:700;font-size:clamp(14px,1.8vw,22px);letter-spacing:0.04em;line-height:1.15;color:var(--accent-green)">CONSISTENCY COMPOUNDS</span>
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);color:var(--text-secondary)">AI × DS = GM</span>
+</div>
+</div>
+<p style="margin:0;max-width:52ch;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary);text-wrap:pretty">Design-system value does not happen once. It accumulates as the organization continues using the system.</p>
+</div>
+</section>
+
+
+<section data-screen-label="06 What you will learn" style="border-top:1px solid var(--border)">
+<div style="max-width:var(--page-max);margin:0 auto;padding:var(--space-10) var(--gutter);display:flex;flex-direction:column;gap:var(--space-8)">
+<h2 style="margin:0;max-width:22ch;font-family:var(--font-display);font-weight:600;font-size:var(--text-h1);letter-spacing:-0.035em;line-height:1.05;text-wrap:balance">Build the system. Measure the economics. <span style="color:var(--accent-green)">Compound the advantage.</span></h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:var(--space-6)">
+<sc-for list="{{ learn }}" as="l" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);color:var(--accent-green)">{{ l.n }}</span>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">{{ l.title }}</h3>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary);text-wrap:pretty">{{ l.text }}</p>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-4);padding-top:var(--space-6);border-top:1px solid var(--border)">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">Written for</span>
+<div data-noscrollbar="" style="display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none">
+<sc-for list="{{ readers }}" as="r" hint-placeholder-count="6"><span style="padding:var(--space-1) var(--space-5);border-left:1px solid var(--border);font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;line-height:1.2;white-space:nowrap;color:{{ r.tone }}">{{ r.name }}</span></sc-for>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="get" data-screen-label="07 Final CTA" style="position:relative;overflow:hidden;border-top:1px solid var(--border)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;padding:var(--space-10) var(--gutter);display:flex;flex-direction:column;gap:var(--space-5)">
+<h2 style="margin:0;font-family:var(--font-display);font-size:clamp(44px,7vw,104px);font-weight:700;line-height:0.92;letter-spacing:-0.045em">Consistency<br><span style="color:var(--accent-green)">Compounds</span></h2>
+<span style="font-family:var(--font-display);font-size:clamp(28px,3.4vw,48px);font-weight:700;letter-spacing:-0.03em;line-height:1">AI × DS = <span style="color:var(--accent-green)">GM</span></span>
+<span style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:600;letter-spacing:-0.02em">Experience <span style="color:var(--accent-green)">↑</span>   Revenue <span style="color:var(--accent-green)">↑</span>   Cost <span style="color:var(--accent-cyan)">↓</span>   Speed <span style="color:var(--accent-green)">↑</span></span>
+<p style="margin:var(--space-3) 0 0;font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">Build once. Reuse intelligently. Move faster. Compound the value.</p>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3);padding-top:var(--space-3)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="mailto:tymofeieva.n@gmail.com?subject=Waitlist%3A%20Consistency%20Compounds" size="lg" icon="mail" hint-size="220px,52px">Join the waitlist</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#framework" variant="secondary" size="lg" icon="arrow-up" hint-size="220px,52px">Explore the framework</x-import>
+</div>
+<span style="padding-top:var(--space-5);font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:0.3em;text-transform:uppercase;color:var(--text-secondary)">Nataliia Tymofeieva</span>
+</div>
+</section>
+
+<div id="contact">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="{{ footerHeadline }}" email="tymofeieva.n@gmail.com" blurb="Design leadership roles, design-system consulting and talks on the economics of consistency." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" hint-size="100%,360px"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.applyTheme(localStorage.getItem("pf-theme") || "dark");
+  }
+  applyTheme(t) {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", t);
+    const light = { "--accent-green": "#5a3ec8", "--accent-green-dim": "#43299f", "--accent-cyan": "#0a6b7a", "--accent-cyan-dim": "#075460", "--text-accent": "#5a3ec8", "--text-link": "#0a6b7a" };
+    Object.keys(light).forEach(k => t === "light" ? root.style.setProperty(k, light[k], "important") : root.style.removeProperty(k));
+    let s = document.getElementById("pf-light-fixes");
+    if (!s) { s = document.createElement("style"); s.id = "pf-light-fixes"; document.head.appendChild(s); }
+    s.textContent = t === "light" ? 'html[data-theme="light"] [style*="background: var(--accent-green)"],html[data-theme="light"] [style*="background:var(--accent-green)"]{color:#fff !important}' : "";
+  }
+  toggleTheme() {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    this.applyTheme(next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  }
+  outcomesData() {
+    return [
+        { word: "Experience", arrow: "↑", tone: "var(--accent-green)", label: "Improve quality of experience", text: "Give users fewer steps, fewer interruptions, and familiar patterns, so products are easier to learn, use, and trust." },
+        { word: "Speed", arrow: "↑", tone: "var(--accent-green)", label: "Move faster", text: "Give teams reusable components, shared rules, clearer decisions, and AI-ready context to move from idea to production faster." },
+        { word: "Cost", arrow: "↓", tone: "var(--accent-cyan)", label: "Reduce cost", text: "Reduce duplicated design and development work, rework, QA effort, maintenance, support, and unnecessary product complexity." },
+        { word: "Revenue", arrow: "↑", tone: "var(--accent-green)", label: "Grow revenue", text: "Create more consistent products and experiences that support adoption, retention, expansion, and scalable growth." },
+    ];
+  }
+  renderVals() {
+    const outcomesList = this.outcomesData();
+    return {
+      outcomePairs: [outcomesList.slice(0,2), outcomesList.slice(2,4)],
+      toggleTheme: () => this.toggleTheme(),
+      brandMark: React.createElement(React.Fragment, null,
+        React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
+        "aliia Tymofeieva"),
+      navLinks: [
+        { label: "how it connects", href: "index.html#connect" },
+        { label: "work streams", href: "index.html#work" },
+        { label: "book", href: "book.html" },
+        { label: "beyond", href: "index.html#more" },
+        { label: "resume", href: "resume.html" },
+      ],
+      navCta: { label: "contact", href: "#contact" },
+      reuse: [
+        "A component can be reused.",
+        "A pattern can guide hundreds of future decisions.",
+        "A shared rule reduces future ambiguity.",
+        "A structured design system gives AI reusable context.",
+      ],
+      without: ["Faster output", "More variation", "More duplicated decisions", "More governance problems"],
+      withDs: ["Faster output", "Reusable standards", "Consistent implementation", "Scalable product knowledge"],
+      loop: [
+        { n: "01", dir: "→", name: "Standards", area: "1 / 1 / 2 / 2" },
+        { n: "02", dir: "→", name: "Reuse", area: "1 / 2 / 2 / 3" },
+        { n: "03", dir: "↓", name: "Speed", area: "1 / 3 / 2 / 4" },
+        { n: "04", dir: "↓", name: "Learning", area: "2 / 3 / 3 / 4" },
+        { n: "05", dir: "←", name: "Better product", area: "3 / 3 / 4 / 4" },
+        { n: "06", dir: "←", name: "Growth", area: "3 / 2 / 4 / 3" },
+        { n: "07", dir: "↑", name: "Reinvestment", area: "3 / 1 / 4 / 2" },
+        { n: "08", dir: "↑ 01", name: "Stronger system", area: "2 / 1 / 3 / 2" },
+      ],
+      connects: ["Design", "Product", "Engineering", "AI", "Operations", "Business Economics"].map(name => ({ name, tone: name === "AI" ? "var(--accent-cyan)" : "var(--accent-green)" })),
+      learn: [
+        { n: "01", title: "Build the system", text: "Create reusable rules, components, patterns, and product standards." },
+        { n: "02", title: "Connect AI", text: "Turn the design system into structured context AI can understand and use." },
+        { n: "03", title: "Measure the economics", text: "Connect design-system work to revenue, cost, speed, retention, productivity, and growth." },
+        { n: "04", title: "Compound the advantage", text: "Build an organization where every new product decision benefits from everything already learned." },
+      ],
+      practice: [
+        { num: "02 · Dealer management system", title: "Dealer management system modernization", figure: "10× fewer pop-ups and warning messages", href: "case-study-02-dms.html", chips: [{ lever: "Experience", arrow: "↑", tone: "var(--accent-green)" }, { lever: "Cost", arrow: "↓", tone: "var(--accent-cyan)" }] },
+        { num: "03 · Sales and service CRM", title: "One colour system, fourteen UI themes", figure: "14 / 14 themes on one foundation", href: "case-study-03-crm.html", chips: [{ lever: "Experience", arrow: "↑", tone: "var(--accent-green)" }, { lever: "Cost", arrow: "↓", tone: "var(--accent-cyan)" }, { lever: "Speed", arrow: "↑", tone: "var(--accent-green)" }] },
+        { num: "05 · Marketing and web", title: "Supporting the business beyond the product", figure: "Six websites became a lead source", href: "case-study-05-marketing.html", chips: [{ lever: "Experience", arrow: "↑", tone: "var(--accent-green)" }, { lever: "Revenue", arrow: "↑", tone: "var(--accent-green)" }, { lever: "Cost", arrow: "↓", tone: "var(--accent-cyan)" }] },
+      ],
+      readers: ["Product leaders", "Design leaders", "Engineering leaders", "Executives", "Founders", "Transformation teams"].map(name => ({ name, tone: name === "Product leaders" ? "var(--accent-cyan)" : "var(--accent-green)" })),
+      footerHeadline: React.createElement(React.Fragment, null, "Let's talk about ", React.createElement("span", { style: { color: "var(--accent-green)" } }, "the system"), " you're building."),
+      footerColumns: [
+        { title: "sections", links: [{ label: "how it connects", href: "index.html#connect" }, { label: "work streams", href: "index.html#work" }, { label: "book", href: "book.html" }, { label: "beyond", href: "index.html#more" }, { label: "resume", href: "resume.html" }] },
+        { title: "contact", links: [{ label: "linkedin", href: "https://www.linkedin.com/in/tymofeieva-n" }, { label: "email", href: "mailto:tymofeieva.n@gmail.com" }, { label: "call me", href: "tel:+14379878703" }, { label: "resume pdf", href: "assets/Nataliia-Tymofeieva-Resume.pdf" }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

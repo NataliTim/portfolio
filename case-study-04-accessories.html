@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>Case study — Nataliia Tymofeieva</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
@@ -9,13 +10,13 @@
 <x-dc>
 <helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@media (max-width:700px){.cs-split{grid-template-columns:minmax(0,1fr) !important}}</style></helmet>
 <div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="work streams" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
 
 <header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
 <div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
 <a href="index.html#work" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
-<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">accessories e-commerce</div>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">04 · Accessories e-commerce</div>
 <h1 style="margin:0;max-width:22ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Rebuilding automotive accessories e-commerce</h1>
 <p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">I redesigned an automotive-accessories platform integrated with manufacturer and dealer websites, reworking search and the customer flow through testing with real users.</p>
 <p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Omni-search, fewer steps, and important information brought into view.</p>
@@ -25,6 +26,7 @@
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Integrations</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">User research</x-import>
 </div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)"><span>lever</span><div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Revenue <span style="color:var(--accent-green)">↑</span></span></div></div>
 <nav style="display:flex;flex-wrap:wrap;gap:var(--space-5);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase">
 <a href="#overview">overview</a>
 <a href="#decisions">decisions</a>
@@ -262,6 +264,7 @@
 <div class="cs-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:var(--space-7);align-items:start;margin-top:var(--space-6)">
 <div style="display:flex;flex-direction:column;gap:var(--space-4)">
 <p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">I created an interactive Figma prototype that introduced tires as a category within the existing platform. The design embedded a third-party tire portal, offered filtering, and brought selected tires back into the platform's quote flow. The challenge was to keep the experience consistent for dealership staff and online customers.</p>
+<p style="margin:0;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;line-height:1.3;color:var(--text-primary)">A new product category designed inside the existing platform language, so customers would not have to learn a second interface.</p>
 <p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-muted)">The embedded portal was placed in an iframe. Authentication, data orchestration and shared cart behaviour are outside what the design documents.</p>
 </div>
 <figure style="margin:0">
@@ -295,11 +298,12 @@
 <sc-for list="{{ outcomes }}" as="item" hint-placeholder-count="4">
 <div style="display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
 <span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ item.title }}</span>
+<span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">{{ item.tag }}</span>
 <span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ item.text }}</span>
 </div>
 </sc-for>
 </div>
-<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">These describe design work and owner-reported validation. Commercial impact is not measured here.</p>
+<p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Commercial results are not published here. This work is built to move search success, time to the right accessory, and completed quotes and orders.</p>
 <sc-if value="{{ showOperationsNote }}">
 <div style="margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:var(--space-2);max-width:var(--measure-tight)">
 <span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">earlier experience · separate from this platform</span>
@@ -313,16 +317,19 @@
 <p style="margin:0;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Figma: interactive integration prototype.</p>
 <p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">The prototype was assembled from the platform's real components, linked to their implementations through Code Connect.</p>
 </div>
+<div style="display:flex;flex-direction:column;gap:var(--space-5)">
+<div style="display:flex;flex-direction:column;gap:6px;max-width:var(--measure-tight)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">What compounds</span><p style="margin:0;font-size:var(--text-body-lg);line-height:1.5;color:var(--text-primary);text-wrap:pretty">A category designed inside the existing language inherits everything customers already know about the platform.</p></div>
 <div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="150px,52px">All work</x-import>
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="resume.html" variant="secondary" size="lg" icon="arrow-up-right" hint-size="140px,52px">Resume</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="220px,52px">More work streams</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="book.html" variant="secondary" size="lg" icon="arrow-right" hint-size="360px,52px">The framework: Consistency Compounds</x-import>
+</div>
 </div>
 </div>
 </div>
 </section>
 
 <div id="contact">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="{{ footerHeadline }}" email="tymofeieva.n@gmail.com" blurb="Design leadership roles, design-system consulting and talks on the economics of consistency." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" hint-size="100%,360px"></x-import>
 </div>
 </div>
 
@@ -360,7 +367,8 @@ class Component extends DCLogic {
       navLinks: [
         { label: "how it connects", href: "index.html#connect" },
         { label: "work streams", href: "index.html#work" },
-        { label: "beyond the work", href: "index.html#more" },
+        { label: "book", href: "book.html" },
+        { label: "beyond", href: "index.html#more" },
         { label: "resume", href: "resume.html" },
       ],
       navCta: { label: "contact", href: "#contact" },
@@ -381,14 +389,15 @@ class Component extends DCLogic {
       ],
       researchSlots: ["task tested", "participant context", "observation", "resulting adjustment", "retest result"],
       outcomes: [
-        { title: "search", text: "Omni-search became part of the redesigned flow." },
-        { title: "flow", text: "The rework reduced steps and exposed previously hidden information." },
-        { title: "validation", text: "The changes were tested with real users." },
-        { title: "integration", text: "An interactive prototype explored tire selection within the existing platform." },
+        { title: "search", tag: "Experience ↑ · Observed", text: "Omni-search became part of the redesigned flow." },
+        { title: "flow", tag: "Experience ↑ · Observed", text: "The rework reduced steps and exposed previously hidden information." },
+        { title: "validation", tag: "Experience ↑ · Observed", text: "The changes were tested with real users." },
+        { title: "integration", tag: "Revenue ↑ · Intended", text: "An interactive prototype explored tire selection within the existing platform." },
       ],
+      footerHeadline: React.createElement(React.Fragment, null, "Let's talk about ", React.createElement("span", { style: { color: "var(--accent-green)" } }, "the system"), " you're building."),
       footerColumns: [
-        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
-        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+        { title: "sections", links: [{ label: "how it connects", href: "index.html#connect" }, { label: "work streams", href: "index.html#work" }, { label: "book", href: "book.html" }, { label: "beyond", href: "index.html#more" }, { label: "resume", href: "resume.html" }] },
+        { title: "contact", links: [{ label: "linkedin", href: "https://www.linkedin.com/in/tymofeieva-n" }, { label: "email", href: "mailto:tymofeieva.n@gmail.com" }, { label: "call me", href: "tel:+14379878703" }, { label: "resume pdf", href: "assets/Nataliia-Tymofeieva-Resume.pdf" }] },
       ],
     };
   }

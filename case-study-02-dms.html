@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>Case study — Nataliia Tymofeieva</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
@@ -9,14 +10,14 @@
 <x-dc>
 <helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@keyframes ds-blink{0%,49%{opacity:1}50%,100%{opacity:0}}@keyframes ds-pulse{0%,100%{opacity:.35}50%{opacity:1}}@media (prefers-reduced-motion:reduce){[style*="ds-pulse"]{animation:none !important}}</style></helmet>
 <div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" brand-href="index.html" links="{{ navLinks }}" active="work streams" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
 
 <header style="position:relative;overflow:hidden;padding:var(--space-9) var(--gutter);border-bottom:1px solid var(--border)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="80" hint-size="100%,100%"></x-import>
 <div style="position:relative;max-width:var(--page-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-5)">
 <a href="index.html#work" style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">← work streams</a>
-<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">02 / work stream</div>
-<h1 style="margin:0;max-width:24ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Dealer Management System Modernization</h1>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">02 · Dealer management system</div>
+<h1 style="margin:0;max-width:24ch;font-family:var(--font-display);font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)">Dealer management system modernization</h1>
 <p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;color:var(--text-secondary)">Improving usability, consistency and maintainability while preserving the workflows customers already relied on.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" platform="saas" hint-size="auto,22px">SaaS · Cloud</x-import>
@@ -25,14 +26,16 @@
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Interaction patterns</x-import>
 </div>
 <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4);padding-top:var(--space-5);border-top:1px solid var(--border)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="1300+" label="Windows in scope" hint-size="100%,90px"></x-import>
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="47K+" label="Labels analyzed and standardized" hint-size="100%,90px"></x-import>
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="10×" label="Fewer popups and warning messages" tone="cyan" hint-size="100%,90px"></x-import>
+<div style="display:flex;flex-direction:column;gap:var(--space-2)"><x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="1300+" label="Windows in scope" hint-size="100%,90px"></x-import><span style="display:inline-flex;align-items:center;padding:3px 0;font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">Measured</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-2)"><x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="47K" label="Labels analyzed and standardized" hint-size="100%,90px"></x-import><span style="display:inline-flex;align-items:center;padding:3px 0;font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">Measured</span></div>
+<div style="display:flex;flex-direction:column;gap:var(--space-2)"><x-import component-from-global-scope="PortfolioDesignSystem_3bd050.StatBlock" value="10×" label="Fewer pop-ups and warning messages" tone="cyan" hint-size="100%,90px"></x-import><span style="display:inline-flex;align-items:center;padding:3px 0;font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">Measured</span></div>
 </div>
-<div style="display:grid;grid-template-columns:repeat(3,minmax(0,220px));gap:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Fewer interruptions in the workflows dealers repeat all day, without asking them to relearn the product.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),220px));gap:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">
 <div style="display:flex;flex-direction:column;gap:6px"><span>role</span><span style="color:var(--text-primary)">Manager of Product Design</span></div>
 <div style="display:flex;flex-direction:column;gap:6px"><span>scope</span><span style="color:var(--text-primary)">Dealer Management System</span></div>
 <div style="display:flex;flex-direction:column;gap:6px"><span>focus</span><span style="color:var(--text-primary)">Incremental modernization</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span>lever</span><div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Cost <span style="color:var(--accent-cyan)">↓</span></span></div></div>
 </div>
 </div>
 </header>
@@ -78,7 +81,7 @@
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="design challenge" title="Inconsistencies accumulated as screens evolved independently." hint-size="100%,140px"></x-import>
 <p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">The product had accumulated inconsistencies over time as different screens and features evolved independently. The key design questions were:</p>
 <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5) var(--space-7);margin-top:var(--space-6)">
-<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">01</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">How can we improve clarity without disrupting established user behavior?</span></div>
+<div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">01</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">How can we improve clarity without disrupting established user behaviour?</span></div>
 <div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">02</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Which patterns should remain familiar, and which inconsistencies should be standardized?</span></div>
 <div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">03</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">How can we improve information hierarchy, labeling, navigation, and field placement across a large legacy application?</span></div>
 <div style="display:flex;gap:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">04</span><span style="font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">How can new AI-assisted design and development workflows make modernization of a large legacy product more scalable?</span></div>
@@ -228,6 +231,7 @@
 <section style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="the rule we worked to" title="Change only where it is self-explanatory and necessary." hint-size="100%,140px"></x-import>
 <p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">Customers have worked in this application for over a decade. Speed comes from muscle memory, so every proposed change had to earn its place: it had to make the product clearer, not just newer.</p>
+<p style="margin:var(--space-3) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.6;color:var(--text-primary)">Familiar workflows are part of why long-time customers stay; changing them carries a relearning cost.</p>
 <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6);margin-top:var(--space-7)">
 <div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
 <span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">standards</span>
@@ -237,11 +241,12 @@
 <div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
 <span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">interviews</span>
 <h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">Essential changes only, confirmed by users</h3>
-<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">User interviews were run throughout so that what shipped was essential. Where a change added value only on paper, the familiar pattern stayed — the existing day-to-day process was never disturbed for its own sake.</p>
+<p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">User interviews were run throughout so that what shipped was essential. Where a change added value only on paper, the familiar pattern stayed - the existing day-to-day process was never disturbed for its own sake.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)">
 <span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">onboarding</span>
 <h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">Clarity that shortens training</h3>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Cost <span style="color:var(--accent-cyan)">↓</span></span><span style="display:inline-flex;align-items:center;padding:3px 0;font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">Observed</span></div>
 <p style="margin:0;font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)">Consistent labeling, grouping and action placement make the product self-explanatory, so new staff are trained and onboarded on one set of patterns instead of a different convention per screen.</p>
 </div>
 </div>
@@ -253,23 +258,29 @@
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="05" kicker="business outcome" title="A foundation for modernization without a disruptive redesign." hint-size="100%,140px"></x-import>
 <p style="margin:var(--space-6) 0 0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.6;color:var(--text-secondary)">The work established a foundation for incremental modernization of a mature Dealer Management System without requiring a disruptive redesign. Key outcomes included:</p>
 <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5) var(--space-6);margin-top:var(--space-6)">
-<sc-for list="{{ outcomes }}" as="item" hint-placeholder-count="7">
+<sc-for list="{{ outcomeGroups }}" as="g" hint-placeholder-count="3">
+<div style="display:flex;align-items:center;gap:8px;padding:var(--space-4) 0 var(--space-2);font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)"><span>{{ g.lever }} <span style="color:{{ g.tone }}">{{ g.arrow }}</span></span><span style="color:var(--text-muted)">{{ g.note }}</span></div>
+<sc-for list="{{ g.items }}" as="item" hint-placeholder-count="2">
 <div style="display:flex;gap:var(--space-3);padding-top:var(--space-4);border-top:1px solid var(--accent-green)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);color:var(--accent-green)">{{ item.n }}</span><span style="font-size:var(--text-body);line-height:1.55;color:var(--text-primary)">{{ item.text }}</span></div>
+</sc-for>
 </sc-for>
 </div>
 <p style="margin:var(--space-7) 0 0;max-width:var(--measure-tight);font-size:var(--text-body);line-height:1.7;color:var(--text-secondary)">Most importantly, the project demonstrated that legacy-product modernization does not require replacing familiar workflows. By combining user research, systematic UX analysis, design standards, and new technology, the product can evolve gradually while protecting the speed and familiarity experienced users depend on.</p>
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4);margin-top:var(--space-7);padding-top:var(--space-6);border-top:1px solid var(--border)">
 <p style="margin:0;flex:1;min-width:280px;max-width:var(--measure-tight);font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Modernizing a product people already know how to use.</p>
+<div style="display:flex;flex-direction:column;gap:var(--space-5)">
+<div style="display:flex;flex-direction:column;gap:6px;max-width:var(--measure-tight)"><span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">What compounds</span><p style="margin:0;font-size:var(--text-body-lg);line-height:1.5;color:var(--text-primary);text-wrap:pretty">Each pattern standardized once is reused on the next legacy screen instead of being redesigned.</p></div>
 <div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="200px,52px">More work streams</x-import>
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#contact" variant="secondary" size="lg" icon="mail" hint-size="150px,52px">Get in touch</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="index.html#work" size="lg" icon="arrow-right" hint-size="220px,52px">More work streams</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="book.html" variant="secondary" size="lg" icon="arrow-right" hint-size="360px,52px">The framework: Consistency Compounds</x-import>
+</div>
 </div>
 </div>
 </div>
 </section>
 
 <div id="contact">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="{{ footerHeadline }}" email="tymofeieva.n@gmail.com" blurb="Design leadership roles, design-system consulting and talks on the economics of consistency." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" hint-size="100%,360px"></x-import>
 </div>
 </div>
 </x-dc>
@@ -303,7 +314,8 @@ class Component extends DCLogic {
       navLinks: [
         { label: "how it connects", href: "index.html#connect" },
         { label: "work streams", href: "index.html#work" },
-        { label: "beyond the work", href: "index.html#more" },
+        { label: "book", href: "book.html" },
+        { label: "beyond", href: "index.html#more" },
         { label: "resume", href: "resume.html" },
       ],
       navCta: { label: "contact", href: "#contact" },
@@ -321,22 +333,26 @@ class Component extends DCLogic {
         "Save, Update, Delete, Post, and Exit actions",
         "required fields",
         "lookup and list-of-value controls",
-        "dropdown behavior",
+        "dropdown behaviour",
         "navigation between fields",
         "section organization",
       ],
-      outcomes: [
-        { n: "01", text: "clearer cross-product UX standards" },
-        { n: "02", text: "improved consistency across common workflows" },
-        { n: "03", text: "identification and prioritization of UX debt" },
-        { n: "04", text: "reusable interaction and layout patterns" },
-        { n: "05", text: "reduced design and implementation effort for future improvements" },
-        { n: "06", text: "a framework for AI-assisted modernization of legacy interfaces" },
-        { n: "07", text: "stronger validation of design decisions through customer feedback" },
+      outcomeGroups: [
+        { lever: "Experience", arrow: "↑", tone: "var(--accent-green)", note: "· feeds retention", items: [
+          { n: "01", text: "improved consistency across common workflows" },
+          { n: "02", text: "stronger validation of design decisions through customer feedback" } ] },
+        { lever: "Cost", arrow: "↓", tone: "var(--accent-cyan)", note: "", items: [
+          { n: "03", text: "reduced design and implementation effort for future improvements" },
+          { n: "04", text: "reusable interaction and layout patterns" },
+          { n: "05", text: "clearer cross-product UX standards" },
+          { n: "06", text: "identification and prioritization of UX debt" } ] },
+        { lever: "Speed", arrow: "↑", tone: "var(--accent-green)", note: "· intended", items: [
+          { n: "07", text: "a framework for AI-assisted modernization of legacy interfaces" } ] },
       ],
+      footerHeadline: React.createElement(React.Fragment, null, "Let's talk about ", React.createElement("span", { style: { color: "var(--accent-green)" } }, "the system"), " you're building."),
       footerColumns: [
-        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
-        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+        { title: "sections", links: [{ label: "how it connects", href: "index.html#connect" }, { label: "work streams", href: "index.html#work" }, { label: "book", href: "book.html" }, { label: "beyond", href: "index.html#more" }, { label: "resume", href: "resume.html" }] },
+        { title: "contact", links: [{ label: "linkedin", href: "https://www.linkedin.com/in/tymofeieva-n" }, { label: "email", href: "mailto:tymofeieva.n@gmail.com" }, { label: "call me", href: "tel:+14379878703" }, { label: "resume pdf", href: "assets/Nataliia-Tymofeieva-Resume.pdf" }] },
       ],
     };
   }

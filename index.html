@@ -2,29 +2,40 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>Nataliia Tymofeieva — Product Designer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
-<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@keyframes ds-blink{0%,49%{opacity:1}50%,100%{opacity:0}}@keyframes hero-flow{to{stroke-dashoffset:-1200}}@keyframes hero-msg{0%{opacity:0;transform:translateY(10px)}8%{opacity:1;transform:none}25%{opacity:1;transform:none}33%{opacity:0;transform:translateY(-8px)}100%{opacity:0;transform:translateY(-8px)}}</style></helmet>
+<helmet><script src="./ds-base.js"></script><style>html{scroll-behavior:smooth}body{margin:0}a{color:var(--accent-cyan);text-decoration:none}a:hover{color:var(--accent-green)}@keyframes ds-blink{0%,49%{opacity:1}50%,100%{opacity:0}}@keyframes hero-flow{to{stroke-dashoffset:-1200}}@keyframes hero-msg{0%{opacity:0;transform:translateY(10px)}6.4%{opacity:1;transform:none}20%{opacity:1;transform:none}26.4%{opacity:0;transform:translateY(-8px)}100%{opacity:0;transform:translateY(-8px)}}</style></helmet>
 <div id="top" style="background:var(--bg);color:var(--text-primary);font-family:var(--font-body)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" links="{{ navLinks }}" active="#work" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Nav" on-theme-toggle="{{ toggleTheme }}" brand="{{ brandMark }}" links="{{ navLinks }}" active="{{ activeNav }}" cta="{{ navCta }}" hint-size="100%,64px"></x-import>
 
 <section style="position:relative;overflow:hidden;padding:var(--space-10) var(--gutter) var(--space-9);border-bottom:var(--border-width) solid var(--border)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="{{ gridSize }}" hint-size="100%,100%"></x-import>
 <div style="position:relative;max-width:var(--page-max);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--space-8);align-items:center">
 <div style="display:flex;flex-direction:column;gap:var(--space-6)">
-<div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">
-<span style="width:7px;height:7px;border-radius:var(--radius-pill);background:var(--accent-green);animation:ds-blink 1.6s steps(1, end) infinite"></span>
-Product Design Manager
+<div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary);line-height:1.5">
+<span style="flex:0 0 auto;width:7px;height:7px;border-radius:var(--radius-pill);background:var(--accent-green);animation:ds-blink 1.6s steps(1, end) infinite"></span>
+<span>Product Design Manager · 15+ years · Master's in Economics</span>
 </div>
-<h1 style="font-size:var(--text-display);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display);max-width:18ch">I design systems, <span style="color:var(--accent-green)">not screens.</span></h1>
-<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);color:var(--text-secondary)">UX/UI/AI evangelist, 15+ years in<br>setting the direction for how products evolve into one consistent system.</p>
+<h1 style="margin:0;font-size:clamp(40px,5.6vw,84px);font-weight:var(--weight-display);line-height:1.02;letter-spacing:var(--tracking-display);max-width:16ch;text-wrap:balance">I design systems that <span style="color:var(--accent-green)">compound.</span></h1>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);color:var(--text-secondary)">Product design manager who builds design systems as business infrastructure that make products easier to adopt, cheaper to scale and faster to ship.</p>
 <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-2)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#contact" icon="send" size="lg" hint-size="160px,52px">Connect</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#contact" on-click="{{ toggleContact }}" icon="send" size="lg" hint-size="160px,52px">Connect</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#work" icon="arrow-down" variant="secondary" size="lg" hint-size="180px,52px">Case studies</x-import>
 </div>
+<sc-if value="{{ contactOpen }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-6);margin-top:var(--space-4);padding:var(--space-4);background:var(--surface-card);border:1px solid var(--accent-green);border-radius:var(--radius-md);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label)">
+<sc-for list="{{ contacts }}" as="item" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="text-transform:uppercase;color:var(--text-muted)">{{ item.label }}</span>
+<a href="{{ item.href }}" target="_blank" rel="noreferrer" style="color:var(--accent-cyan)">{{ item.value }}</a>
+</div>
+</sc-for>
+</div>
+</sc-if>
 </div>
 <div style="position:relative;aspect-ratio:4/5;border:var(--border-width) solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--bg-deep)">
 <svg viewBox="0 0 400 500" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
@@ -44,21 +55,25 @@ Product Design Manager
 </svg>
 <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:var(--space-5)">
 <div style="position:relative;min-height:104px">
-<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) infinite;animation-fill-mode:both">
-<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">Consistency</span>
-<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">One language, every product</span>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 20s var(--ease-out, cubic-bezier(.16,1,.3,1)) 4s infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">Revenue ↑</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Easier to adopt and expand into</span>
 </div>
-<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) 4s infinite;animation-fill-mode:both">
-<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">System</span>
-<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Component libraries that scale</span>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 20s var(--ease-out, cubic-bezier(.16,1,.3,1)) 8s infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">Cost ↓</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Decisions made once, reused everywhere</span>
 </div>
-<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) 8s infinite;animation-fill-mode:both">
-<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">Strategy</span>
-<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">How the product evolves</span>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 20s var(--ease-out, cubic-bezier(.16,1,.3,1)) 12s infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">Speed ↑</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Idea to production, on-system</span>
 </div>
-<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 16s var(--ease-out, cubic-bezier(.16,1,.3,1)) 12s infinite;animation-fill-mode:both">
-<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-cyan)">Bridge</span>
-<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Closing the gap with AI</span>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 20s var(--ease-out, cubic-bezier(.16,1,.3,1)) infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">Experience ↑</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">Fewer steps, fewer interruptions</span>
+</div>
+<div style="position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;gap:6px;animation:hero-msg 20s var(--ease-out, cubic-bezier(.16,1,.3,1)) 16s infinite;animation-fill-mode:both">
+<span style="font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">AI × DS</span>
+<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;color:var(--text-primary)">AI builds on proven decisions</span>
 </div>
 </div>
 </div>
@@ -72,16 +87,20 @@ Product Design Manager
 <div style="min-width:0;display:flex;align-items:stretch;gap:var(--space-2)">
 <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background:var(--surface-card);border:1px solid {{ node.border }};border-radius:var(--radius-md)">
 <span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ node.tone }}">{{ node.label }}</span>
-<span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">{{ node.title }}</span>
+<sc-if value="{{ node.title }}" hint-placeholder-val="{{ true }}"><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">{{ node.title }}</span></sc-if>
+<sc-if value="{{ node.levers }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-wrap:wrap;column-gap:12px;row-gap:4px;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em">
+<sc-for list="{{ node.levers }}" as="lv" hint-placeholder-count="4"><span style="white-space:nowrap">{{ lv.word }} <span style="color:{{ lv.tone }}">{{ lv.arrow }}</span></span></sc-for>
+</div></sc-if>
 </div>
 <span style="display:flex;align-items:center;color:var(--text-muted);font-family:var(--font-mono);font-size:14px">{{ node.arrow }}</span>
 </div>
 </sc-for>
 </div>
+<p style="margin:var(--space-4) 0 0;font-family:var(--font-mono);font-size:var(--text-mono-meta);line-height:1.6;color:var(--text-muted)">How it runs: Figma · GitHub · Storybook · MCP · Claude Code → <a href="#work">the process transformation case</a></p>
 </section>
 
 <section id="work" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="work streams" title="The work, the leadership behind it, and the decisions that moved the needle on quality of experience." hint-size="100%,160px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="02" kicker="work streams" title="One decision, made reusable." subtitle="Each case shows the business lever it pulls." hint-size="100%,160px"></x-import>
 <div style="display:flex;flex-direction:column;margin-top:var(--space-6)">
 
 <article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
@@ -108,16 +127,17 @@ Product Design Manager
 <span style="position:absolute;left:var(--space-4);bottom:var(--space-4);font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">source-of-truth diagram</span>
 </div>
 <div style="display:flex;flex-direction:column;gap:var(--space-3)">
-<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">01</div>
-<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Process Transformation for the AI Era</h3>
-<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Rebuilt the entire design process so that the design system is the source of truth — the foundation that turns AI-assisted design into a deterministic approach rather than a generated guess.</p>
+<div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">01 · Process</div>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Process transformation for the age of AI</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Speed <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Cost <span style="color:var(--accent-cyan)">↓</span></span></div>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Rebuilt the entire design process so that the design system is the source of truth - the foundation that turns AI-assisted design into a deterministic approach rather than a generated guess.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">AI</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Process</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design–development bridge</x-import>
 </div>
-<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">The shift in what counts as the source of truth, and the pipeline that makes it work.</p>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">AI composes from proven components, so decisions land faster and handoff is ready to build.</p>
 <div style="margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-01-process.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
 </div>
@@ -127,15 +147,16 @@ Product Design Manager
 <article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
 <div style="display:flex;flex-direction:column;gap:var(--space-3)">
 <div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">02 · Dealer management system</div>
-<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Modernizing a Dealer Management System Customers Have Used for Over a Decade</h3>
-<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Directed the modernization of a large dealer management system: consistency, standardization, and consistent application of the design system, with every change validated through UX analysis and user interviews.</p>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Dealer management system modernization</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Cost <span style="color:var(--accent-cyan)">↓</span></span></div>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Directed the modernization of a dealer management system customers have used for over a decade, with every change validated through UX analysis and user interviews.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" platform="saas" hint-size="auto,22px">SaaS · Cloud</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Modernization</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">New features</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Technology migration</x-import>
 </div>
-<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">Standards, heuristics and accessibility applied across a legacy product — changing only what is self-explanatory and necessary, so muscle memory built over a decade stays intact.</p>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">Standards, heuristics and accessibility applied across a legacy product - changing only what is self-explanatory and necessary, so muscle memory built over a decade stays intact.</p>
 <div style="margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-02-dms.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
 </div>
@@ -189,7 +210,8 @@ Product Design Manager
 </div>
 <div style="display:flex;flex-direction:column;gap:var(--space-3)">
 <div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">03 · Sales and service CRM</div>
-<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One Colour System, Fourteen UI Themes</h3>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One colour system, fourteen UI themes</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Cost <span style="color:var(--accent-cyan)">↓</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Speed <span style="color:var(--accent-green)">↑</span></span></div>
 <p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Led a global update of all fourteen UI themes across a sales and service CRM, grounded in a full analysis of the existing interface and every technology in use across the product.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" platform="web" hint-size="auto,22px">Web</x-import>
@@ -197,7 +219,7 @@ Product Design Manager
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Foundation work</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">UI audit</x-import>
 </div>
-<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">The analysis-first method — auditing every surface and every technology in use de-risked a change that touched the whole product.</p>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">Colour roles defined once and mapped to all fourteen themes, after auditing how the product was built.</p>
 <div style="margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-03-crm.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
 </div>
@@ -207,15 +229,16 @@ Product Design Manager
 <article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border)">
 <div style="display:flex;flex-direction:column;gap:var(--space-3)">
 <div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">04 · Accessories e-commerce</div>
-<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Rebuilding Automotive Accessories E-commerce</h3>
-<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">A full redesign of an automotive-accessories platform deeply integrated with OEM and dealer websites — plus running design and operations for an online store of more than a thousand products.</p>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Rebuilding automotive accessories e-commerce</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Revenue <span style="color:var(--accent-green)">↑</span></span></div>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">A full redesign of an automotive-accessories platform deeply integrated with OEM and dealer websites.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">E-commerce</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Full redesign</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Integrations</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">User research</x-import>
 </div>
-<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">The validated flow rework — omni-search, fewer steps, and hidden information brought into the open, all tested against real users.</p>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">The validated flow rework - omni-search, fewer steps, and hidden information brought into the open, all tested against real users.</p>
 <div style="margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-04-accessories.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
 </div>
@@ -273,8 +296,9 @@ Product Design Manager
 </div>
 <div style="display:flex;flex-direction:column;gap:var(--space-3)">
 <div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">05 · Marketing and web</div>
-<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Supporting the Business Beyond the Product</h3>
-<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Delivered the surrounding layer the business needed to promote and sell its products — company websites, landing pages, video and presentations — instrumented with Google Analytics and Tag Manager and integrated with the sales CRM.</p>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">Supporting the business beyond the product</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Revenue <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Cost <span style="color:var(--accent-cyan)">↓</span></span></div>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">Delivered the surrounding layer the business needed to promote and sell its products - company websites, landing pages, video and presentations - instrumented with Google Analytics and Tag Manager and integrated with the sales CRM.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Marketing</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Landing pages</x-import>
@@ -291,15 +315,16 @@ Product Design Manager
 <article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-7);align-items:center;padding:var(--space-7) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
 <div style="display:flex;flex-direction:column;gap:var(--space-3)">
 <div style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary)">06 · Product suite</div>
-<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One Language Across a Product Suite</h3>
-<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">A dedicated initiative to optimize a single design language across every product in the suite, and to make workflows carry from one product to the next — best practices consolidated into shared patterns rather than re-solved product by product.</p>
+<h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h3);letter-spacing:-0.03em;text-wrap:pretty">One design language across a product suite</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Experience <span style="color:var(--accent-green)">↑</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Cost <span style="color:var(--accent-cyan)">↓</span></span><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary)">Revenue <span style="color:var(--accent-green)">↑</span></span></div>
+<p style="margin:0;max-width:var(--measure-tight);color:var(--text-secondary);font-size:var(--text-body);line-height:1.6">A dedicated initiative to optimize a single design language across every product in the suite, and to make workflows carry from one product to the next - best practices consolidated into shared patterns rather than re-solved product by product.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Design system</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Consistency</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">Cross-product</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Tag" size="sm" hint-size="auto,22px">UX patterns</x-import>
 </div>
-<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">Workflow continuity across products — the shared patterns that let a user move between apps without relearning.</p>
+<p style="margin:var(--space-2) 0 0;max-width:var(--measure-tight);padding-top:var(--space-3);border-top:1px solid var(--border);color:var(--text-primary);font-size:var(--text-body);line-height:1.55">Workflow continuity across products - the shared patterns that let a user move between apps without relearning.</p>
 <div style="margin-top:var(--space-2)">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="case-study-06-product-suite.html" variant="secondary" size="sm" icon="arrow-right" hint-size="170px,36px">View case study</x-import>
 </div>
@@ -323,7 +348,7 @@ Product Design Manager
 <rect x="176" y="216" width="58" height="42"></rect><rect x="316" y="216" width="58" height="42"></rect>
 </g>
 <path d="M36 280 H444" stroke="color-mix(in srgb, var(--text-primary) 16%, transparent)" stroke-width="1"></path>
-<text x="36" y="302" fill="var(--text-muted)">SHARED PATTERNS ACROSS SIX PRODUCTS</text>
+<text x="36" y="302" fill="var(--text-muted)">SHARED PATTERNS ACROSS THE SUITE · NOT ALL 13 PRODUCTS SHOWN</text>
 </svg>
 </div>
 </article>
@@ -331,34 +356,210 @@ Product Design Manager
 </div>
 </section>
 
+<section id="book" style="position:relative;overflow:hidden;border-top:1px solid var(--border);background:var(--surface-inset)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="64" hint-size="100%,100%"></x-import>
+<div style="position:relative;max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);display:flex;flex-wrap:wrap;gap:var(--space-7);align-items:center;justify-content:space-between">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:var(--space-4)">
+<div style="display:flex;align-items:center;gap:var(--space-4);font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)"><span>03</span><span style="color:var(--text-secondary)">the book · forthcoming</span><span style="flex:1;height:1px;background:var(--border)"></span></div>
+<h2 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(40px,5vw,72px);letter-spacing:-0.04em;line-height:0.95">Consistency Compounds</h2>
+<span style="font-family:var(--font-display);font-weight:700;font-size:var(--text-h3);letter-spacing:-0.02em">AI × DS = <span style="color:var(--accent-green)">GM</span></span>
+<p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);font-weight:300;line-height:1.55;color:var(--text-secondary);text-wrap:pretty">A business book about design systems, AI and product economics. The work above is the evidence.</p>
+<div style="padding-top:var(--space-2)"><x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="book.html" size="lg" icon="arrow-right" hint-size="240px,52px">Explore the framework</x-import></div>
+</div>
+<img src="assets/book-cover-v2.png" alt="Consistency Compounds book cover" style="display:block;flex:0 1 200px;width:100%;max-width:200px;min-width:0;height:auto">
+</div>
+</section>
+
 <section id="more" style="max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--gutter);border-top:1px solid var(--border)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="03" kicker="beyond the work" title="Everything that isn't a product, in one place." hint-size="100%,120px"></x-import>
-<div style="display:grid;grid-template-columns:{{ moreCols }};gap:var(--grid-gap);margin-top:var(--space-7)">
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.SectionHeading" index="04" kicker="beyond" hint-size="100%,80px"></x-import>
+<div style="display:flex;justify-content:flex-end;gap:var(--space-2);margin-top:var(--space-7)">
+<button type="button" onClick="{{ scrollPrev }}" aria-label="previous" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:transparent;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-secondary);font-family:var(--font-mono);font-size:14px;cursor:pointer" style-hover="border-color:var(--accent-green);color:var(--accent-green)">←</button>
+<button type="button" onClick="{{ scrollNext }}" aria-label="next" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:transparent;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-secondary);font-family:var(--font-mono);font-size:14px;cursor:pointer" style-hover="border-color:var(--accent-green);color:var(--accent-green)">→</button>
+</div>
+<div ref="{{ trackRef }}" style="display:flex;gap:var(--grid-gap);margin-top:var(--space-4);overflow-x:auto;scroll-snap-type:x proximity;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:var(--space-2)">
 <sc-for list="{{ more }}" as="card" hint-placeholder-count="7">
-<article style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);background:var(--surface-card);border:1px solid {{ card.border }};border-radius:var(--radius-md)">
+<article style="flex:0 0 320px;scroll-snap-align:start;display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-4);background:var(--surface-card);border:1px solid {{ card.border }};border-radius:var(--radius-md)">
 <div style="position:relative;overflow:hidden;height:120px;background:var(--surface-inset);border:1px solid var(--border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center">
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.GridOverlay" size="32" hint-size="100%,100%"></x-import>
+<sc-if value="{{ card.isBook }}" hint-placeholder-val="{{ true }}">
+<svg viewBox="0 0 220 120" width="100%" height="100%" style="position:relative;display:block" aria-label="Book cover sketch">
+<g stroke="var(--border)" stroke-width="1" fill="var(--surface-inset)">
+<rect x="96" y="22" width="60" height="88" rx="2"></rect>
+<rect x="88" y="26" width="56" height="84" rx="2" opacity=".7"></rect>
+</g>
+<g transform="translate(78 14)" fill="none" stroke="var(--accent-green)" stroke-width="1.25" stroke-linejoin="round">
+<rect x="0" y="0" width="64" height="92" rx="2" fill="var(--surface-card)"></rect>
+<line x1="10" y1="0" x2="10" y2="92"></line>
+<line x1="20" y1="16" x2="54" y2="16" stroke="var(--accent-cyan)"></line>
+<line x1="20" y1="24" x2="46" y2="24" stroke="var(--accent-cyan)" opacity=".6"></line>
+<rect x="20" y="40" width="14" height="14"></rect>
+<rect x="40" y="40" width="14" height="14" opacity=".55"></rect>
+<rect x="20" y="60" width="14" height="14" opacity=".55"></rect>
+<rect x="40" y="60" width="14" height="14"></rect>
+<line x1="20" y1="82" x2="34" y2="82" opacity=".5"></line>
+</g>
+</svg>
+</sc-if>
+<sc-if value="{{ card.isSpeaking }}" hint-placeholder-val="{{ true }}">
+<svg viewBox="0 0 220 120" width="100%" height="100%" style="position:relative;display:block" aria-label="Speaking sketch">
+<g fill="none" stroke="var(--border)" stroke-width="1">
+<rect x="20" y="16" width="104" height="62" rx="2"></rect>
+</g>
+<g fill="none" stroke="var(--accent-cyan)" stroke-width="1.25" stroke-linecap="round">
+<line x1="34" y1="32" x2="94" y2="32"></line>
+<line x1="34" y1="42" x2="76" y2="42" opacity=".65"></line>
+<polyline points="34,66 54,54 68,60 88,38 110,48"></polyline>
+</g>
+<g fill="none" stroke="var(--accent-green)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+<path d="M150 104 V62 h28 v42 z"></path>
+<path d="M146 62 h36"></path>
+<circle cx="164" cy="42" r="8"></circle>
+<path d="M156 58 q8 -8 16 0"></path>
+<line x1="190" y1="104" x2="190" y2="72"></line>
+<rect x="185" y="58" width="10" height="16" rx="5"></rect>
+<line x1="182" y1="104" x2="198" y2="104"></line>
+</g>
+<line x1="20" y1="104" x2="200" y2="104" stroke="var(--border)" stroke-width="1"></line>
+</svg>
+</sc-if>
+<sc-if value="{{ card.isBoard }}" hint-placeholder-val="{{ true }}">
+<svg viewBox="0 0 220 120" width="100%" height="100%" style="position:relative;display:block" aria-label="Board meeting sketch">
+<ellipse cx="110" cy="66" rx="52" ry="26" fill="none" stroke="var(--accent-green)" stroke-width="1.25"></ellipse>
+<ellipse cx="110" cy="66" rx="34" ry="16" fill="none" stroke="var(--border)" stroke-width="1"></ellipse>
+<g fill="none" stroke="var(--accent-cyan)" stroke-width="1.1" stroke-linejoin="round">
+<g><circle cx="110" cy="26" r="5"></circle><path d="M103 37 q7 -8 14 0"></path></g>
+<g><circle cx="142" cy="31" r="5"></circle><path d="M135 42 q7 -8 14 0"></path></g>
+<g><circle cx="165" cy="46" r="5"></circle><path d="M158 57 q7 -8 14 0"></path></g>
+<g><circle cx="174" cy="66" r="5"></circle><path d="M167 77 q7 -8 14 0"></path></g>
+<g opacity=".8"><circle cx="165" cy="86" r="5"></circle><path d="M158 97 q7 -8 14 0"></path></g>
+<g opacity=".8"><circle cx="142" cy="101" r="5"></circle><path d="M135 112 q7 -8 14 0"></path></g>
+<g opacity=".8"><circle cx="110" cy="106" r="5"></circle><path d="M103 117 q7 -8 14 0"></path></g>
+<g opacity=".8"><circle cx="78" cy="101" r="5"></circle><path d="M71 112 q7 -8 14 0"></path></g>
+<g opacity=".8"><circle cx="55" cy="86" r="5"></circle><path d="M48 97 q7 -8 14 0"></path></g>
+<g><circle cx="46" cy="66" r="5"></circle><path d="M39 77 q7 -8 14 0"></path></g>
+<g><circle cx="55" cy="46" r="5"></circle><path d="M48 57 q7 -8 14 0"></path></g>
+<g><circle cx="78" cy="31" r="5"></circle><path d="M71 42 q7 -8 14 0"></path></g>
+</g>
+<g stroke="var(--border)" stroke-width="1" fill="none">
+<rect x="94" y="60" width="14" height="10" rx="1"></rect>
+<rect x="116" y="62" width="12" height="8" rx="1"></rect>
+</g>
+</svg>
+</sc-if>
+<sc-if value="{{ card.isTooling }}" hint-placeholder-val="{{ true }}">
+<svg viewBox="0 0 220 120" width="100%" height="100%" style="position:relative;display:block" aria-label="Spreadsheet to grid sketch">
+<g fill="none" stroke="var(--border)" stroke-width="1">
+<rect x="14" y="26" width="76" height="68" rx="2"></rect>
+<line x1="14" y1="40" x2="90" y2="40"></line>
+<line x1="14" y1="54" x2="90" y2="54"></line>
+<line x1="14" y1="68" x2="90" y2="68"></line>
+<line x1="14" y1="81" x2="90" y2="81"></line>
+<line x1="39" y1="26" x2="39" y2="94"></line>
+<line x1="64" y1="26" x2="64" y2="94"></line>
+</g>
+<g fill="none" stroke="var(--accent-cyan)" stroke-width="1.1" stroke-linecap="round" opacity=".8">
+<line x1="20" y1="33" x2="33" y2="33"></line>
+<line x1="45" y1="33" x2="58" y2="33"></line>
+<line x1="70" y1="33" x2="83" y2="33"></line>
+<line x1="20" y1="47" x2="31" y2="47"></line>
+<line x1="45" y1="61" x2="56" y2="61"></line>
+<line x1="70" y1="75" x2="81" y2="75"></line>
+</g>
+<g fill="none" stroke="var(--accent-green)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+<line x1="98" y1="60" x2="118" y2="60"></line>
+<polyline points="112,54 118,60 112,66"></polyline>
+<rect x="128" y="26" width="78" height="68" rx="3"></rect>
+<rect x="128" y="26" width="78" height="14" rx="3"></rect>
+<line x1="128" y1="58" x2="206" y2="58"></line>
+<line x1="128" y1="76" x2="206" y2="76"></line>
+<line x1="160" y1="40" x2="160" y2="94"></line>
+<line x1="184" y1="40" x2="184" y2="94"></line>
+</g>
+</svg>
+</sc-if>
+<sc-if value="{{ card.isLeadership }}" hint-placeholder-val="{{ true }}">
+<svg viewBox="0 0 220 120" width="100%" height="100%" style="position:relative;display:block" aria-label="Education and speaking sketch">
+<g fill="none" stroke="var(--accent-green)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+<polygon points="62,34 96,48 62,62 28,48"></polygon>
+<path d="M40 54 v16 q22 12 44 0 v-16"></path>
+<path d="M96 48 v18"></path>
+<circle cx="96" cy="69" r="2.5"></circle>
+</g>
+<g fill="none" stroke="var(--accent-cyan)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="150" cy="40" r="8"></circle>
+<path d="M138 60 q12 -12 24 0"></path>
+<path d="M138 60 v20 h24 v-20"></path>
+<path d="M170 34 q7 8 0 16" opacity=".8"></path>
+<path d="M178 28 q12 14 0 28" opacity=".55"></path>
+</g>
+<line x1="24" y1="92" x2="196" y2="92" stroke="var(--border)" stroke-width="1"></line>
+</svg>
+</sc-if>
+<sc-if value="{{ card.noArt }}" hint-placeholder-val="{{ true }}">
 <span style="position:relative;font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)">IMAGE</span>
+</sc-if>
 </div>
 <span style="font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--accent-green)">{{ card.kind }}</span>
 <h3 style="margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--text-h4);letter-spacing:-0.02em;text-wrap:pretty">{{ card.title }}</h3>
 <p style="margin:0;color:var(--text-secondary);font-size:var(--text-small);line-height:1.6">{{ card.text }}</p>
-<span style="margin-top:auto;padding-top:var(--space-3);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ card.noteTone }}">{{ card.note }}</span>
+<sc-if value="{{ card.href }}" hint-placeholder-val="{{ false }}"><a href="{{ card.href }}" style="margin-top:auto;padding-top:var(--space-3);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ card.noteTone }}" style-hover="color:var(--text-primary)">{{ card.note }}</a></sc-if><sc-if value="{{ card.noHref }}" hint-placeholder-val="{{ true }}"><span style="margin-top:auto;padding-top:var(--space-3);border-top:1px solid var(--border);font-family:var(--font-mono);font-size:var(--text-mono-meta);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ card.noteTone }}">{{ card.note }}</span></sc-if>
 </article>
 </sc-for>
 </div>
 </section>
 
 <div id="contact">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="Let's talk about the system you're building." email="hello@example.com" blurb="Design leadership roles and design-system consulting." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" colophon="Built with the Portfolio design system." hint-size="100%,360px"></x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Footer" headline="{{ footerHeadline }}" email="tymofeieva.n@gmail.com" blurb="Design leadership roles, design-system consulting and talks on the economics of consistency." columns="{{ footerColumns }}" copyright="© 2026 Nataliia Tymofeieva" hint-size="100%,360px"></x-import>
 </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showPersonalNote&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;How it connects&quot;},&quot;beyondColumns&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:4,&quot;min&quot;:2,&quot;max&quot;:4,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Beyond the work&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPersonalNote&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;How it connects&quot;}}">
 class Component extends DCLogic {
+  track = React.createRef();
+  state = { contactOpen: false, activeNav: "" };
+  scrollBy(dir) {
+    const el = this.track.current;
+    if (!el) return;
+    const card = el.querySelector("article");
+    const step = card ? card.offsetWidth + 24 : 344;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  }
+  componentWillUnmount() {
+    const el = this.track.current;
+    if (el && this.onWheel) el.removeEventListener("wheel", this.onWheel);
+    if (this.onSpy) { window.removeEventListener("scroll", this.onSpy); window.removeEventListener("resize", this.onSpy); }
+  }
   componentDidMount() {
+    const el0 = this.track.current;
+    if (el0) {
+      this.onWheel = e => {
+        const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        if (!d) return;
+        const max = el0.scrollWidth - el0.clientWidth;
+        if (max <= 0) return;
+        if ((el0.scrollLeft <= 0 && d < 0) || (el0.scrollLeft >= max - 1 && d > 0)) return;
+        e.preventDefault();
+        el0.scrollLeft += d;
+      };
+      el0.addEventListener("wheel", this.onWheel, { passive: false });
+    }
     const t = localStorage.getItem("pf-theme") || "dark";
     this.applyTheme(t);
+    this.onSpy = () => {
+      if (this.spyRaf) return;
+      this.spyRaf = requestAnimationFrame(() => {
+        this.spyRaf = 0;
+        const line = window.innerHeight * 0.35;
+        let cur = "";
+        ["connect", "work", "more"].forEach(id => { const n = document.getElementById(id); if (n && n.getBoundingClientRect().top <= line) cur = "#" + id; });
+        const doc = document.documentElement;
+        if (window.innerHeight + window.scrollY >= doc.scrollHeight - 2) { const m = document.getElementById("more"); if (m && m.getBoundingClientRect().top < window.innerHeight) cur = "#more"; }
+        if (cur !== this.state.activeNav) this.setState({ activeNav: cur });
+      });
+    };
+    window.addEventListener("scroll", this.onSpy, { passive: true });
+    window.addEventListener("resize", this.onSpy);
+    this.onSpy();
   }
   applyTheme(t) {
     const root = document.documentElement;
@@ -376,9 +577,20 @@ class Component extends DCLogic {
     try { localStorage.setItem("pf-theme", next); } catch (e) {}
   }
   renderVals() {
-    const perRow = this.props.beyondColumns ?? 4;
     return {
       toggleTheme: () => this.toggleTheme(),
+      activeNav: this.state.activeNav,
+      trackRef: this.track,
+      contactOpen: !!this.state.contactOpen,
+      toggleContact: e => { e.preventDefault(); this.setState(s => ({ contactOpen: !s.contactOpen })); },
+      contacts: [
+        { label: "phone", value: "437.987.8703", href: "tel:+14379878703" },
+        { label: "email", value: "tymofeieva.n@gmail.com", href: "mailto:tymofeieva.n@gmail.com" },
+        { label: "whatsapp", value: "+1 437 987 8703", href: "https://wa.me/14379878703" },
+        { label: "telegram", value: "+1 437 987 8703", href: "https://t.me/+14379878703" },
+      ],
+      scrollPrev: () => this.scrollBy(-1),
+      scrollNext: () => this.scrollBy(1),
       gridSize: 80,
       brandMark: React.createElement(React.Fragment, null,
         React.createElement("span", { style: { color: "var(--accent-green)" } }, "Nat"),
@@ -386,30 +598,41 @@ class Component extends DCLogic {
       navLinks: [
         { label: "how it connects", href: "#connect" },
         { label: "work streams", href: "#work" },
-        { label: "beyond the work", href: "#more" },
+        { label: "book", href: "book.html" },
+        { label: "beyond", href: "#more" },
         { label: "resume", href: "resume.html" },
       ],
       navCta: { label: "contact", href: "#contact" },
       showPersonal: this.props.showPersonalNote ?? true,
-      moreCols: "repeat(" + perRow + ",minmax(0,1fr))",
       flow: [
-        { label: "design system", title: "Tokens, components, patterns", arrow: "→", tone: "var(--accent-green)", border: "var(--border)" },
-        { label: "figma / github", title: "Source of truth, versioned", arrow: "→", tone: "var(--accent-green)", border: "var(--border)" },
-        { label: "ai", title: "Agents build and validate on-system", arrow: "→", tone: "var(--accent-green)", border: "var(--accent-green)" },
-        { label: "products", title: "Generated, consistant, determenistic", arrow: "", tone: "var(--accent-green)", border: "var(--border)" },
+        { label: "design system", title: "Reusable components, decided once", arrow: "→", tone: "var(--accent-green)", border: "var(--border)" },
+        { label: "ai", title: "Reuses them for deterministic output at speed", arrow: "→", tone: "var(--accent-green)", border: "var(--accent-green)" },
+        { label: "product", title: "Better quality of experience, easier to adopt", arrow: "→", tone: "var(--accent-green)", border: "var(--border)" },
+        { label: "business", title: "", levers: [
+          { word: "Experience", arrow: "↑", tone: "var(--accent-green)" },
+          { word: "Revenue", arrow: "↑", tone: "var(--accent-green)" },
+          { word: "Cost", arrow: "↓", tone: "var(--accent-cyan)" },
+          { word: "Speed", arrow: "↑", tone: "var(--accent-green)" },
+        ], arrow: "", tone: "var(--accent-green)", border: "var(--border)" },
+      ],
+      proof: [
+        { value: "8 → 2", label: "Steps per lead · Sales Mobile app", tone: "green", lever: "Experience", arrow: "↑", arrowTone: "var(--accent-green)" },
+        { value: "10×", label: "Fewer pop-ups and warning messages · DMS", tone: "cyan", lever: "Experience", arrow: "↑", arrowTone: "var(--accent-green)" },
+        { value: "14 / 14", label: "UI themes on one foundation · CRM", tone: "green", lever: "Cost", arrow: "↓", arrowTone: "var(--accent-cyan)" },
+        { value: "1,000+", label: "Figma plugin users", tone: "cyan", lever: "Speed", arrow: "↑", arrowTone: "var(--accent-green)" },
       ],
       more: [
-        { kind: "Book", title: "Design Systems for the AI Era", text: "How systems teams stay the source of truth when generation is cheap and consistency isn't.", note: "Read more →", border: "var(--border)", noteTone: "var(--accent-green)" },
-        { kind: "Tooling", title: "Figma plugin", text: "Generates table components from CSV data.", note: "1,000+ users", border: "var(--border)", noteTone: "var(--accent-cyan)" },
-        { kind: "Speaking", title: "Conference talks", text: "Design systems and AI-augmented workflows.", note: "Occasional", border: "var(--border)", noteTone: "var(--text-muted)" },
-        { kind: "Board", title: "DDRC", text: "Board Member.", note: "2026 — present", border: "var(--border)", noteTone: "var(--text-muted)" },
-        { kind: "Leadership", title: "Toastmasters International", text: "VP of Education.", note: "2025 — present", border: "var(--border)", noteTone: "var(--text-muted)" },
-        { kind: "My path", title: "15 years, four eras", text: "Web Studio → ServiceTO → Quorum. Its own page now, not a homepage section.", note: "Read the story →", border: "var(--accent-green)", noteTone: "var(--accent-green)" },
-        { kind: "Resume", title: "Want the short version?", text: "One PDF — roles, dates, skills.", note: "Download resume →", href: "resume.html", border: "var(--border)", noteTone: "var(--accent-green)" },
-      ],
+        { isTooling: true, kind: "Tooling", title: "Figma plugin", text: "Turns pasted or imported CSV data into fully built, on-system table components in Figma - headers, rows and states mapped to the library, so data-heavy prototypes are built from the library instead of by hand.", note: "1,000+ users", border: "var(--border)", noteTone: "var(--accent-cyan)" },
+        { isSpeaking: true, kind: "Speaking", title: "Conference talks", text: "Spoke on Design Systems for the AI Driven Future - how a system gives AI-assisted work the context it needs to stay consistent and deterministic.", note: "Occasional", border: "var(--border)", noteTone: "var(--text-muted)" },
+        { isBoard: true, kind: "Board", title: "DDRC", text: "Board member at the Developmental Disabilities Resource Centre (DDRC), contributing a design and technology perspective to governance and service decisions.", note: "2026 - present", border: "var(--border)", noteTone: "var(--text-muted)" },
+        { isLeadership: true, kind: "Leadership", title: "Toastmasters International", text: "VP of Education for a Toastmasters club - planning the meeting and speech program, mentoring members through their paths, and keeping the schedule filled.", note: "2025 - present", border: "var(--border)", noteTone: "var(--text-muted)" },
+        { noArt: true, kind: "My path", title: "15 years, three eras", text: "Web Studio → ServiceTO → Quorum", note: "Read the story →", border: "var(--accent-green)", noteTone: "var(--accent-green)" },
+        { noArt: true, kind: "Resume", title: "Want the short version?", text: "One PDF - roles, dates, skills.", note: "Download resume →", href: "assets/Nataliia-Tymofeieva-Resume.pdf", border: "var(--border)", noteTone: "var(--accent-green)" },
+      ].map(c => ({ ...c, noHref: !c.href })),
+      footerHeadline: React.createElement(React.Fragment, null, "Let's talk about ", React.createElement("span", { style: { color: "var(--accent-green)" } }, "the system"), " you're building."),
       footerColumns: [
-        { title: "elsewhere", links: [{ label: "linkedin", href: "#" }, { label: "email", href: "#" }] },
-        { title: "downloads", links: [{ label: "resume", href: "resume.html" }, { label: "portfolio pdf", href: "#" }] },
+        { title: "sections", links: [{ label: "how it connects", href: "#connect" }, { label: "work streams", href: "#work" }, { label: "book", href: "book.html" }, { label: "beyond", href: "#more" }, { label: "resume", href: "resume.html" }] },
+        { title: "contact", links: [{ label: "linkedin", href: "https://www.linkedin.com/in/tymofeieva-n" }, { label: "email", href: "mailto:tymofeieva.n@gmail.com" }, { label: "call me", href: "tel:+14379878703" }, { label: "resume pdf", href: "assets/Nataliia-Tymofeieva-Resume.pdf" }] },
       ],
     };
   }
