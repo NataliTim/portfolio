@@ -18,12 +18,12 @@
 <div style="display:flex;flex-direction:column;gap:var(--space-6)">
 <div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary);line-height:1.5">
 <span style="flex:0 0 auto;width:7px;height:7px;border-radius:var(--radius-pill);background:var(--accent-green);animation:ds-blink 1.6s steps(1, end) infinite"></span>
-<span>Product Design Manager · 15+ years · Master's in Economics</span>
+<span>Product Design Manager</span>
 </div>
 <h1 style="margin:0;font-size:clamp(40px,5.6vw,84px);font-weight:var(--weight-display);line-height:1.02;letter-spacing:var(--tracking-display);max-width:16ch;text-wrap:balance">I design systems that <span style="color:var(--accent-green)">compound.</span></h1>
 <p style="margin:0;max-width:var(--measure-tight);font-size:var(--text-body-lg);color:var(--text-secondary)">Product design manager who builds design systems as business infrastructure that make products easier to adopt, cheaper to scale and faster to ship.</p>
 <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-2)">
-<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#contact" on-click="{{ toggleContact }}" icon="send" size="lg" hint-size="160px,52px">Connect</x-import>
+<x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#contact" data-contact-open="" icon="send" size="lg" hint-size="160px,52px">Connect</x-import>
 <x-import component-from-global-scope="PortfolioDesignSystem_3bd050.Button" href="#work" icon="arrow-down" variant="secondary" size="lg" hint-size="180px,52px">Case studies</x-import>
 </div>
 <sc-if value="{{ contactOpen }}" hint-placeholder-val="{{ false }}">
